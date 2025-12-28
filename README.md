@@ -1,5 +1,7 @@
 # Fedora Workstation
 
+![Fedora Workstation](./.dotfiles-assets/updated-fastfetch.png)
+
 Things i used for my setup:
 - alacritty
 - micro
