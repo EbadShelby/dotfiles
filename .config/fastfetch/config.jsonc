@@ -1,0 +1,82 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "modules": [
+        "title",
+        "separator",
+        "os",
+        {
+            "type": "host",
+            "format": "{/2}{-}{/}{2}{?3} {3}{?}"
+        },
+        "kernel",
+        {
+            "type": "disk",
+            "folders": "/",
+            "key": "OS Age",
+            "format": "{days} days"
+        },
+        "break",
+        {
+            "type": "custom",
+            "key": "Display",
+            "format": "1920x1080 @ 144Hz"
+        },
+		{
+		    "type": "shell",
+		    "format": "{1}"
+		},
+		{
+		    "type": "terminal",
+		    "format": "{1}"
+		},
+		{
+		    "type": "custom",
+		    "key": "Editor",
+		    "format": "micro"
+		},
+        "wm",        
+        "break",
+		{
+            "type": "custom",
+            "key": "Theme",
+            "format": "Catppuccin Blue Macchiato"
+        },
+	    {
+            "type": "custom",
+            "key": "Icons",
+            "format": "Kora"
+        },
+	    {
+	        "type": "cursor",
+	        "key": "Cursor",
+	        "format": "{1}"
+	    },
+	    {
+            "type": "custom",
+            "key": "Font",
+            "format": "Ubuntu NF"
+        },
+	    {
+	        "type": "custom",
+	        "key": "Mono Font",
+	        "format": "Monaspace Neon NF"
+	    },
+        "break",
+        "cpu",
+        {
+            "type": "gpu",
+            "key": "GPU",
+            "temp": true,
+            "format": "{2} - {4}"
+        },
+        {
+                "type": "disk",
+                "key": "Disk",
+                "folders": "/",
+                "format": "{1} / {2} ({3})" 
+        },
+        "memory",
+        "break",
+        "colors"
+    ]
+}
