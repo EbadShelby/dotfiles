@@ -9,7 +9,7 @@
 ### 🛠 Terminal & Tools
 - **fastfetch**
 - **alacritty**
-- **micro**
+- **fresh (text editor)**
 - **zsh** with plugins:
   - `zoxide`
   - `lsd`
