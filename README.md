@@ -10,6 +10,10 @@
 
 ## ⚡ My Setup
 
+> Setup optimized for a **beautiful, fast, and productive Fedora Workstation** experience.
+
+---
+
 ### 🛠 Terminal & Tools
 - **fastfetch**
 - **alacritty**
@@ -54,4 +58,4 @@
 
 ---
 
-> This setup is optimized for a **beautiful, fast, and productive Fedora Workstation** experience.
+
