@@ -36,6 +36,7 @@
 
 ### 🔌 GNOME Extensions
 - `arcMenu`
+- `Tiling Shell`
 - `auto move windows`
 - `Caffeine`
 - `Clipboard Indicator`
