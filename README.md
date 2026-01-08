@@ -1,6 +1,8 @@
 # 🐧 Fedora Workstation
 
-![Fedora Workstation](./.dotfiles-assets/updated-fastfetch.png)
+![Fedora Workstation](./.dotfiles-assets/fedora-home.png)
+![Fedora Workstation](./.dotfiles-assets/fedora-gtk.png)
+![Fedora Workstation](./.dotfiles-assets/fedora-vscode.png)
 
 ---
 
