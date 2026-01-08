@@ -38,6 +38,7 @@
 
 ### 🔌 GNOME Extensions
 - `arcMenu`
+    - `runner launcher`
 - `Tiling Shell`
 - `auto move windows`
 - `Caffeine`
