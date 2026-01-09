@@ -10,7 +10,7 @@
 
 ## ⚡ My Setup
 
-> Setup optimized for a **beautiful, fast, and productive Fedora Workstation** experience.
+> Optimized for a **majestic, fast, and productive Fedora Workstation** experience.
 
 ---
 
@@ -34,7 +34,7 @@
 ---
 
 ### 🎨 GNOME Tweaks
-- **Theme:** Catppuccin Blue Macchiato  
+- **Theme:** Catppuccin Dark Macchiato  
 - **Icons:** Kora  
 - **Cursor:** Sunity  
 - **Font:** Ubuntu NF  
@@ -43,6 +43,7 @@
 ---
 
 ### 🔌 GNOME Extensions
+Added arcMenu, Tiling Shell, Open bar settings inside Downloads folder.
 - `arcMenu`
     - `runner launcher`
 - `Tiling Shell`
