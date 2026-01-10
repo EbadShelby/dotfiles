@@ -2,7 +2,7 @@
 
 ![Fedora Workstation](./.dotfiles-assets/fedora-home.png)
 ![Fedora Workstation](./.dotfiles-assets/fedora-launcher.png)
-![Fedora Workstation](./.dotfiles-assets/fedora-gtk.png)
+![Fedora Workstation](./.dotfiles-assets/fedora-gtk1.png)
 ![Fedora Workstation](./.dotfiles-assets/fedora-vscode.png)
 
 
@@ -17,6 +17,10 @@
 ### 🛠 Terminal & Tools
 - **fastfetch**
 - **alacritty**
+- **snapper**
+- **man**
+- **tldr**
+- **man**
 - **harlequin**
 - **fresh (text editor)**
 - **zsh** with plugins:
@@ -59,5 +63,33 @@ Added arcMenu, Tiling Shell, Open bar settings inside Downloads folder.
 - `User Themes`
 
 ---
+
+### 💻 My Apps
+- 'btrfs-assistant'
+- 'Gradia'
+- 'Kanri'
+- 'Pika Backup'
+- 'Obsidian'
+- 'LocalSend'
+- 'Resources'
+- 'Bitwarden'
+- 'Signal Desktop'
+- 'ONLYOFFICE'
+- 'Extension Manager'
+- 'Tweaks'
+- 'Flatseal'
+- 'Firewall'
+- 'rog-control-center'
+- 'Video Downloader'
+- 'Easy Effects'
+- 'OBS Studio'
+- 'DBeaver Community'
+- 'Upscaler'
+- 'Waterfox'
+- 'Brave'
+- 'VScode'
+- 'Audacity'
+- 'virt-manager'
+- 'Anki'
 
 
