@@ -18,9 +18,7 @@
 - **fastfetch**
 - **alacritty**
 - **snapper**
-- **man**
 - **tldr**
-- **man**
 - **harlequin**
 - **lazygit**
 - **gh**
