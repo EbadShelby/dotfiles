@@ -22,6 +22,8 @@
 - **tldr**
 - **man**
 - **harlequin**
+- **lazygit**
+- **gh**
 - **fresh (text editor)**
 - **zsh** with plugins:
   - `zoxide`
