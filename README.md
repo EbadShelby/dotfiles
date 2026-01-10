@@ -17,6 +17,7 @@
 ### 🛠 Terminal & Tools
 - **fastfetch**
 - **alacritty**
+- **harlequin**
 - **fresh (text editor)**
 - **zsh** with plugins:
   - `zoxide`
