@@ -65,31 +65,42 @@ Added arcMenu, Tiling Shell, Open bar settings inside Downloads folder.
 ---
 
 ### 💻 My Apps
-- 'btrfs-assistant'
-- 'Gradia'
-- 'Kanri'
-- 'Pika Backup'
-- 'Obsidian'
-- 'LocalSend'
-- 'Resources'
-- 'Bitwarden'
-- 'Signal Desktop'
-- 'ONLYOFFICE'
-- 'Extension Manager'
-- 'Tweaks'
-- 'Flatseal'
-- 'Firewall'
-- 'rog-control-center'
-- 'Video Downloader'
-- 'Easy Effects'
-- 'OBS Studio'
-- 'DBeaver Community'
-- 'Upscaler'
-- 'Waterfox'
-- 'Brave'
-- 'VScode'
-- 'Audacity'
-- 'virt-manager'
-- 'Anki'
+
+#### System
+- btrfs-assistant
+- Pika Backup
+- Firewall
+- Extension Manager
+- Tweaks
+- Flatseal
+- rog-control-center
+- Resources
+
+#### Work
+- VSCode
+- DBeaver Community
+- virt-manager
+- Obsidian
+- ONLYOFFICE
+- Anki
+- Kanri
+
+#### Media
+- OBS Studio
+- Audacity
+- Easy Effects
+- Video Downloader
+- Upscaler
+- Gradia
+
+#### Web & Comms
+- Brave
+- Waterfox
+- Signal Desktop
+- LocalSend
+
+#### Utilities
+- Bitwarden
+
 
 
