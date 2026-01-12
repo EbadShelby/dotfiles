@@ -88,6 +88,7 @@ Added arcMenu, Tiling Shell, Open bar settings inside Downloads folder.
 #### Media
 - OBS Studio
 - Audacity
+- Kdenlive
 - Easy Effects
 - Video Downloader
 - Upscaler
