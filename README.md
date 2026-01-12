@@ -18,10 +18,12 @@
 - **fastfetch**
 - **alacritty**
 - **snapper**
-- **tldr**
 - **harlequin**
 - **lazygit**
 - **gh**
+- **tldr**
+- **bat**
+- **glow**
 - **fresh (text editor)**
 - **zsh** with plugins:
   - `zoxide`
