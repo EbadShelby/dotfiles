@@ -21,6 +21,7 @@
 - **harlequin**
 - **lazygit**
 - **gh**
+- **gitui**
 - **tldr**
 - **bat**
 - **glow**
