@@ -24,6 +24,7 @@
 - **gitui**
 - **tldr**
 - **bat**
+- **btop**
 - **glow**
 - **fresh (text editor)**
 - **zsh** with plugins:
