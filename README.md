@@ -17,24 +17,24 @@
 ### 🛠 Terminal & Tools
 - **fastfetch**
 - **alacritty**
+- **fresh**
 - **snapper**
 - **harlequin**
 - **lazygit**
 - **gh**
 - **gitui**
+- **btop**
 - **tldr**
 - **bat**
-- **btop**
+- **fd**
+- **fzf**
+- **ripgrep**
+- **lsd**
 - **glow**
-- **fresh (text editor)**
+- **oh-my-zsh**
 - **zsh** with plugins:
   - `zoxide`
-  - `lsd`
   - `atuin`
-  - `fzf`
-  - `fd`
-  - `ripgrep`
-  - `oh-my-zsh`
   - `powerlevel10k`
   - `zsh-autosuggestions`
   - `zsh-syntax-highlighting`
