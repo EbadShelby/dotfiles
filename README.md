@@ -57,6 +57,7 @@ Added arcMenu, Tiling Shell, Open bar settings inside Downloads folder.
     - `runner launcher`
 - `Tiling Shell`
 - `auto move windows`
+- `Rounded window corners reborn`
 - `Caffeine`
 - `Clipboard Indicator`
 - `Dash to Dock`
