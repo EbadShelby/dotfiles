@@ -1,9 +1,9 @@
 # 🐧 Fedora Workstation
 
-![Fedora Workstation](./.dotfiles-assets/fedora-home.png)
+![Fedora Workstation](./.dotfiles-assets/fedora-workstation.png)
+![Fedora Workstation](./.dotfiles-assets/fedora-files.png)
 ![Fedora Workstation](./.dotfiles-assets/fedora-launcher.png)
-![Fedora Workstation](./.dotfiles-assets/fedora-gtk1.png)
-![Fedora Workstation](./.dotfiles-assets/fedora-vscode.png)
+![Fedora Workstation](./.dotfiles-assets/fedora-code.png)
 
 
 ---

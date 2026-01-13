@@ -3,7 +3,7 @@
 dimensions = { columns = 102, lines = 30 }
 padding = { x = 10, y = 10 }
 
-decorations = "Full"
+decorations = "None"
 title = "Fedora Workstation"
 dynamic_title = false
 
