@@ -56,6 +56,7 @@ Added arcMenu, Tiling Shell, Open bar settings inside Downloads folder.
 - `arcMenu`
     - `runner launcher`
 - `Tiling Shell`
+- `Blur my shell`
 - `auto move windows`
 - `Rounded window corners reborn`
 - `AppIndicator and KStatusNotifierItem Support`
