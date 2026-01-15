@@ -19,6 +19,7 @@
 - **alacritty**
 - **fresh**
 - **snapper**
+- **grub-btrfs**
 - **harlequin**
 - **lazygit**
 - **gh**
