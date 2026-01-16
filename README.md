@@ -27,6 +27,8 @@
 - **btop**
 - **tldr**
 - **bat**
+- **ncdu**
+- **du-dust**
 - **fd**
 - **fzf**
 - **ripgrep**
