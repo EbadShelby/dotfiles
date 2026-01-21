@@ -14,6 +14,36 @@
 
 ---
 
+### 🎨 GNOME Tweaks
+- **Theme:** Catppuccin Dark Macchiato  
+- **Icons:** Kora  
+- **Cursor:** Sunity  
+- **Font:** Ubuntu NF  
+- **Mono Font:** Monaspace Neon NF  
+
+---
+
+### 🔌 GNOME Extensions
+Added arcMenu, Tiling Shell, Open bar settings inside Downloads folder.
+- `arcMenu`
+    - `runner launcher`
+- `Tiling Shell`
+- `Blur my shell`
+- `auto move windows`
+- `Rounded window corners reborn`
+- `AppIndicator and KStatusNotifierItem Support`
+- `Caffeine`
+- `Clipboard Indicator`
+- `Dash to Dock`
+- `Impatience`
+- `Bring out Submenu of Power Off Button`
+- `Just Perfection`
+- `Open Bar`
+- `Removable Drive Menu`
+- `User Themes`
+
+---
+
 ### 🛠 Terminal & Tools
 - **fastfetch**
 - **alacritty**
@@ -45,36 +75,6 @@
 
 ---
 
-### 🎨 GNOME Tweaks
-- **Theme:** Catppuccin Dark Macchiato  
-- **Icons:** Kora  
-- **Cursor:** Sunity  
-- **Font:** Ubuntu NF  
-- **Mono Font:** Monaspace Neon NF  
-
----
-
-### 🔌 GNOME Extensions
-Added arcMenu, Tiling Shell, Open bar settings inside Downloads folder.
-- `arcMenu`
-    - `runner launcher`
-- `Tiling Shell`
-- `Blur my shell`
-- `auto move windows`
-- `Rounded window corners reborn`
-- `AppIndicator and KStatusNotifierItem Support`
-- `Caffeine`
-- `Clipboard Indicator`
-- `Dash to Dock`
-- `Impatience`
-- `Bring out Submenu of Power Off Button`
-- `Just Perfection`
-- `Open Bar`
-- `Removable Drive Menu`
-- `User Themes`
-
----
-
 ### 💻 My Apps
 
 #### System
@@ -97,7 +97,7 @@ Added arcMenu, Tiling Shell, Open bar settings inside Downloads folder.
 - Kanri
 
 #### Media
-- OBS Studio
+- GPU Screen Recorder
 - Audacity
 - Kdenlive
 - Easy Effects
