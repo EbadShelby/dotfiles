@@ -67,6 +67,7 @@ Added arcMenu, Tiling Shell, Open bar settings inside Downloads folder.
 - `Clipboard Indicator`
 - `Dash to Dock`
 - `Impatience`
+- `Bring out Submenu of Power Off Button`
 - `Just Perfection`
 - `Open Bar`
 - `Removable Drive Menu`
