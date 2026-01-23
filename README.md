@@ -4,6 +4,7 @@
 ![Fedora Workstation](./.dotfiles-assets/fedora-files.png)
 ![Fedora Workstation](./.dotfiles-assets/fedora-launcher.png)
 ![Fedora Workstation](./.dotfiles-assets/fedora-code.png)
+![Fedora Workstation](./.dotfiles-assets/fedora-gradient.png)
 
 
 ---
