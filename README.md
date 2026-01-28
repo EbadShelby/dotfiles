@@ -52,6 +52,7 @@ Added arcMenu, Tiling Shell, Open bar settings inside Downloads folder.
 - **fresh**
 - **snapper**
 - **grub-btrfs**
+- **keyd-**
 - **harlequin**
 - **lazygit**
 - **gh**
