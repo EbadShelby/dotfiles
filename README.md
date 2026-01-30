@@ -65,6 +65,7 @@ Added arcMenu, Tiling Shell, Open bar settings inside Downloads folder.
 - **fd**
 - **fzf**
 - **ripgrep**
+- **aria2**
 - **lsd**
 - **glow**
 - **oh-my-zsh**
