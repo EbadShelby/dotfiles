@@ -111,7 +111,7 @@ Added arcMenu, Tiling Shell, Open bar settings inside Downloads folder.
 
 #### Web & Comms
 - Brave
-- Waterfox
+- Firefox with betterfox
 - Signal Desktop
 - LocalSend
 
