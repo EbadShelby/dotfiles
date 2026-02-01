@@ -1,82 +1,76 @@
 {
     "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "type": "small",
+        "padding": {
+            "top": 1
+        }
+    },
+    "display": {
+        "separator": " "
+    },
     "modules": [
-        "title",
-        "separator",
-        "os",
         {
+            "key": "╭───────────╮",
+            "type": "custom"
+        },
+        {
+            "key": "│ {#31} user    {#keys}│",
+            "type": "title",
+            "format": "{user-name}"
+        },
+        {
+            "key": "│ {#32}󰌢 host    {#keys}│",
             "type": "host",
-            "format": "{/2}{-}{/}{2}{?3} {3}{?}"
         },
-        "kernel",
         {
-            "type": "disk",
-            "folders": "/",
-            "key": "OS Age",
-            "format": "{days} days"
+            "key": "│ {#34}{icon} distro  {#keys}│",
+            "type": "os"
         },
-        "break",
         {
-            "type": "custom",
-            "key": "Display",
-            "format": "1920x1080 @ 144Hz"
+            "key": "│ {#35} kernel  {#keys}│",
+            "type": "kernel"
         },
-		{
-		    "type": "shell",
-		    "format": "{1}"
-		},
-		{
-		    "type": "terminal",
-		    "format": "{1}"
-		},
-		{
-		    "type": "custom",
-		    "key": "Editor",
-		    "format": "micro"
-		},
-        "wm",        
-        "break",
-		{
-            "type": "custom",
-            "key": "Theme",
-            "format": "Catppuccin Blue Macchiato"
-        },
-	    {
-            "type": "custom",
-            "key": "Icons",
-            "format": "Kora"
-        },
-	    {
-	        "type": "cursor",
-	        "key": "Cursor",
-	        "format": "{1}"
-	    },
-	    {
-            "type": "custom",
-            "key": "Font",
-            "format": "Ubuntu NF"
-        },
-	    {
-	        "type": "custom",
-	        "key": "Mono Font",
-	        "format": "Monaspace Neon NF"
-	    },
-        "break",
-        "cpu",
         {
+            "key": "│ {#36}󰇄 desktop {#keys}│",
+            "type": "de"
+        },
+        {
+            "key": "│ {#31} term    {#keys}│",
+            "type": "terminal"
+        },
+        {
+            "key": "│ {#32} shell   {#keys}│",
+            "type": "shell"
+        },
+        {
+            "key": "│ {#33}󰍛 cpu     {#keys}│",
+            "type": "cpu"
+        },
+        {
+            "key": "│ {#32}󰢮 gpu     {#keys}│",
             "type": "gpu",
-            "key": "GPU",
-            "temp": true,
-            "format": "{2} - {4}"
+            "hideType": "integrated",
+            "format": "{1} {2}"
         },
         {
-                "type": "disk",
-                "key": "Disk",
-                "folders": "/",
-                "format": "{1} / {2} ({3})" 
+            "key": "│ {#34}󰅐 age     {#keys}│",
+            "type": "command",
+            "shell": "zsh",
+            "text": "birth=$(stat -c %W /etc/machine-id); now=$(date +%s); diff=$((now - birth)); days=$((diff / 86400)); years=$((days / 365)); days=$((days % 365)); months=$((days / 30)); days=$((days % 30)); result=''; [[ $years -gt 0 ]] && result+=\"${years}y \"; [[ $months -gt 0 ]] && result+=\"${months}m \"; result+=\"${days}d\"; echo $result"
         },
-        "memory",
-        "break",
-        "colors"
+        {
+            "key": "├───────────┤",
+            "type": "custom"
+        },
+        {
+            "key": "│ {#39} colors  {#keys}│",
+            "type": "colors",
+            "symbol": "circle"
+        },
+        {
+            "key": "╰───────────╯",
+            "type": "custom"
+        }
     ]
 }
