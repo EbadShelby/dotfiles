@@ -57,6 +57,7 @@ Added arcMenu, Tiling Shell, Open bar settings inside Downloads folder.
 - **lazygit**
 - **gh**
 - **gitui**
+- **scrcpy**
 - **btop**
 - **tldr**
 - **bat**
