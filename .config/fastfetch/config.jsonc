@@ -54,12 +54,6 @@
             "format": "{1} {2}"
         },
         {
-            "key": "│ {#34}󰅐 age     {#keys}│",
-            "type": "command",
-            "shell": "zsh",
-            "text": "birth=$(stat -c %W /etc/machine-id); now=$(date +%s); diff=$((now - birth)); days=$((diff / 86400)); years=$((days / 365)); days=$((days % 365)); months=$((days / 30)); days=$((days % 30)); result=''; [[ $years -gt 0 ]] && result+=\"${years}y \"; [[ $months -gt 0 ]] && result+=\"${months}m \"; result+=\"${days}d\"; echo $result"
-        },
-        {
             "key": "├───────────┤",
             "type": "custom"
         },
