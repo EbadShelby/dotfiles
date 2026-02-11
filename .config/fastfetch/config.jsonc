@@ -21,11 +21,14 @@
         },
         {
             "key": "│ {#32}󰌢 host    {#keys}│",
-            "type": "host",
+            "type": "custom",
+            "format": "ROG Strix G513RC"
+
         },
         {
             "key": "│ {#34}{icon} distro  {#keys}│",
-            "type": "os"
+            "type": "custom",
+            "format": "Fedora 43 (Workstation Edition)"
         },
         {
             "key": "│ {#35} kernel  {#keys}│",
@@ -34,10 +37,6 @@
         {
             "key": "│ {#36}󰇄 desktop {#keys}│",
             "type": "de"
-        },
-        {
-            "key": "│ {#31} term    {#keys}│",
-            "type": "terminal"
         },
         {
             "key": "│ {#32} shell   {#keys}│",
