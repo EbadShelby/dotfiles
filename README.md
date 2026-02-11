@@ -98,7 +98,7 @@ Added arcMenu, Tiling Shell, Open bar settings inside Downloads folder.
 - VSCode
 - DBeaver Community
 - virt-manager
-- Obsidian
+- GhostWriter
 - ONLYOFFICE
 - Anki
 - Kanri
