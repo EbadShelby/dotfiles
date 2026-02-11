@@ -43,6 +43,7 @@ Added arcMenu, Tiling Shell, Open bar settings inside Downloads folder.
 - `Removable Drive Menu`
 - `User Themes`
 - `Vitals`
+- `Status Area Horizontal Spacing`
 
 ---
 
