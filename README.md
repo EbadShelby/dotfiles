@@ -49,11 +49,12 @@ Added arcMenu, Tiling Shell, Open bar settings inside Downloads folder.
 
 ### 🛠 Terminal & Tools
 - **fastfetch**
-- **alacritty**
+- **kitty**
 - **fresh**
 - **snapper**
 - **grub-btrfs**
 - **keyd-**
+- **mods**
 - **harlequin**
 - **lazygit**
 - **gh**
@@ -63,6 +64,7 @@ Added arcMenu, Tiling Shell, Open bar settings inside Downloads folder.
 - **btop**
 - **tldr**
 - **bat**
+- **systemd-manager-tui**
 - **ncdu**
 - **du-dust**
 - **fd**
