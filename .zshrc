@@ -1,16 +1,6 @@
 # show a gradient text on launch
-echo -e "\e[1mFedora Workstation\e[0m" | lolcat -S $RANDOM
+echo -e "\e[1mFedora Workstation\e[0m" | lolcat -b -g 3c6eb4:00ffff
 echo ""
-
-fedora_greeting() {
-    echo -e "\e[1mFedora Workstation\e[0m" | lolcat -S $RANDOM
-}
-
-# run the gradient text after typing clear
-clear_and_greet() {
-    command clear     
-    fedora_greeting  
-}
 
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
@@ -38,23 +28,36 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 
-alias clear='clear_and_greet'
-alias cls='clear_and_greet'
+alias cls='clear'
 
-alias zshconfig="fresh ~/.zshrc"
-alias alcrtconfig="fresh ~/.config/alacritty/alacritty.toml"
+alias zshconfig="micro ~/.zshrc"
+alias kittyconf="micro ~/.config/kitty/kitty.conf"
 
 alias upd="sudo dnf upgrade --refresh"
 alias dnf='dnf5'
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
-alias snp='sudo snapper -c root create --description'
+# snapper
+alias snpr='sudo snapper -c root create -d'
+alias snph='sudo snapper -c home create -d'
 
-alias ls='lsd'
-alias ll='lsd -la'
-alias la='lsd -A'
+alias snprs='sudo snapper -c root status'
+alias snphs='sudo snapper -c home status'
 
+alias snprd='sudo snapper -c root diff'
+alias snphd='sudo snapper -c home diff'
+
+alias snpupd='sudo snapper -c root create -d "before update" && sudo snapper -c home create -d "before update"'
+
+# lsd
+alias ls='lsd --group-directories-first'
+alias ll='lsd -la --group-directories-first'
+alias la='lsd -A --group-directories-first'
+alias lt='lsd --tree'
+
+# mods
+alias modsconfig='mods --settings'
 
 # --- Laravel/LAMP Stack Control ---
 # Start the engine
@@ -84,6 +87,25 @@ alias dr='sudo dnf5 remove'
 alias ds='dnf5 search'
 alias dl='dnf5 history list'
 
+#glow
+alias glow='glow -t'
+
+#mods
+alias chatshow='mods --show'
+alias chatdel='mods --delete'
+alias chattitle='mods --title'
+alias chatlist='mods --list'
+alias chatconfig='mods --settings'
+alias chatcont='mods --continue'
+
+#nano
+alias nano='nano -/'
+
+#pomo
+alias pomoconfig="micro ~/.config/pomo/pomo.yaml"
+
+#espanso
+alias espconfig="micro .config/espanso/match/base.yml"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -95,10 +117,12 @@ export FZF_DEFAULT_OPTS=" \
 --color=marker:#f4dbd6,fg+:#cad3f5,prompt:#c6a0f6,hl+:#ed8796"
 
 # Set fresh as the default editor
-export EDITOR='fresh'
-export VISUAL='fresh'
+export EDITOR='micro'
+export VISUAL='micro'
 
 export HARLEQUIN_CONFIG_PATH="$HOME/.config/harlequin/profiles.toml"
+
+export "MICRO_TRUECOLOR=1"
 
 eval "$(atuin init zsh)"
 eval "$(zoxide init --cmd cd zsh)"

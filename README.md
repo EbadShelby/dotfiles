@@ -50,11 +50,13 @@ Added arcMenu, Tiling Shell, Open bar settings inside Downloads folder.
 ### 🛠 Terminal & Tools
 - **fastfetch**
 - **kitty**
-- **fresh**
+- **micro**
 - **snapper**
 - **grub-btrfs**
-- **keyd-**
+- **keyd**
 - **mods**
+- **pomo**
+- **espanso**
 - **harlequin**
 - **lazygit**
 - **gh**
