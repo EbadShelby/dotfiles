@@ -32,8 +32,7 @@
         },
         {
             "key": "│ {#35} kernel  {#keys}│",
-            "type": "kernel",
-            "format": "{1} {6}"
+            "type": "kernel"
         },
         {
             "key": "│ {#36}󰇄 desktop {#keys}│",

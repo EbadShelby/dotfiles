@@ -1,4 +1,4 @@
-# 🐧 Fedora Workstation
+# 🐧 Fedora Workstation / GNOME
 
 ![Fedora Workstation](./.dotfiles-assets/fedora-workstation.png)
 ![Fedora Workstation](./.dotfiles-assets/fedora-files.png)
@@ -18,9 +18,9 @@
 ### 🎨 GNOME Tweaks
 - **Theme:** Catppuccin Dark Macchiato  
 - **Icons:** Kora  
-- **Cursor:** Sunity  
-- **Font:** Ubuntu NF  
-- **Mono Font:** Monaspace Neon NF  
+- **Cursor:** Sunity
+- **Font:** Ubuntu NF
+- **Mono Font:** Monaspace Neon NF
 
 ---
 
@@ -29,46 +29,30 @@ Added arcMenu, Tiling Shell, Open bar settings inside Downloads folder.
 - `arcMenu`
     - `runner launcher`
 - `Tiling Shell`
-- `Blur my shell`
-- `auto move windows`
-- `Rounded window corners reborn`
 - `AppIndicator and KStatusNotifierItem Support`
 - `Caffeine`
 - `Clipboard Indicator`
-- `Dash to Dock`
-- `Impatience`
-- `Bring out Submenu of Power Off Button`
 - `Just Perfection`
 - `Open Bar`
-- `Removable Drive Menu`
 - `User Themes`
 - `Vitals`
-- `Status Area Horizontal Spacing`
 
 ---
 
 ### 🛠 Terminal & Tools
 - **fastfetch**
 - **kitty**
-- **micro**
+- **micro editor**
+- **fresh editor**
 - **snapper**
-- **grub-btrfs**
 - **keyd**
-- **mods**
 - **pomo**
-- **espanso**
 - **harlequin**
 - **lazygit**
 - **gh**
-- **gitui**
 - **phpmyadmin**
-- **scrcpy**
-- **btop**
 - **tldr**
 - **bat**
-- **systemd-manager-tui**
-- **ncdu**
-- **du-dust**
 - **fd**
 - **fzf**
 - **ripgrep**
@@ -91,16 +75,13 @@ Added arcMenu, Tiling Shell, Open bar settings inside Downloads folder.
 #### System
 - btrfs-assistant
 - Pika Backup
-- Firewall
 - Extension Manager
 - Tweaks
 - Flatseal
 - rog-control-center
-- Resources
 
 #### Work
 - VSCode
-- DBeaver Community
 - virt-manager
 - Obsidian
 - ONLYOFFICE
@@ -121,8 +102,6 @@ Added arcMenu, Tiling Shell, Open bar settings inside Downloads folder.
 - Firefox with betterfox
 - Signal Desktop
 - LocalSend
-
-#### Utilities
 - Bitwarden
 
 ---
