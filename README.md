@@ -103,6 +103,7 @@ Added arcMenu, Tiling Shell, Open bar settings inside Downloads folder.
 - Signal Desktop
 - LocalSend
 - Bitwarden
+- Smile
 
 ---
 
