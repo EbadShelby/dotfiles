@@ -47,9 +47,12 @@ Added arcMenu, Tiling Shell, Open bar settings inside Downloads folder.
 - **snapper**
 - **keyd**
 - **pomo**
+- **clatype**
+- **tetro-tui**
 - **harlequin**
 - **lazygit**
 - **gh**
+- **gh-dash**
 - **phpmyadmin**
 - **tldr**
 - **bat**
