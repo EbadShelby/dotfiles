@@ -15,7 +15,7 @@
             "type": "custom"
         },
         {
-            "key": "│ {#31} user    {#keys}│",
+            "key": "│ {#31} user    {#keys}│",
             "type": "title",
             "format": "{user-name}"
         },
@@ -26,28 +26,29 @@
 
         },
         {
-            "key": "│ {#34}{icon} distro  {#keys}│",
+            "key": "│ {#33}{icon} distro  {#keys}│",
             "type": "custom",
             "format": "Fedora 43 (Workstation Edition)"
         },
         {
-            "key": "│ {#35} kernel  {#keys}│",
+            "key": "│ {#34} kernel  {#keys}│",
             "type": "kernel"
         },
         {
-            "key": "│ {#36}󰇄 desktop {#keys}│",
-            "type": "de"
+            "key": "│ {#35} wm      {#keys}│",
+            "type": "wm",
+            "format": "{1}"
         },
         {
-            "key": "│ {#32} shell   {#keys}│",
+            "key": "│ {#36} shell   {#keys}│",
             "type": "shell"
         },
         {
-            "key": "│ {#33}󰍛 cpu     {#keys}│",
+            "key": "│ {#37}󰍛 cpu     {#keys}│",
             "type": "cpu"
         },
         {
-            "key": "│ {#32}󰢮 gpu     {#keys}│",
+            "key": "│ {#38}󰢮 gpu     {#keys}│",
             "type": "gpu",
             "hideType": "integrated",
             "format": "{1} {2}"
