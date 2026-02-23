@@ -30,7 +30,7 @@
 * **Theme:** Catppuccin Dark Macchiato
 * **Icons:** Kora
 * **Cursor:** Sunity
-* **Mono Font:** Monaspace Neon NF
+* **Terminal Font:** Monaspace Neon NF
 
 ---
 
@@ -70,10 +70,8 @@
 
 ### CLI Utilities
 
-* micro
 * fresh
 * snapper
-* keyd
 * pomo
 * clatype
 * tetro-tui
@@ -81,7 +79,7 @@
 * lazygit
 * gh
 * gh-dash
-* phpmyadmin
+* opencode
 * tldr
 * bat
 * fd
@@ -135,5 +133,4 @@
 
 ---
 
-![Fedora Workstation](./.dotfiles-assets/star-history.png)
-
+![Fedora Workstation](./.dotfiles-assets/star-history-80.png)
