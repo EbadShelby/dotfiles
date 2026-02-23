@@ -1,7 +1,17 @@
-prefer-no-csd
+// ==================================================
+// General
+// ==================================================
+
+prefer-no-csd // prefer server-side decorations for consistent tiling
+
+
+// ==================================================
+// Input
+// ==================================================
+
 input {
     keyboard {
-        numlock
+        numlock // enable numlock on startup
     }
 
     touchpad {
@@ -15,10 +25,16 @@ input {
         // accel-speed 0.2
         // accel-profile "flat"
         // scroll-method "two-finger"
-        disabled-on-external-mouse
+        disabled-on-external-mouse // disable when mouse connected
     }
+
     focus-follows-mouse max-scroll-amount="0%"
 }
+
+
+// ==================================================
+// Outputs (Monitors)
+// ==================================================
 
 output "eDP-1" {
 	mode "1920x1080@144.000"
@@ -28,9 +44,14 @@ output "eDP-1" {
 }
 
 // output "HDMI-A-1" {
-	// mode "1920x1080@99.999"
-	// position x=0 y=0
+// 	// mode "1920x1080@99.999"
+// 	// position x=0 y=0
 // }
+
+
+// ==================================================
+// Layout & Visuals
+// ==================================================
 
 layout {
     gaps 12
@@ -58,91 +79,127 @@ layout {
         color "#0007"
     }
 }
-screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M.png"
+
+hotkey-overlay {
+    // disable the "Important Hotkeys" pop-up at startup.
+    skip-at-startup
+}
+
+
+// ==================================================
+// Window Rules
+// ==================================================
+
+// Wezterm column behavior
 window-rule {
     match app-id=r#"^org\.wezfurlong\.wezterm$"#
     default-column-width {}
 }
 
+// Floating utility apps
 window-rule {
     match app-id="org.gnome.Nautilus"
     open-floating true
-    
-    default-column-width { proportion 0.45; }
-    default-window-height { fixed 500; }
-}
-window-rule {
-    match app-id="localsend"
-    open-floating true
-    
-    default-column-width { proportion 0.3; }
-    default-window-height { fixed 600; }
-}
-window-rule {
-    match app-id="it.mijorus.smile"
-    open-floating true
-    
-    default-column-width { proportion 0.2; }
-    default-window-height { fixed 400; }
-}
-window-rule {
-    match app-id="be.alexandervanhee.gradia"
-    open-floating true
-    
-    default-column-width { proportion 0.55; }
-    default-window-height { fixed 700; }
-}
-window-rule {
-    match app-id="btrfs-assistant"
-    open-floating true
-    
     default-column-width { proportion 0.4; }
     default-window-height { fixed 500; }
 }
+
+window-rule {
+    match app-id="localsend"
+    open-floating true
+    default-column-width { proportion 0.2; }
+    default-window-height { fixed 500; }
+}
+
+window-rule {
+    match app-id="it.mijorus.smile"
+    open-floating true
+    default-column-width { proportion 0.15; }
+    default-window-height { fixed 400; }
+}
+
+window-rule {
+    match app-id="be.alexandervanhee.gradia"
+    open-floating true
+    default-column-width { proportion 0.5; }
+    default-window-height { fixed 700; }
+}
+
+window-rule {
+    match app-id="btrfs-assistant"
+    open-floating true
+    default-column-width { proportion 0.35; }
+    default-window-height { fixed 500; }
+}
+
 window-rule {
     match app-id="org.quickshell"
     open-floating true
-    
-    default-column-width { proportion 0.45; }
+    default-column-width { proportion 0.4; }
     default-window-height { fixed 750; }
 }
 
+// Browsers
 window-rule {
     match app-id="brave-browser"
     open-maximized true
 }
+
 window-rule {
     match app-id="firefox"
     open-maximized true
 }
 
+// Global window geometry
 window-rule {
     geometry-corner-radius 8
     clip-to-geometry true
 }
 
+
+// ==================================================
+// Keybinds
+// ==================================================
+
 binds {
+
+    // ---------------------------
+    // Display / Mirror
+    // ---------------------------
     Mod+P repeat=false { spawn-sh "wl-mirror $(niri msg --json focused-output | jq -r .name)"; }
-    
-    Mod+Return hotkey-overlay-title="kitty" { spawn "kitty"; }
-    
-    Ctrl+Space hotkey-overlay-title="Application Launcher" {
+
+    // ---------------------------
+    // DMS Integrations
+    // ---------------------------
+    Ctrl+Space {
         spawn "dms" "ipc" "call" "spotlight" "toggle";
     }
-    Mod+B hotkey-overlay-title="Clipboard Manager" {
+    Mod+Period {
         spawn "dms" "ipc" "call" "clipboard" "toggle";
     }
-    Mod+I hotkey-overlay-title="Settings" {
+    Mod+I {
         spawn "dms" "ipc" "call" "settings" "focusOrToggle";
     }
-    
-    // Mod+D hotkey-overlay-title="fuzzel search" { spawn "fuzzel"; }
-    Super+Alt+L hotkey-overlay-title="swaylock" { spawn "swaylock"; }
-    Super+E hotkey-overlay-title="spawn nautilus" { spawn "nautilus"; }
-    
+
+    // ---------------------------
+    // App Launchers
+    // ---------------------------
+    Mod+Return { spawn "kitty"; }
+    Super+Alt+L { spawn "swaylock"; }
+    Super+E { spawn "nautilus"; }
+    Mod+Comma { spawn "flatpak" "run" "it.mijorus.smile"; }
+    Ctrl+Shift+Print { spawn "flatpak" "run" "be.alexandervanhee.gradia"; }
+    Mod+D { spawn "code"; }
+    Mod+B { spawn "brave-browser"; }
+
+    // Accessibility
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
 
+    // ---------------------------
+    // Audio Controls
+    // ---------------------------
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
     XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
@@ -153,15 +210,20 @@ binds {
     XF86AudioPrev        allow-when-locked=true { spawn-sh "playerctl previous"; }
     XF86AudioNext        allow-when-locked=true { spawn-sh "playerctl next"; }
 
+    // ---------------------------
+    // Brightness
+    // ---------------------------
     XF86MonBrightnessUp allow-when-locked=true {
        spawn "dms" "ipc" "call" "brightness" "increment" "5" "";
     }
     XF86MonBrightnessDown allow-when-locked=true {
        spawn "dms" "ipc" "call" "brightness" "decrement" "5" "";
     }
-    
-    Mod+O repeat=false { toggle-overview; }
 
+    // ---------------------------
+    // Window & Navigation
+    // ---------------------------
+    Mod+O repeat=false { toggle-overview; }
     Mod+Q repeat=false { close-window; }
 
     Mod+Left  { focus-column-left; }
@@ -189,6 +251,9 @@ binds {
     Mod+Shift+Ctrl+Up    { move-column-to-monitor-up; }
     Mod+Shift+Ctrl+Right { move-column-to-monitor-right; }
 
+    // ---------------------------
+    // Workspace Control
+    // ---------------------------
     Mod+Page_Down      { focus-workspace-down; }
     Mod+Page_Up        { focus-workspace-up; }
     Mod+Ctrl+Page_Down { move-column-to-workspace-down; }
@@ -202,6 +267,9 @@ binds {
     Mod+Ctrl+WheelScrollDown cooldown-ms=150 { move-column-to-workspace-down; }
     Mod+Ctrl+WheelScrollUp   cooldown-ms=150 { move-column-to-workspace-up; }
 
+    // ---------------------------
+    // Column Control
+    // ---------------------------
     Mod+WheelScrollRight      { focus-column-right; }
     Mod+WheelScrollLeft       { focus-column-left; }
     Mod+Ctrl+WheelScrollRight { move-column-right; }
@@ -212,6 +280,9 @@ binds {
     Mod+Ctrl+Shift+WheelScrollDown { move-column-right; }
     Mod+Ctrl+Shift+WheelScrollUp   { move-column-left; }
 
+    // ---------------------------
+    // Direct Workspace Jump
+    // ---------------------------
     Mod+1 { focus-workspace 1; }
     Mod+2 { focus-workspace 2; }
     Mod+3 { focus-workspace 3; }
@@ -221,6 +292,7 @@ binds {
     Mod+7 { focus-workspace 7; }
     Mod+8 { focus-workspace 8; }
     Mod+9 { focus-workspace 9; }
+
     Mod+Shift+1 { move-column-to-workspace 1; }
     Mod+Shift+2 { move-column-to-workspace 2; }
     Mod+Shift+3 { move-column-to-workspace 3; }
@@ -230,21 +302,21 @@ binds {
     Mod+Shift+7 { move-column-to-workspace 7; }
     Mod+Shift+8 { move-column-to-workspace 8; }
     Mod+Shift+9 { move-column-to-workspace 9; }
-    
+
+    // ---------------------------
+    // Window Behavior
+    // ---------------------------
     Mod+BracketLeft  { consume-or-expel-window-left; }
     Mod+BracketRight { consume-or-expel-window-right; }
-
-    // Consume one window from the right to the bottom of the focused column.
-    Mod+Comma  { consume-window-into-column; }
-    // Expel the bottom window from the focused column to the right.
-    Mod+Period { expel-window-from-column; }
 
     Mod+R { switch-preset-column-width; }
     Mod+Shift+R { switch-preset-window-height; }
     Mod+Ctrl+R { reset-window-height; }
+
     Mod+F { maximize-column; }
     Mod+Shift+F { fullscreen-window; }
     Mod+Ctrl+F { expand-column-to-available-width; }
+
     Mod+C { center-column; }
     Mod+Ctrl+C { center-visible-columns; }
 
@@ -259,6 +331,9 @@ binds {
 
     Mod+W { toggle-column-tabbed-display; }
 
+    // ---------------------------
+    // Screenshots
+    // ---------------------------
     Print { screenshot; }
     Ctrl+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }
@@ -268,10 +343,13 @@ binds {
     // The quit action will show a confirmation dialog to avoid accidental exits.
     Mod+Shift+E { quit; }
     Ctrl+Alt+Delete { quit; }
-
 }
+
+
+// ==================================================
+// External Includes
+// ==================================================
 
 include "dms/outputs.kdl"
 include "dms/binds.kdl"
-
 include "dms/windowrules.kdl"
