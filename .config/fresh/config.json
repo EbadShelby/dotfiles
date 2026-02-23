@@ -1,0 +1,45 @@
+{
+  "keybindings": [
+    {
+      "key": "Down",
+      "modifiers": [
+        "alt",
+        "shift"
+      ],
+      "action": "duplicate_line"
+    },
+    {
+      "key": "k",
+      "modifiers": [
+        "ctrl"
+      ],
+      "action": "noop",
+      "when": "normal"
+    },
+    {
+      "key": "k",
+      "modifiers": [
+        "ctrl"
+      ],
+      "action": "delete_line"
+    },
+    {
+      "key": "Backspace",
+      "modifiers": [
+        "ctrl",
+        "alt"
+      ],
+      "action": "delete_word_backward",
+      "when": "normal"
+    },
+    {
+      "key": "k",
+      "modifiers": [
+        "ctrl"
+      ],
+      "action": "noop",
+      "when": "prompt"
+    }
+  ],
+  "theme": "catppuccin-macchiato-blue"
+}
