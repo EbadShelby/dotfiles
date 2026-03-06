@@ -63,19 +63,16 @@
   * zsh-syntax-highlighting
   * fzf-tab
 
-### Terminal
-
-
-
-
 ### CLI Utilities
 
 * fresh
 * snapper
 * pomo
+* xytz
 * clatype
 * tetro-tui
 * harlequin
+* mycli
 * lazygit
 * gh
 * gh-dash
@@ -105,22 +102,22 @@
 
 ## Work
 
+* Zed
 * VSCode
 * virt-manager
 * Obsidian
 * ONLYOFFICE
 * Anki
-* Kanri
+* Trello
 
 ## Media
 
 * GPU Screen Recorder
 * Audacity
-* Kdenlive
-* Easy Effects
-* Video Downloader
+* Shotcut
 * Upscaler
 * Gradia
+* EasyEffects
 
 ## Web & Communication
 
