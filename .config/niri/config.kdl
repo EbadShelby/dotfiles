@@ -25,7 +25,7 @@ input {
         // accel-speed 0.2
         // accel-profile "flat"
         // scroll-method "two-finger"
-        disabled-on-external-mouse // disable when mouse connected
+        disabled-on-external-mouse // Comment out to turn on touchpad
     }
 
     focus-follows-mouse max-scroll-amount="0%"
@@ -157,6 +157,40 @@ window-rule {
     geometry-corner-radius 8
     clip-to-geometry true
 }
+
+// ==================================================
+// Recent Windows
+// ==================================================
+
+recent-windows {
+    debounce-ms 500
+    open-delay-ms 100
+
+    highlight {
+        active-color "#8aadf4ff"
+        urgent-color "#ed8796ff"
+        padding 8
+        corner-radius 4
+    }
+
+    previews {
+        max-height 100
+    }
+    binds {
+        Alt+Tab         { next-window     scope="workspace"; }
+        Alt+Shift+Tab   { previous-window scope="workspace"; }
+    }
+}
+
+// ==================================================
+// fixed workspaces
+// ==================================================\
+
+workspace "1"
+workspace "2"
+workspace "3"
+workspace "4"
+workspace "5"
 
 
 // ==================================================

@@ -109,6 +109,8 @@
 * ONLYOFFICE
 * Anki
 * Trello
+* Waydroid
+* Crossmacro
 
 ## Media
 
