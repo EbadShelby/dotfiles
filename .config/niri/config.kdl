@@ -15,7 +15,7 @@ input {
     }
 
     touchpad {
-        // off
+        off
         tap
         // dwt
         // dwtp
@@ -25,7 +25,6 @@ input {
         // accel-speed 0.2
         // accel-profile "flat"
         // scroll-method "two-finger"
-        disabled-on-external-mouse // Comment out to turn on touchpad
     }
 
     focus-follows-mouse max-scroll-amount="0%"
@@ -36,17 +35,20 @@ input {
 // Outputs (Monitors)
 // ==================================================
 
+// Main Monitor
 output "eDP-1" {
 	mode "1920x1080@144.000"
-	//mode "1920x1080@60.002"
+	// mode "1920x1080@60.002"
 	position x=1920 y=0
 	focus-at-startup
+    // scale 1.1
 }
 
-// output "HDMI-A-1" {
-// 	// mode "1920x1080@99.999"
-// 	// position x=0 y=0
-// }
+// Second Monitor (Left side)
+output "HDMI-A-1" {
+	mode "1920x1080@99.999"
+	position x=0 y=0
+}
 
 
 // ==================================================
@@ -80,7 +82,7 @@ layout {
     }
 }
 
-screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M.png"
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 hotkey-overlay {
     // disable the "Important Hotkeys" pop-up at startup.
@@ -105,14 +107,12 @@ window-rule {
     default-column-width { proportion 0.4; }
     default-window-height { fixed 500; }
 }
-
 window-rule {
     match app-id="localsend"
     open-floating true
-    default-column-width { proportion 0.2; }
-    default-window-height { fixed 500; }
+    default-column-width { proportion 0.25; }
+    default-window-height { fixed 600; }
 }
-
 window-rule {
     match app-id="it.mijorus.smile"
     open-floating true
@@ -140,8 +140,7 @@ window-rule {
     default-column-width { proportion 0.4; }
     default-window-height { fixed 750; }
 }
-
-// Browsers
+// Browwsers
 window-rule {
     match app-id="brave-browser"
     open-maximized true
@@ -157,7 +156,6 @@ window-rule {
     geometry-corner-radius 8
     clip-to-geometry true
 }
-
 // ==================================================
 // Recent Windows
 // ==================================================
@@ -192,7 +190,6 @@ workspace "3"
 workspace "4"
 workspace "5"
 
-
 // ==================================================
 // Keybinds
 // ==================================================
@@ -225,7 +222,7 @@ binds {
     Super+E { spawn "nautilus"; }
     Mod+Comma { spawn "flatpak" "run" "it.mijorus.smile"; }
     Ctrl+Shift+Print { spawn "flatpak" "run" "be.alexandervanhee.gradia"; }
-    Mod+D { spawn "code"; }
+    Mod+D { spawn "zed"; }
     Mod+B { spawn "brave-browser"; }
 
     // Accessibility
@@ -261,9 +258,9 @@ binds {
     Mod+Q repeat=false { close-window; }
 
     Mod+Left  { focus-column-left; }
+    Mod+Right { focus-column-right; }
     Mod+Down  { focus-window-down; }
     Mod+Up    { focus-window-up; }
-    Mod+Right { focus-column-right; }
 
     Super+Shift+Left  { move-column-left; }
     Super+Shift+Down  { move-window-down; }
@@ -288,10 +285,6 @@ binds {
     // ---------------------------
     // Workspace Control
     // ---------------------------
-    Mod+Page_Down      { focus-workspace-down; }
-    Mod+Page_Up        { focus-workspace-up; }
-    Mod+Ctrl+Page_Down { move-column-to-workspace-down; }
-    Mod+Ctrl+Page_Up   { move-column-to-workspace-up; }
 
     Mod+Shift+Page_Down { move-workspace-down; }
     Mod+Shift+Page_Up   { move-workspace-up; }
