@@ -87,7 +87,7 @@
       "width": 50
     },
     {
-      "id": "brightnessSlider",
+      "id": "inputVolumeSlider",
       "enabled": true,
       "width": 50
     },
@@ -117,7 +117,7 @@
       "width": 50
     },
     {
-      "id": "darkMode",
+      "id": "colorPicker",
       "enabled": true,
       "width": 50
     }
@@ -127,7 +127,7 @@
   "showWorkspacePadding": true,
   "workspaceScrolling": false,
   "showWorkspaceApps": false,
-  "workspaceDragReorder": true,
+  "workspaceDragReorder": false,
   "maxWorkspaceIcons": 3,
   "workspaceAppIconSizeOffset": 0,
   "groupWorkspaceApps": true,
@@ -168,6 +168,17 @@
   "centeringMode": "index",
   "clockDateFormat": "",
   "lockDateFormat": "",
+  "greeterRememberLastSession": true,
+  "greeterRememberLastUser": true,
+  "greeterEnableFprint": false,
+  "greeterEnableU2f": false,
+  "greeterWallpaperPath": "",
+  "greeterUse24HourClock": true,
+  "greeterShowSeconds": false,
+  "greeterPadHours12Hour": false,
+  "greeterLockDateFormat": "",
+  "greeterFontFamily": "",
+  "greeterWallpaperFillMode": "",
   "mediaSize": 1,
   "appLauncherViewMode": "list",
   "spotlightModalViewMode": "list",
@@ -177,19 +188,19 @@
   "filePickerUsageHistory": {},
   "sortAppsAlphabetically": false,
   "appLauncherGridColumns": 4,
-  "spotlightCloseNiriOverview": true,
+  "spotlightCloseNiriOverview": false,
   "spotlightSectionViewModes": {},
   "appDrawerSectionViewModes": {},
-  "niriOverviewOverlayEnabled": true,
-  "dankLauncherV2Size": "compact",
-  "dankLauncherV2BorderEnabled": false,
-  "dankLauncherV2BorderThickness": 2,
+  "niriOverviewOverlayEnabled": false,
+  "dankLauncherV2Size": "micro",
+  "dankLauncherV2BorderEnabled": true,
+  "dankLauncherV2BorderThickness": 3,
   "dankLauncherV2BorderColor": "primary",
   "dankLauncherV2ShowFooter": true,
   "dankLauncherV2UnloadOnClose": false,
   "useAutoLocation": false,
   "weatherEnabled": false,
-  "networkPreference": "auto",
+  "networkPreference": "wifi",
   "iconTheme": "System Default",
   "cursorSettings": {
     "theme": "System Default",
@@ -248,8 +259,17 @@
   "fadeToDpmsGracePeriod": 5,
   "launchPrefix": "",
   "brightnessDevicePins": {},
-  "wifiNetworkPins": {},
-  "bluetoothDevicePins": {},
+  "wifiNetworkPins": {
+    "preferredWifi": [
+      "GlobeAtHome_50B8D",
+      "phone"
+    ]
+  },
+  "bluetoothDevicePins": {
+    "preferredDevice": [
+      "18:9C:2C:B1:A4:B8"
+    ]
+  },
   "audioInputDevicePins": {},
   "audioOutputDevicePins": {},
   "gtkThemingEnabled": false,
@@ -278,6 +298,7 @@
   "matugenTemplateKcolorscheme": true,
   "matugenTemplateVscode": true,
   "matugenTemplateEmacs": true,
+  "matugenTemplateZed": true,
   "showDock": false,
   "dockAutoHide": false,
   "dockSmartAutoHide": false,
@@ -319,6 +340,8 @@
   "lockAtStartup": false,
   "enableFprint": false,
   "maxFprintTries": 15,
+  "enableU2f": false,
+  "u2fMode": "or",
   "lockScreenActiveMonitor": "all",
   "lockScreenInactiveColor": "#000000",
   "lockScreenNotificationMode": 0,
@@ -417,8 +440,9 @@
           "enabled": true
         },
         {
-          "id": "cpuUsage",
-          "enabled": true
+          "id": "cpuTemp",
+          "enabled": true,
+          "minimumWidth": true
         },
         {
           "id": "memUsage",
@@ -438,7 +462,7 @@
         }
       ],
       "spacing": 0,
-      "innerPadding": 0,
+      "innerPadding": 1,
       "bottomGap": 0,
       "transparency": 1,
       "widgetTransparency": 1,
@@ -471,7 +495,10 @@
       "shadowOpacity": 60,
       "shadowColorMode": "text",
       "shadowCustomColor": "#000000",
-      "clickThrough": false
+      "clickThrough": false,
+      "maximizeWidgetIcons": false,
+      "maximizeWidgetText": false,
+      "removeWidgetPadding": false
     }
   ],
   "desktopClockEnabled": false,
@@ -547,7 +574,14 @@
   "desktopWidgetGroups": [],
   "builtInPluginSettings": {
     "dms_settings_search": {
-      "trigger": "?"
+      "trigger": "?",
+      "enabled": false
+    },
+    "dms_notepad": {
+      "enabled": false
+    },
+    "dms_sysmon": {
+      "enabled": false
     }
   },
   "clipboardEnterToPaste": false,
