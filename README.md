@@ -133,4 +133,4 @@
 
 ---
 
-![Fedora Workstation](./.dotfiles-assets/star-history-80.png)
+![Fedora Workstation](./.dotfiles-assets/star-history-100.png)
