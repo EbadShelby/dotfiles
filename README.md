@@ -46,6 +46,7 @@
 * Open Bar
 * User Themes
 * Vitals
+* Rounded window corners reborn
 
 ---
 
