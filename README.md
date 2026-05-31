@@ -54,7 +54,7 @@
 
 ### Shell
 
-* kitty
+* alacritty
 * **zsh** + **oh-my-zsh**
 
   * zoxide
@@ -124,7 +124,7 @@
 
 ## Web & Communication
 
-* Brave
+* Brave-origin
 * Firefox (with betterfox)
 * Signal Desktop
 * LocalSend
