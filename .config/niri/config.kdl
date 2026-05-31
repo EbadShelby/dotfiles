@@ -15,7 +15,7 @@ input {
     }
 
     touchpad {
-        // off
+        off
         tap
         // dwt
         // dwtp
@@ -38,7 +38,7 @@ input {
 // Main Monitor
 output "eDP-1" {
 	mode "1920x1080@144.000"
-	// mode "1920x1080@60.002"
+	//mode "1920x1080@60.002"
 	position x=1920 y=0
 	focus-at-startup
     // scale 1.1
@@ -68,7 +68,7 @@ layout {
 
     focus-ring {
         width 3
-        active-color "#89b4fa"
+        active-color "#8aadf4"
         inactive-color "#181825"
     }
 
@@ -113,12 +113,6 @@ window-rule {
     default-column-width { proportion 0.25; }
     default-window-height { fixed 600; }
 }
-window-rule {
-    match app-id="it.mijorus.smile"
-    open-floating true
-    default-column-width { proportion 0.15; }
-    default-window-height { fixed 400; }
-}
 
 window-rule {
     match app-id="be.alexandervanhee.gradia"
@@ -142,8 +136,17 @@ window-rule {
 }
 // Browwsers
 window-rule {
-    match app-id="brave-browser"
+    match app-id="brave-origin-beta"
     open-maximized true
+    opacity 0.85
+    draw-border-with-background false
+    background-effect {
+        xray true
+        blur true
+    }
+    popups {
+        opacity 0.9
+    }
 }
 
 window-rule {
@@ -151,11 +154,306 @@ window-rule {
     open-maximized true
 }
 
+window-rule {
+    match app-id="antigravity"
+    open-maximized true
+}
+
+window-rule {
+    match app-id="code"
+    open-maximized true
+}
+
+
 // Global window geometry
 window-rule {
     geometry-corner-radius 8
     clip-to-geometry true
 }
+
+window-rule {
+    match app-id="^Alacritty"
+
+    background-effect {
+        blur true
+        xray false
+    }
+}
+
+window-rule {
+    match app-id="org.gnome.Nautilus"
+    opacity 0.85
+    draw-border-with-background false
+    background-effect {
+        xray true
+        blur true
+    }
+    popups {
+        opacity 0.95
+    }
+}
+
+window-rule {
+    match app-id="code"
+    opacity 0.85
+    draw-border-with-background false
+    background-effect {
+        xray true
+        blur true
+    }
+    popups {
+        opacity 0.95
+    }
+}
+
+window-rule {
+    match app-id="antigravity"
+    opacity 0.85
+    draw-border-with-background false
+    background-effect {
+        xray true
+        blur true
+    }
+    popups {
+        opacity 0.95
+    }
+}
+
+window-rule {
+    match app-id="com.dec05eba.gpu_screen_recorder"
+    opacity 0.85
+    draw-border-with-background false
+    background-effect {
+        xray true
+        blur true
+    }
+    popups {
+        opacity 0.95
+    }
+}
+
+window-rule {
+    match app-id="localsend"
+    opacity 0.85
+    draw-border-with-background false
+    background-effect {
+        xray true
+        blur true
+    }
+    popups {
+        opacity 0.95
+    }
+}
+
+window-rule {
+    match app-id="org.gnome.Software"
+    opacity 0.85
+    draw-border-with-background false
+    background-effect {
+        xray true
+        blur true
+    }
+    popups {
+        opacity 0.95
+    }
+}
+
+window-rule {
+    match app-id="obsidian"
+    opacity 0.85
+    draw-border-with-background false
+    background-effect {
+        xray true
+        blur true
+    }
+    popups {
+        opacity 0.95
+    }
+}
+
+window-rule {
+    match app-id="org.gnome.Showtime"
+    opacity 0.85
+    open-floating true
+    draw-border-with-background false
+    
+    background-effect {
+        xray true
+        blur true
+    }
+    popups {
+        opacity 0.95
+    }
+}
+window-rule {
+    match app-id="org.gnome.Loupe"
+    opacity 0.85
+    draw-border-with-background false
+    background-effect {
+        xray true
+        blur true
+    }
+    popups {
+        opacity 0.95
+    }
+}
+window-rule {
+    match app-id="org.gnome.tweaks"
+    opacity 0.85
+    draw-border-with-background false
+    background-effect {
+        xray true
+        blur true
+    }
+    popups {
+        opacity 0.95
+    }
+}
+window-rule {
+    match app-id="Audacity"
+    opacity 0.85
+    draw-border-with-background false
+    background-effect {
+        xray true
+        blur true
+    }
+    popups {
+        opacity 0.95
+    }
+}
+window-rule {
+    match app-id="Flowblade"
+    opacity 0.85
+    draw-border-with-background false
+    background-effect {
+        xray true
+        blur true
+    }
+    popups {
+        opacity 0.95
+    }
+}
+
+window-rule {
+    match app-id="org.gnome.Logs"
+    opacity 0.85
+    draw-border-with-background false
+    background-effect {
+        xray true
+        blur true
+    }
+    popups {
+        opacity 0.95
+    }
+}
+
+window-rule {
+    match app-id="LosslessCut"
+    opacity 0.85
+    draw-border-with-background false
+    background-effect {
+        xray true
+        blur true
+    }
+    popups {
+        opacity 0.95
+    }
+}
+
+window-rule {
+    match app-id="org.quickshell"
+    opacity 0.85
+    draw-border-with-background false
+    background-effect {
+        xray true
+        blur true
+    }
+    popups {
+        opacity 0.95
+    }
+}
+
+window-rule {
+    match app-id="org.kde.easyeffects"
+    opacity 0.85
+    draw-border-with-background false
+    background-effect {
+        xray true
+        blur true
+    }
+    popups {
+        opacity 0.95
+    }
+}
+
+window-rule {
+    match app-id="org.gnome.TextEditor"
+    opacity 0.85
+    draw-border-with-background false
+    background-effect {
+        xray true
+        blur true
+    }
+    popups {
+        opacity 0.95
+    }
+}
+window-rule {
+    match app-id="ONLYOFFICE"
+    opacity 0.85
+    draw-border-with-background false
+    background-effect {
+        xray true
+        blur true
+    }
+    popups {
+        opacity 0.95
+    }
+}
+
+window-rule {
+    match app-id="org.gnome.Papers"
+    opacity 0.85
+    draw-border-with-background false
+    background-effect {
+        xray true
+        blur true
+    }
+    popups {
+        opacity 0.95
+    }
+}
+
+window-rule {
+    match app-id="org.signal.Signal"
+    opacity 0.85
+    draw-border-with-background false
+    background-effect {
+        xray true
+        blur true
+    }
+    popups {
+        opacity 0.95
+    }
+}
+
+window-rule {
+    match app-id="btrfs-assistant"
+    opacity 0.85
+    draw-border-with-background false
+    background-effect {
+        xray true
+        blur true
+    }
+    popups {
+        opacity 0.95
+    }
+}
+
+
+
+
+
 // ==================================================
 // Recent Windows
 // ==================================================
@@ -217,13 +515,13 @@ binds {
     // ---------------------------
     // App Launchers
     // ---------------------------
-    Mod+Return { spawn "kitty"; }
+    Mod+Return { spawn "alacritty"; }
     Super+Alt+L { spawn "swaylock"; }
     Super+E { spawn "nautilus"; }
-    Mod+Comma { spawn "flatpak" "run" "it.mijorus.smile"; }
+    Mod+Comma { spawn "flatpak" "run" "emote"; }
     Ctrl+Shift+Print { spawn "flatpak" "run" "be.alexandervanhee.gradia"; }
-    Mod+D { spawn "zed"; }
-    Mod+B { spawn "brave-browser"; }
+    Mod+D { spawn "code"; }
+    Mod+B { spawn "brave-origin-beta"; }
 
     // Accessibility
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
@@ -255,7 +553,7 @@ binds {
     // Window & Navigation
     // ---------------------------
     Mod+O repeat=false { toggle-overview; }
-    Mod+Q repeat=false { close-window; }
+    Mod+Shift+Q repeat=false { close-window; }
 
     Mod+Left  { focus-column-left; }
     Mod+Right { focus-column-right; }
@@ -380,3 +678,4 @@ binds {
 include "dms/outputs.kdl"
 include "dms/binds.kdl"
 include "dms/windowrules.kdl"
+include "dms/cursor.kdl"
