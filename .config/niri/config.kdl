@@ -2,7 +2,7 @@
 // General
 // ==================================================
 
-prefer-no-csd // prefer server-side decorations for consistent tiling
+prefer-no-csd
 
 
 // ==================================================
@@ -11,20 +11,13 @@ prefer-no-csd // prefer server-side decorations for consistent tiling
 
 input {
     keyboard {
-        numlock // enable numlock on startup
+        numlock
     }
 
     touchpad {
         off
         tap
-        // dwt
-        // dwtp
-        // drag false
-        // drag-lock
         natural-scroll
-        // accel-speed 0.2
-        // accel-profile "flat"
-        // scroll-method "two-finger"
     }
 
     focus-follows-mouse max-scroll-amount="0%"
@@ -35,19 +28,15 @@ input {
 // Outputs (Monitors)
 // ==================================================
 
-// Main Monitor
 output "eDP-1" {
-	mode "1920x1080@144.000"
-	//mode "1920x1080@60.002"
-	position x=1920 y=0
-	focus-at-startup
-    // scale 1.1
+    mode "1920x1080@144.000"
+    position x=1920 y=0
+    focus-at-startup
 }
 
-// Second Monitor (Left side)
 output "HDMI-A-1" {
-	mode "1920x1080@99.999"
-	position x=0 y=0
+    mode "1920x1080@99.999"
+    position x=0 y=0
 }
 
 
@@ -57,7 +46,6 @@ output "HDMI-A-1" {
 
 layout {
     gaps 12
-
     center-focused-column "never"
 
     preset-column-widths {
@@ -85,7 +73,6 @@ layout {
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 hotkey-overlay {
-    // disable the "Important Hotkeys" pop-up at startup.
     skip-at-startup
 }
 
@@ -94,364 +81,129 @@ hotkey-overlay {
 // Window Rules
 // ==================================================
 
-// Wezterm column behavior
+// Global corner radius
 window-rule {
-    match app-id=r#"^org\.wezfurlong\.wezterm$"#
-    default-column-width {}
+    geometry-corner-radius 8
+    clip-to-geometry true
 }
 
-// Floating utility apps
+// Global blur — applies to all apps listed
 window-rule {
-    match app-id="org.gnome.Nautilus"
+    match app-id="^Alacritty$"
+    match app-id="^brave-origin-beta$"
+    match app-id="^code$"
+    match app-id="^antigravity$"
+    match app-id="^com.dec05eba.gpu_screen_recorder$"
+    match app-id="^localsend$"
+    match app-id="^org.gnome.Software$"
+    match app-id="^obsidian$"
+    match app-id="^org.gnome.Showtime$"
+    match app-id="^org.gnome.Loupe$"
+    match app-id="^Audacity$"
+    match app-id="^Flowblade$"
+    match app-id="^org.gnome.Logs$"
+    match app-id="^LosslessCut$"
+    match app-id="^org.quickshell$"
+    match app-id="^org.kde.easyeffects$"
+    match app-id="^org.gnome.TextEditor$"
+    match app-id="^ONLYOFFICE$"
+    match app-id="^org.gnome.Papers$"
+    match app-id="^org.signal.Signal$"
+    match app-id="^btrfs-assistant$"
+    match app-id="^org.gnome.Nautilus$"
+
+    opacity 0.85
+    draw-border-with-background false
+    background-effect {
+        blur true
+    }
+    popups {
+        opacity 0.95
+    }
+}
+
+// Alacritty — non-xray blur
+window-rule {
+    match app-id="^Alacritty$"
+    background-effect {
+        xray false
+    }
+}
+
+// Floating apps
+window-rule {
+    match app-id="^org.gnome.Nautilus$"
+    background-effect {
+        xray false
+    }
     open-floating true
     default-column-width { proportion 0.4; }
     default-window-height { fixed 500; }
 }
+
 window-rule {
-    match app-id="localsend"
+    match app-id="^localsend$"
     open-floating true
+    background-effect {
+        xray false
+    }
     default-column-width { proportion 0.25; }
     default-window-height { fixed 600; }
 }
 
 window-rule {
-    match app-id="be.alexandervanhee.gradia"
+    match app-id="^be.alexandervanhee.gradia$"
     open-floating true
     default-column-width { proportion 0.5; }
     default-window-height { fixed 700; }
 }
 
 window-rule {
-    match app-id="btrfs-assistant"
+    match app-id="^btrfs-assistant$"
     open-floating true
     default-column-width { proportion 0.35; }
     default-window-height { fixed 500; }
 }
 
 window-rule {
-    match app-id="org.quickshell"
+    match app-id="^org.quickshell$"
     open-floating true
+    background-effect {
+        xray false
+    }
+
     default-column-width { proportion 0.4; }
     default-window-height { fixed 750; }
 }
-// Browwsers
-window-rule {
-    match app-id="brave-origin-beta"
-    open-maximized true
-    opacity 0.85
-    draw-border-with-background false
-    background-effect {
-        xray true
-        blur true
-    }
-    popups {
-        opacity 0.9
-    }
-}
 
 window-rule {
-    match app-id="firefox"
-    open-maximized true
-}
-
-window-rule {
-    match app-id="antigravity"
-    open-maximized true
-}
-
-window-rule {
-    match app-id="code"
-    open-maximized true
-}
-
-
-// Global window geometry
-window-rule {
-    geometry-corner-radius 8
-    clip-to-geometry true
-}
-
-window-rule {
-    match app-id="^Alacritty"
-
-    background-effect {
-        blur true
-        xray false
-    }
-}
-
-window-rule {
-    match app-id="org.gnome.Nautilus"
-    opacity 0.85
-    draw-border-with-background false
-    background-effect {
-        xray true
-        blur true
-    }
-    popups {
-        opacity 0.95
-    }
-}
-
-window-rule {
-    match app-id="code"
-    opacity 0.85
-    draw-border-with-background false
-    background-effect {
-        xray true
-        blur true
-    }
-    popups {
-        opacity 0.95
-    }
-}
-
-window-rule {
-    match app-id="antigravity"
-    opacity 0.85
-    draw-border-with-background false
-    background-effect {
-        xray true
-        blur true
-    }
-    popups {
-        opacity 0.95
-    }
-}
-
-window-rule {
-    match app-id="com.dec05eba.gpu_screen_recorder"
-    opacity 0.85
-    draw-border-with-background false
-    background-effect {
-        xray true
-        blur true
-    }
-    popups {
-        opacity 0.95
-    }
-}
-
-window-rule {
-    match app-id="localsend"
-    opacity 0.85
-    draw-border-with-background false
-    background-effect {
-        xray true
-        blur true
-    }
-    popups {
-        opacity 0.95
-    }
-}
-
-window-rule {
-    match app-id="org.gnome.Software"
-    opacity 0.85
-    draw-border-with-background false
-    background-effect {
-        xray true
-        blur true
-    }
-    popups {
-        opacity 0.95
-    }
-}
-
-window-rule {
-    match app-id="obsidian"
-    opacity 0.85
-    draw-border-with-background false
-    background-effect {
-        xray true
-        blur true
-    }
-    popups {
-        opacity 0.95
-    }
-}
-
-window-rule {
-    match app-id="org.gnome.Showtime"
-    opacity 0.85
+    match app-id="^org.gnome.Showtime$"
     open-floating true
-    draw-border-with-background false
-    
-    background-effect {
-        xray true
-        blur true
-    }
-    popups {
-        opacity 0.95
-    }
-}
-window-rule {
-    match app-id="org.gnome.Loupe"
-    opacity 0.85
-    draw-border-with-background false
-    background-effect {
-        xray true
-        blur true
-    }
-    popups {
-        opacity 0.95
-    }
-}
-window-rule {
-    match app-id="org.gnome.tweaks"
-    opacity 0.85
-    draw-border-with-background false
-    background-effect {
-        xray true
-        blur true
-    }
-    popups {
-        opacity 0.95
-    }
-}
-window-rule {
-    match app-id="Audacity"
-    opacity 0.85
-    draw-border-with-background false
-    background-effect {
-        xray true
-        blur true
-    }
-    popups {
-        opacity 0.95
-    }
-}
-window-rule {
-    match app-id="Flowblade"
-    opacity 0.85
-    draw-border-with-background false
-    background-effect {
-        xray true
-        blur true
-    }
-    popups {
-        opacity 0.95
-    }
 }
 
+// Maximized apps
 window-rule {
-    match app-id="org.gnome.Logs"
-    opacity 0.85
-    draw-border-with-background false
-    background-effect {
-        xray true
-        blur true
-    }
-    popups {
-        opacity 0.95
-    }
+    match app-id="^brave-origin-beta$"
+    match app-id="^firefox$"
+    match app-id="^antigravity$"
+    match app-id="^code$"
+    open-maximized true
 }
 
+// Wezterm
 window-rule {
-    match app-id="LosslessCut"
-    opacity 0.85
-    draw-border-with-background false
-    background-effect {
-        xray true
-        blur true
-    }
-    popups {
-        opacity 0.95
-    }
-}
-
-window-rule {
-    match app-id="org.quickshell"
-    opacity 0.85
-    draw-border-with-background false
-    background-effect {
-        xray true
-        blur true
-    }
-    popups {
-        opacity 0.95
-    }
-}
-
-window-rule {
-    match app-id="org.kde.easyeffects"
-    opacity 0.85
-    draw-border-with-background false
-    background-effect {
-        xray true
-        blur true
-    }
-    popups {
-        opacity 0.95
-    }
-}
-
-window-rule {
-    match app-id="org.gnome.TextEditor"
-    opacity 0.85
-    draw-border-with-background false
-    background-effect {
-        xray true
-        blur true
-    }
-    popups {
-        opacity 0.95
-    }
-}
-window-rule {
-    match app-id="ONLYOFFICE"
-    opacity 0.85
-    draw-border-with-background false
-    background-effect {
-        xray true
-        blur true
-    }
-    popups {
-        opacity 0.95
-    }
-}
-
-window-rule {
-    match app-id="org.gnome.Papers"
-    opacity 0.85
-    draw-border-with-background false
-    background-effect {
-        xray true
-        blur true
-    }
-    popups {
-        opacity 0.95
-    }
-}
-
-window-rule {
-    match app-id="org.signal.Signal"
-    opacity 0.85
-    draw-border-with-background false
-    background-effect {
-        xray true
-        blur true
-    }
-    popups {
-        opacity 0.95
-    }
-}
-
-window-rule {
-    match app-id="btrfs-assistant"
-    opacity 0.85
-    draw-border-with-background false
-    background-effect {
-        xray true
-        blur true
-    }
-    popups {
-        opacity 0.95
-    }
+    match app-id=r#"^org\.wezfurlong\.wezterm$"#
+    default-column-width {}
 }
 
 
+// ==================================================
+// Overview
+// ==================================================
 
+overview {
+    backdrop-color "#1e2030"
+}
 
 
 // ==================================================
@@ -472,15 +224,17 @@ recent-windows {
     previews {
         max-height 100
     }
+
     binds {
-        Alt+Tab         { next-window     scope="workspace"; }
-        Alt+Shift+Tab   { previous-window scope="workspace"; }
+        Alt+Tab       { next-window     scope="workspace"; }
+        Alt+Shift+Tab { previous-window scope="workspace"; }
     }
 }
 
+
 // ==================================================
-// fixed workspaces
-// ==================================================\
+// Workspaces
+// ==================================================
 
 workspace "1"
 workspace "2"
@@ -488,71 +242,49 @@ workspace "3"
 workspace "4"
 workspace "5"
 
+
 // ==================================================
 // Keybinds
 // ==================================================
 
 binds {
 
-    // ---------------------------
     // Display / Mirror
-    // ---------------------------
     Mod+P repeat=false { spawn-sh "wl-mirror $(niri msg --json focused-output | jq -r .name)"; }
 
-    // ---------------------------
     // DMS Integrations
-    // ---------------------------
-    Ctrl+Space {
-        spawn "dms" "ipc" "call" "spotlight" "toggle";
-    }
-    Mod+Period {
-        spawn "dms" "ipc" "call" "clipboard" "toggle";
-    }
-    Mod+I {
-        spawn "dms" "ipc" "call" "settings" "focusOrToggle";
-    }
+    Ctrl+Space  { spawn "dms" "ipc" "call" "spotlight" "toggle"; }
+    Mod+Period  { spawn "dms" "ipc" "call" "clipboard" "toggle"; }
+    Mod+I       { spawn "dms" "ipc" "call" "settings" "focusOrToggle"; }
 
-    // ---------------------------
     // App Launchers
-    // ---------------------------
-    Mod+Return { spawn "alacritty"; }
-    Super+Alt+L { spawn "swaylock"; }
-    Super+E { spawn "nautilus"; }
-    Mod+Comma { spawn "flatpak" "run" "emote"; }
+    Mod+Return      { spawn "alacritty"; }
+    Super+Alt+L     { spawn "swaylock"; }
+    Super+E         { spawn "nautilus"; }
+    Mod+Comma       { spawn "flatpak" "run" "emote"; }
     Ctrl+Shift+Print { spawn "flatpak" "run" "be.alexandervanhee.gradia"; }
-    Mod+D { spawn "code"; }
-    Mod+B { spawn "brave-origin-beta"; }
+    Mod+D           { spawn "code"; }
+    Mod+B           { spawn "brave-origin-beta"; }
 
     // Accessibility
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
 
-    // ---------------------------
-    // Audio Controls
-    // ---------------------------
+    // Audio
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
     XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
     XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
-
     XF86AudioPlay        allow-when-locked=true { spawn-sh "playerctl play-pause"; }
     XF86AudioStop        allow-when-locked=true { spawn-sh "playerctl stop"; }
     XF86AudioPrev        allow-when-locked=true { spawn-sh "playerctl previous"; }
     XF86AudioNext        allow-when-locked=true { spawn-sh "playerctl next"; }
 
-    // ---------------------------
     // Brightness
-    // ---------------------------
-    XF86MonBrightnessUp allow-when-locked=true {
-       spawn "dms" "ipc" "call" "brightness" "increment" "5" "";
-    }
-    XF86MonBrightnessDown allow-when-locked=true {
-       spawn "dms" "ipc" "call" "brightness" "decrement" "5" "";
-    }
+    XF86MonBrightnessUp   allow-when-locked=true { spawn "dms" "ipc" "call" "brightness" "increment" "5" ""; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn "dms" "ipc" "call" "brightness" "decrement" "5" ""; }
 
-    // ---------------------------
     // Window & Navigation
-    // ---------------------------
-    Mod+O repeat=false { toggle-overview; }
+    Mod+O repeat=false  { toggle-overview; }
     Mod+Shift+Q repeat=false { close-window; }
 
     Mod+Left  { focus-column-left; }
@@ -565,8 +297,8 @@ binds {
     Super+Shift+Up    { move-window-up; }
     Super+Shift+Right { move-column-right; }
 
-    Mod+Home { focus-column-first; }
-    Mod+End  { focus-column-last; }
+    Mod+Home      { focus-column-first; }
+    Mod+End       { focus-column-last; }
     Mod+Ctrl+Home { move-column-to-first; }
     Mod+Ctrl+End  { move-column-to-last; }
 
@@ -580,10 +312,7 @@ binds {
     Mod+Shift+Ctrl+Up    { move-column-to-monitor-up; }
     Mod+Shift+Ctrl+Right { move-column-to-monitor-right; }
 
-    // ---------------------------
-    // Workspace Control
-    // ---------------------------
-
+    // Workspaces
     Mod+Shift+Page_Down { move-workspace-down; }
     Mod+Shift+Page_Up   { move-workspace-up; }
 
@@ -592,9 +321,7 @@ binds {
     Mod+Ctrl+WheelScrollDown cooldown-ms=150 { move-column-to-workspace-down; }
     Mod+Ctrl+WheelScrollUp   cooldown-ms=150 { move-column-to-workspace-up; }
 
-    // ---------------------------
-    // Column Control
-    // ---------------------------
+    // Columns
     Mod+WheelScrollRight      { focus-column-right; }
     Mod+WheelScrollLeft       { focus-column-left; }
     Mod+Ctrl+WheelScrollRight { move-column-right; }
@@ -605,9 +332,7 @@ binds {
     Mod+Ctrl+Shift+WheelScrollDown { move-column-right; }
     Mod+Ctrl+Shift+WheelScrollUp   { move-column-left; }
 
-    // ---------------------------
     // Direct Workspace Jump
-    // ---------------------------
     Mod+1 { focus-workspace 1; }
     Mod+2 { focus-workspace 2; }
     Mod+3 { focus-workspace 3; }
@@ -628,44 +353,36 @@ binds {
     Mod+Shift+8 { move-column-to-workspace 8; }
     Mod+Shift+9 { move-column-to-workspace 9; }
 
-    // ---------------------------
     // Window Behavior
-    // ---------------------------
     Mod+BracketLeft  { consume-or-expel-window-left; }
     Mod+BracketRight { consume-or-expel-window-right; }
 
-    Mod+R { switch-preset-column-width; }
+    Mod+R       { switch-preset-column-width; }
     Mod+Shift+R { switch-preset-window-height; }
-    Mod+Ctrl+R { reset-window-height; }
+    Mod+Ctrl+R  { reset-window-height; }
 
-    Mod+F { maximize-column; }
+    Mod+F       { maximize-column; }
     Mod+Shift+F { fullscreen-window; }
-    Mod+Ctrl+F { expand-column-to-available-width; }
+    Mod+Ctrl+F  { expand-column-to-available-width; }
 
-    Mod+C { center-column; }
-    Mod+Ctrl+C { center-visible-columns; }
+    Mod+C       { center-column; }
+    Mod+Ctrl+C  { center-visible-columns; }
 
-    Mod+Minus { set-column-width "-10%"; }
-    Mod+Equal { set-column-width "+10%"; }
-
+    Mod+Minus       { set-column-width "-10%"; }
+    Mod+Equal       { set-column-width "+10%"; }
     Mod+Shift+Minus { set-window-height "-10%"; }
     Mod+Shift+Equal { set-window-height "+10%"; }
 
     Mod+V       { toggle-window-floating; }
     Mod+Shift+V { switch-focus-between-floating-and-tiling; }
+    Mod+W       { toggle-column-tabbed-display; }
 
-    Mod+W { toggle-column-tabbed-display; }
-
-    // ---------------------------
     // Screenshots
-    // ---------------------------
-    Print { screenshot; }
-    Ctrl+Print { screenshot-screen; }
-    Alt+Print { screenshot-window; }
+    Print       { screenshot; }
+    Ctrl+Print  { screenshot-screen; }
+    Alt+Print   { screenshot-window; }
 
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
-
-    // The quit action will show a confirmation dialog to avoid accidental exits.
     Mod+Shift+E { quit; }
     Ctrl+Alt+Delete { quit; }
 }
