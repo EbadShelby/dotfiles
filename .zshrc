@@ -1,7 +1,6 @@
-# show a gradient text on launch
-echo -e "\e[1mFedora Workstation\e[0m" | lolcat -b -g 3c6eb4:00ffff
-echo ""
-
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
@@ -30,8 +29,9 @@ setopt hist_find_no_dups
 
 alias cls='clear'
 
-alias zshconfig="micro ~/.zshrc"
-alias kittyconf="micro ~/.config/kitty/kitty.conf"
+alias zshconfig="fresh ~/.zshrc"
+alias alacconf="fresh ~/.config/alacritty/alacritty.toml"
+alias niriconf="fresh ~/.config/niri/config.kdl"
 
 alias upd="sudo dnf upgrade --refresh"
 alias dnf='dnf5'
@@ -74,7 +74,7 @@ alias lampp-status="systemctl status httpd mysqld php-fpm"
 
 
 # flatpak
-alias fpi='flatpak install flathub'
+alias fpi='flatpak install --user flathub'
 alias fpu='flatpak update'
 alias fpr='flatpak uninstall --delete-data'
 alias fps='flatpak search'
@@ -101,24 +101,29 @@ alias chatcont='mods --continue'
 #nano
 alias nano='nano -/'
 
+alias cmatrix='cmatrix -b -C blue'
+
 #pomo
 alias pomoconfig="micro ~/.config/pomo/pomo.yaml"
 
 #espanso
 alias espconfig="micro .config/espanso/match/base.yml"
 
+DISABLE_AUTO_TITLE="true"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Catppuccin Macchiato theme for fzf
 export FZF_DEFAULT_OPTS=" \
---color=bg+:#363a4f,bg:#24273a,spinner:#f4dbd6,hl:#ed8796 \
---color=fg:#cad3f5,header:#ed8796,info:#c6a0f6,pointer:#f4dbd6 \
---color=marker:#f4dbd6,fg+:#cad3f5,prompt:#c6a0f6,hl+:#ed8796"
+--color=bg+:#363A4F,bg:#24273A,spinner:#F4DBD6,hl:#ED8796 \
+--color=fg:#CAD3F5,header:#ED8796,info:#C6A0F6,pointer:#F4DBD6 \
+--color=marker:#B7BDF8,fg+:#CAD3F5,prompt:#C6A0F6,hl+:#ED8796 \
+--color=selected-bg:#494D64 \
+--color=border:#6E738D,label:#CAD3F5"
 
 # Set fresh as the default editor
-export EDITOR='micro'
-export VISUAL='micro'
+export EDITOR='fresh'
+export VISUAL='fresh'
 
 export HARLEQUIN_CONFIG_PATH="$HOME/.config/harlequin/profiles.toml"
 
@@ -129,3 +134,4 @@ eval "$(zoxide init --cmd cd zsh)"
 
 # opencode
 export PATH=/home/stranger/.opencode/bin:$PATH
+export PATH="$HOME/.local/bin:$HOME/.config/composer/vendor/bin:$HOME/.npm-global/bin:$PATH"
