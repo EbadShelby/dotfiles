@@ -1,4 +1,85 @@
 // ==================================================
+// Keybinds Reference
+// ==================================================
+//
+// --- System ---
+// Mod+Shift+E          Quit niri
+// Ctrl+Alt+Delete      Quit niri
+// Super+Alt+L          Lock screen
+// Mod+Escape           Toggle keyboard shortcuts inhibit
+// Mod+P                Mirror focused output
+//
+// --- Apps ---
+// Mod+Return           Alacritty (terminal)
+// Mod+B                Brave browser
+// Mod+D                VS Code
+// Super+E              Nautilus (files)
+// Mod+Comma            Emote (emoji picker)
+// Ctrl+Shift+Print     Gradia (screenshot editor)
+//
+// --- DMS ---
+// Ctrl+Space           Spotlight toggle
+// Mod+Period           Clipboard toggle
+// Mod+I                Settings focus/toggle
+//
+// --- Audio ---
+// XF86AudioRaiseVolume / LowerVolume / Mute / MicMute
+// XF86AudioPlay / Stop / Prev / Next
+//
+// --- Brightness ---
+// XF86MonBrightnessUp / Down   (+/- 5%)
+//
+// --- Screenshots ---
+// Print                Region screenshot
+// Ctrl+Print           Full screen screenshot
+// Alt+Print            Window screenshot
+//
+// --- Windows ---
+// Mod+Shift+Q          Close window
+// Mod+V                Toggle floating
+// Mod+Shift+V          Switch focus floating/tiling
+// Mod+W                Toggle tabbed column
+// Mod+F                Maximize column
+// Mod+Shift+F          Fullscreen window
+// Mod+Ctrl+F           Expand column to available width
+// Mod+C                Center column
+// Mod+Ctrl+C           Center visible columns
+// Mod+R                Cycle preset column widths
+// Mod+Shift+R          Cycle preset window heights
+// Mod+Ctrl+R           Reset window height
+// Mod+Minus / Equal    Column width -/+ 10%
+// Mod+Shift+Minus/Equal  Window height -/+ 10%
+// Mod+BracketLeft/Right  Consume or expel window
+//
+// --- Focus ---
+// Mod+Arrow            Focus column/window (directional)
+// Mod+Home / End       Focus first/last column
+// Alt+Tab              Next window (workspace)
+// Alt+Shift+Tab        Previous window (workspace)
+//
+// --- Move Windows ---
+// Super+Shift+Arrow    Move column/window (directional)
+// Mod+Ctrl+Home/End    Move column to first/last
+//
+// --- Monitors ---
+// Mod+Shift+Arrow      Focus monitor (directional)
+// Mod+Shift+Ctrl+Arrow Move column to monitor (directional)
+//
+// --- Workspaces ---
+// Mod+1..9             Focus workspace N
+// Mod+Shift+1..9       Move column to workspace N
+// Mod+WheelUp/Down     Switch workspace
+// Mod+Ctrl+WheelUp/Down  Move column to workspace up/down
+// Mod+Shift+Page_Up/Down  Move workspace up/down
+//
+// --- Overview ---
+// Mod+O                Toggle overview
+//
+// --- Accessibility ---
+// Super+Alt+S          Toggle Orca screen reader
+
+
+// ==================================================
 // General
 // ==================================================
 
