@@ -74,7 +74,7 @@ alias lampp-status="systemctl status httpd mysqld php-fpm"
 
 
 # flatpak
-alias fpi='flatpak install --user flathub'
+alias fpi='flatpak install flathub'
 alias fpu='flatpak update'
 alias fpr='flatpak uninstall --delete-data'
 alias fps='flatpak search'
