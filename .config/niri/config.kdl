@@ -96,7 +96,7 @@ input {
     }
 
     touchpad {
-        off
+        // off
         tap
         natural-scroll
     }
@@ -110,7 +110,10 @@ input {
 // ==================================================
 
 output "eDP-1" {
-    mode "1920x1080@144.000"
+    // run 'niri msg outputs' to list your monitors info
+    
+    //mode "1920x1080@144.000"
+    //code "1920x1080@60.002"
     position x=1920 y=0
     focus-at-startup
 }
@@ -126,7 +129,7 @@ output "HDMI-A-1" {
 // ==================================================
 
 layout {
-    gaps 12
+    gaps 14
     center-focused-column "never"
 
     preset-column-widths {
@@ -171,7 +174,9 @@ window-rule {
 // Global blur — applies to all apps listed
 window-rule {
     match app-id="^Alacritty$"
-    match app-id="^brave-origin-beta$"
+    match app-id="^com.mitchellh.ghostty$"
+    match app-id="^brave-origin"
+    match app-id="^helium$"
     match app-id="^code$"
     match app-id="^antigravity$"
     match app-id="^com.dec05eba.gpu_screen_recorder$"
@@ -192,8 +197,9 @@ window-rule {
     match app-id="^org.signal.Signal$"
     match app-id="^btrfs-assistant$"
     match app-id="^org.gnome.Nautilus$"
+    match app-id="^helium$"
 
-    opacity 0.85
+    opacity 0.8
     draw-border-with-background false
     background-effect {
         blur true
@@ -218,8 +224,8 @@ window-rule {
         xray false
     }
     open-floating true
-    default-column-width { proportion 0.4; }
-    default-window-height { fixed 500; }
+    default-column-width { proportion 0.45; }
+    default-window-height { fixed 550; }
 }
 
 window-rule {
@@ -264,10 +270,12 @@ window-rule {
 
 // Maximized apps
 window-rule {
-    match app-id="^brave-origin-beta$"
+    match app-id="^brave-origin$"
     match app-id="^firefox$"
     match app-id="^antigravity$"
     match app-id="^code$"
+    match app-id="^helium$"
+    match app-id="^ONLYOFFICE$"
     open-maximized true
 }
 
@@ -317,11 +325,11 @@ recent-windows {
 // Workspaces
 // ==================================================
 
-workspace "1"
-workspace "2"
-workspace "3"
-workspace "4"
-workspace "5"
+// workspace "1"
+// workspace "2"
+// workspace "3"
+// workspace "4"
+// workspace "5"
 
 
 // ==================================================
@@ -331,8 +339,12 @@ workspace "5"
 binds {
 
     // Display / Mirror
-    Mod+P repeat=false { spawn-sh "wl-mirror $(niri msg --json focused-output | jq -r .name)"; }
+    //Mod+P repeat=false { spawn-sh "wl-mirror $(niri msg --json focused-output | jq -r .name)"; }
+    
+    Mod+P repeat=false { spawn-sh "wl-mirror --fullscreen-output HDMI-A-1 eDP-1"; }
 
+    // Mod+P repeat=false { spawn-sh "PROJECTOR=$(niri msg --json outputs | jq -r '.[] | select(.name != \"eDP-1\") | .name' | head -n 1); wl-mirror --fullscreen-output $PROJECTOR eDP-1"; }
+    
     // DMS Integrations
     Ctrl+Space  { spawn "dms" "ipc" "call" "spotlight" "toggle"; }
     Mod+Period  { spawn "dms" "ipc" "call" "clipboard" "toggle"; }
@@ -345,7 +357,7 @@ binds {
     Mod+Comma       { spawn "flatpak" "run" "emote"; }
     Ctrl+Shift+Print { spawn "flatpak" "run" "be.alexandervanhee.gradia"; }
     Mod+D           { spawn "code"; }
-    Mod+B           { spawn "brave-origin-beta"; }
+    Mod+B           { spawn "brave-origin"; }
 
     // Accessibility
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
@@ -456,7 +468,7 @@ binds {
 
     Mod+V       { toggle-window-floating; }
     Mod+Shift+V { switch-focus-between-floating-and-tiling; }
-    Mod+W       { toggle-column-tabbed-display; }
+    // Mod+W       { toggle-column-tabbed-display; }
 
     // Screenshots
     Print       { screenshot; }

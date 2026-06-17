@@ -1,70 +1,28 @@
 {
-    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
-    "logo": {
-        "type": "small",
-        "padding": {
-            "top": 1
-        }
-    },
-    "display": {
-        "separator": " "
-    },
-    "modules": [
-        {
-            "key": "╭───────────╮",
-            "type": "custom"
-        },
-        {
-            "key": "│ {#31} user    {#keys}│",
-            "type": "title",
-            "format": "{user-name}"
-        },
-        {
-            "key": "│ {#32}󰌢 host    {#keys}│",
-            "type": "custom",
-            "format": "ROG Strix G513RC"
-
-        },
-        {
-            "key": "│ {#33}{icon} distro  {#keys}│",
-            "type": "custom",
-            "format": "Fedora 43 (Workstation Edition)"
-        },
-        {
-            "key": "│ {#34} kernel  {#keys}│",
-            "type": "kernel"
-        },
-        {
-            "key": "│ {#35} wm      {#keys}│",
-            "type": "wm",
-            "format": "{1}"
-        },
-        {
-            "key": "│ {#36} shell   {#keys}│",
-            "type": "shell"
-        },
-        {
-            "key": "│ {#37}󰍛 cpu     {#keys}│",
-            "type": "cpu"
-        },
-        {
-            "key": "│ {#38}󰢮 gpu     {#keys}│",
-            "type": "gpu",
-            "hideType": "integrated",
-            "format": "{1} {2}"
-        },
-        {
-            "key": "├───────────┤",
-            "type": "custom"
-        },
-        {
-            "key": "│ {#39} colors  {#keys}│",
-            "type": "colors",
-            "symbol": "circle"
-        },
-        {
-            "key": "╰───────────╯",
-            "type": "custom"
-        }
-    ]
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "modules": [
+    "title",
+    "separator",
+    "os",
+    "host",
+    "kernel",
+    "uptime",
+    "shell",
+    "display",
+    "de",
+    "wm",
+    "wmtheme",
+    "theme",
+    "icons",
+    "font",
+    "cursor",
+    "terminal",
+    "terminalfont",
+    "cpu",
+    "gpu",
+    "memory",
+    "disk",
+    "break",
+    "colors"
+  ]
 }
