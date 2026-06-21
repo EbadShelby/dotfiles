@@ -56,7 +56,7 @@
 
 ### Shell
 
-* alacritty
+* kitty
 * **zsh** + **oh-my-zsh**
 
   * zoxide
@@ -71,23 +71,18 @@
 * fresh
 * snapper
 * pomo
+* dooit
 * xytz
-* clatype
-* tetro-tui
 * harlequin
 * mycli
 * lazygit
-* gh
-* gh-dash
 * opencode
 * tldr
 * bat
 * fd
 * fzf
 * ripgrep
-* aria2
 * lsd
-* glow
 * fastfetch
 
 ---
@@ -105,21 +100,17 @@
 
 ## Work
 
-* Zed
 * VSCode
 * virt-manager
 * Obsidian
 * ONLYOFFICE
-* Anki
-* Trello
 * Waydroid
-* Crossmacro
 
 ## Media
 
 * GPU Screen Recorder
 * Audacity
-* Shotcut
+* flowblade
 * Upscaler
 * Gradia
 * EasyEffects
@@ -127,12 +118,18 @@
 ## Web & Communication
 
 * Brave-origin
-* Firefox (with betterfox)
-* Signal Desktop
 * LocalSend
 * Bitwarden
-* Smile
+* Emote
 
 ---
 
-![Fedora Workstation](./.dotfiles-assets/star-history-100.png)
+## Star History
+
+<a href="https://www.star-history.com/?repos=EbadShelby%2Fdotfiles&type=date&legend=top-left">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=EbadShelby/dotfiles&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=EbadShelby/dotfiles&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=EbadShelby/dotfiles&type=date&legend=top-left" />
+ </picture>
+</a>
