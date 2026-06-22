@@ -15,13 +15,15 @@
 
 ## Niri (Wayland)
 
-![Fedora Workstation](./.dotfiles-assets/home-blur.png)
-![Fedora Workstation](./.dotfiles-assets/term-blur.png)
-![Fedora Workstation](./.dotfiles-assets/term-blur-2.png)
-![Fedora Workstation](./.dotfiles-assets/float-term-blur.png)
-![Fedora Workstation](./.dotfiles-assets/fedora-blur.png)
-![Fedora Workstation](./.dotfiles-assets/blur-brave.png)
-![Fedora Workstation](./.dotfiles-assets/code-blur.png)
+![Fedora Workstation](./.dotfiles-assets/niri-v2-home.png)
+![Fedora Workstation](./.dotfiles-assets/niri-v2-bar.png)
+![Fedora Workstation](./.dotfiles-assets/niri-v2-search.png)
+![Fedora Workstation](./.dotfiles-assets/niri-v2-terminal.png)
+![Fedora Workstation](./.dotfiles-assets/niri-v2-fastfetch.png)
+![Fedora Workstation](./.dotfiles-assets/niri-v2-fastfetch-floating.png)
+![Fedora Workstation](./.dotfiles-assets/niri-v2-fedora.png)
+![Fedora Workstation](./.dotfiles-assets/niri-v2-brave-origin.png)
+![Fedora Workstation](./.dotfiles-assets/niri-v2-vscode.png)
 
 ---
 
