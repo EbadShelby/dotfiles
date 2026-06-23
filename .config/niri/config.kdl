@@ -18,6 +18,7 @@ input {
         // off
         tap
         natural-scroll
+        scroll-factor 0.6
     }
 
     focus-follows-mouse max-scroll-amount="0%"
