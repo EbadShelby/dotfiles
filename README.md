@@ -4,6 +4,20 @@
 
 ---
 
+# 📑 Quick Navigation
+
+- [Desktop Environments](#desktop-environments)
+  - [GNOME](#gnome)
+  - [Niri (Wayland)](#niri-wayland)
+- [Desktop Configuration](#desktop-configuration)
+  - [Appearance](#appearance)
+  - [Extensions (GNOME)](#extensions-gnome)
+- [🛠 Terminal & CLI Tools](#-terminal--cli-tools)
+- [💻 Applications](#-applications)
+- [Star History](#star-history)
+
+---
+
 # Desktop Environments
 
 ## GNOME
