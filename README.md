@@ -89,10 +89,13 @@
 * pomo
 * dooit
 * xytz
+* ghgrab
+* glazepkg
 * harlequin
+* gemini-cli
+* opencode
 * mycli
 * lazygit
-* opencode
 * tldr
 * bat
 * fd
