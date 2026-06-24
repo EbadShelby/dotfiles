@@ -84,25 +84,24 @@
 
 ### CLI Utilities
 
-* fresh
-* snapper
-* pomo
-* dooit
-* xytz
-* ghgrab
-* glazepkg
-* harlequin
-* gemini-cli
-* opencode
-* mycli
-* lazygit
-* tldr
-* bat
-* fd
-* fzf
-* ripgrep
-* lsd
-* fastfetch
+* **fresh**        - An IDE/text editor in your terminal
+* **snapper**      - Btrfs snapshot and rollback manager
+* **dooit**        - Terminal todo/task manager
+* **xytz**         - majestic youtube video downloader
+* **ghgrab**       - quickly download files and repos from GitHub
+* **glazepkg**     - view installed tools from different sources in one view
+* **harlequin**    - Full-featured SQL IDE in the terminal
+* **gemini-cli**   - Google Gemini AI in the terminal
+* **opencode**     - AI coding assistant for the terminal
+* **mycli**        - Smart MySQL client with autocomplete
+* **lazygit**      - Terminal UI for Git
+* **tldr**         - Simplified command examples
+* **bat**          - Better cat with syntax highlighting
+* **fd**           - Fast and user-friendly find alternative
+* **fzf**          - Fuzzy finder for files and commands
+* **ripgrep**      - Ultra-fast text search tool
+* **lsd**          - Modern replacement for ls
+* **fastfetch**    - Fast system information display
 
 ---
 
