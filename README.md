@@ -124,6 +124,7 @@
 * Obsidian
 * ONLYOFFICE
 * Waydroid
+* Podman Desktop
 
 ## Media
 
