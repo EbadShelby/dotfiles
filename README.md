@@ -102,6 +102,7 @@
 * **ripgrep**      - Ultra-fast text search tool
 * **lsd**          - Modern replacement for ls
 * **fastfetch**    - Fast system information display
+* **podman-tui**   - tui for podman
 
 ---
 
