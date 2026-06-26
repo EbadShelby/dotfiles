@@ -29,15 +29,15 @@
 
 ## Niri (Wayland)
 
-![Fedora Workstation](./.dotfiles-assets/niri-v2-home.png)
-![Fedora Workstation](./.dotfiles-assets/niri-v2-bar.png)
-![Fedora Workstation](./.dotfiles-assets/niri-v2-search.png)
-![Fedora Workstation](./.dotfiles-assets/niri-v2-terminal.png)
-![Fedora Workstation](./.dotfiles-assets/niri-v2-fastfetch.png)
-![Fedora Workstation](./.dotfiles-assets/niri-v2-fastfetch-floating.png)
-![Fedora Workstation](./.dotfiles-assets/niri-v2-fedora.png)
-![Fedora Workstation](./.dotfiles-assets/niri-v2-brave-origin.png)
-![Fedora Workstation](./.dotfiles-assets/niri-v2-vscode.png)
+![Fedora Workstation](./.dotfiles-assets/niri-v3-home.png)
+![Fedora Workstation](./.dotfiles-assets/niri-v3-bar.png)
+![Fedora Workstation](./.dotfiles-assets/niri-v3-search.png)
+![Fedora Workstation](./.dotfiles-assets/niri-v3-terminal.png)
+![Fedora Workstation](./.dotfiles-assets/niri-v3-fastfetch.png)
+![Fedora Workstation](./.dotfiles-assets/niri-v3-fastfetch-floating.png)
+![Fedora Workstation](./.dotfiles-assets/niri-v3-fedora.png)
+![Fedora Workstation](./.dotfiles-assets/niri-v3-brave-origin.png)
+![Fedora Workstation](./.dotfiles-assets/niri-v3-vscode.png)
 
 ---
 
