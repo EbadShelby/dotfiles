@@ -8,7 +8,7 @@
 
 - [Desktop Environments](#desktop-environments)
   - [GNOME](#gnome)
-  - [Niri (Wayland)](#niri-wayland)
+  - [Niri (Wayland) + DankMaterialShell](#niri-wayland--dankmaterialshell)
 - [Desktop Configuration](#desktop-configuration)
   - [Appearance](#appearance)
   - [Extensions (GNOME)](#extensions-gnome)
@@ -27,7 +27,7 @@
 ![Fedora Workstation](./.dotfiles-assets/fedora-launcher.png)
 ![Fedora Workstation](./.dotfiles-assets/fedora-codee.png)
 
-## Niri (Wayland)
+## Niri (Wayland) + DankMaterialShell
 
 ![Fedora Workstation](./.dotfiles-assets/niri-v3-home.png)
 ![Fedora Workstation](./.dotfiles-assets/niri-v3-bar.png)
