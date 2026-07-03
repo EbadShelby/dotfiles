@@ -103,6 +103,7 @@
 * **lsd**          - Modern replacement for ls
 * **fastfetch**    - Fast system information display
 * **podman-tui**   - tui for podman
+* **tlp + tlp-rdw**   - better battery and power management daemon
 
 ---
 
