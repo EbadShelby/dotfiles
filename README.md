@@ -86,7 +86,6 @@
 
 * **fresh**        - An IDE/text editor in your terminal
 * **snapper**      - Btrfs snapshot and rollback manager
-* **dooit**        - Terminal todo/task manager
 * **xytz**         - majestic youtube video downloader
 * **ghgrab**       - quickly download files and repos from GitHub
 * **glazepkg**     - view installed tools from different sources in one view
@@ -116,16 +115,15 @@
 * Extension Manager
 * Tweaks
 * Flatseal
+* Gearlever
 * rog-control-center
 
 ## Work
 
 * VSCode
 * virt-manager
-* Obsidian
+* Helix Notes
 * ONLYOFFICE
-* Waydroid
-* Podman Desktop
 
 ## Media
 
@@ -134,7 +132,6 @@
 * flowblade
 * Upscaler
 * Gradia
-* EasyEffects
 
 ## Web & Communication
 
