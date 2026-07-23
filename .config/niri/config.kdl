@@ -3,6 +3,13 @@
 // ==================================================
 
 prefer-no-csd
+spawn-at-startup "wl-clip-persist" "--clipboard" "regular"
+
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+
+hotkey-overlay {
+    skip-at-startup
+}
 
 
 // ==================================================
@@ -15,7 +22,7 @@ input {
     }
 
     touchpad {
-        off
+//         off
         tap
         natural-scroll
         scroll-factor 0.5
@@ -31,9 +38,10 @@ input {
 
 output "eDP-1" {
     mode "1920x1080@144.000"
-    //mode "1920x1080@60.002"
+//     mode "1920x1080@60.002"
     position x=1920 y=0
     focus-at-startup
+//     scale 1.2
 }
 
 output "HDMI-A-1" {
@@ -43,8 +51,50 @@ output "HDMI-A-1" {
 
 
 // ==================================================
+// Window Rules
+// ==================================================
+
+// Global corner radius
+window-rule {
+    geometry-corner-radius 4
+    clip-to-geometry true
+}
+
+// Maximized apps
+window-rule {
+    match app-id="^brave-origin$"
+    match app-id="^firefox$"
+    match app-id="^antigravity$"
+    match app-id="^code$"
+    match app-id="^helium$"
+    match app-id="^ONLYOFFICE$"
+    match app-id="^Flowblade$"
+    match app-id="^Helixnotes$"
+    match app-id="^Arduino IDE$"
+    open-maximized true
+}
+
+// Floating apps
+window-rule {
+    open-floating true
+    
+    match app-id="^org.gnome.Nautilus$"
+    
+    background-effect {
+        xray false
+    }
+
+    default-column-width { fixed 942; }
+    default-window-height { fixed 602; }
+}
+
+// ==================================================
 // Layout & Visuals
 // ==================================================
+
+overview {
+    backdrop-color "#1e2030"
+}
 
 layout {
     gaps 12
@@ -66,158 +116,12 @@ layout {
         on
         draw-behind-window true
         softness 30
-        spread 5
+        spread 2
         offset x=0 y=5
         color "#0007"
     }
 }
 
-screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
-
-hotkey-overlay {
-    skip-at-startup
-}
-
-
-// ==================================================
-// Window Rules
-// ==================================================
-
-// Global corner radius
-window-rule {
-    geometry-corner-radius 2
-    clip-to-geometry true
-}
-
-// Global blur — applies to all apps listed
-window-rule {
-    match app-id="^Alacritty$"
-    match app-id="^kitty$"
-    match app-id="^com.mitchellh.ghostty$"
-    match app-id="^brave-origin"
-    match app-id="^helium$"
-    match app-id="^code$"
-    match app-id="^antigravity$"
-    match app-id="^com.dec05eba.gpu_screen_recorder$"
-    match app-id="^localsend$"
-    match app-id="^org.gnome.Software$"
-    match app-id="^obsidian$"
-    match app-id="^org.gnome.Showtime$"
-    match app-id="^org.gnome.Loupe$"
-    match app-id="^Audacity$"
-    match app-id="^Flowblade$"
-    match app-id="^org.gnome.Logs$"
-    match app-id="^LosslessCut$"
-    match app-id="^org.quickshell$"
-    match app-id="^org.kde.easyeffects$"
-    match app-id="^org.gnome.TextEditor$"
-    match app-id="^ONLYOFFICE$"
-    match app-id="^org.gnome.Papers$"
-    match app-id="^org.signal.Signal$"
-    match app-id="^btrfs-assistant$"
-    match app-id="^org.gnome.Nautilus$"
-    match app-id="^helium$"
-
-    opacity 0.8
-    draw-border-with-background false
-    background-effect {
-        blur true
-    }
-    popups {
-        opacity 0.95
-    }
-}
-
-// Alacritty — non-xray blur
-window-rule {
-    match app-id="^Alacritty$"
-    background-effect {
-        xray false
-    }
-}
-
-// Floating apps
-window-rule {
-    match app-id="^org.gnome.Nautilus$"
-    background-effect {
-        xray false
-    }
-    open-floating true
-    default-column-width { proportion 0.45; }
-    default-window-height { fixed 550; }
-}
-
-window-rule {
-    match app-id="^localsend$"
-    open-floating true
-    background-effect {
-        xray false
-    }
-    default-column-width { proportion 0.25; }
-    default-window-height { fixed 600; }
-}
-
-window-rule {
-    match app-id="^be.alexandervanhee.gradia$"
-    open-floating true
-    default-column-width { proportion 0.5; }
-    default-window-height { fixed 700; }
-}
-
-window-rule {
-    match app-id="^btrfs-assistant$"
-    open-floating true
-    default-column-width { proportion 0.35; }
-    default-window-height { fixed 500; }
-}
-
-window-rule {
-    match app-id="^org.quickshell$"
-    open-floating true
-    background-effect {
-        xray false
-    }
-
-    default-column-width { proportion 0.4; }
-    default-window-height { fixed 750; }
-}
-
-window-rule {
-    match app-id="^org.gnome.Showtime$"
-    open-floating true
-}
-
-// Maximized apps
-window-rule {
-    match app-id="^brave-origin$"
-    match app-id="^firefox$"
-    match app-id="^antigravity$"
-    match app-id="^code$"
-    match app-id="^helium$"
-    match app-id="^ONLYOFFICE$"
-    match app-id="^Flowblade$"
-    open-maximized true
-}
-
-// Wezterm
-window-rule {
-    match app-id=r#"^org\.wezfurlong\.wezterm$"#
-    default-column-width {}
-}
-
-
-// ==================================================
-// Overview
-// ==================================================
-
-overview {
-    backdrop-color "#1e2030"
-}
-
-
-// ==================================================
-// Recent Windows
-// ==================================================
 
 recent-windows {
     debounce-ms 500
@@ -240,11 +144,67 @@ recent-windows {
     }
 }
 
+workspace "1"
+workspace "2"
+workspace "3"
+workspace "4"
+workspace "5"
+
+animations {
+    workspace-switch {
+        spring damping-ratio=1.0 stiffness=1000 epsilon=0.0001
+    }
+
+    window-open {
+        duration-ms 160
+        curve "ease-out-expo"
+    }
+
+    window-close {
+        duration-ms 120
+        curve "ease-out-quad"
+    }
+
+    horizontal-view-movement {
+        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+    }
+
+    window-movement {
+        spring damping-ratio=1.0 stiffness=900 epsilon=0.0001
+    }
+
+    window-resize {
+        spring damping-ratio=1.0 stiffness=900 epsilon=0.0001
+    }
+
+    config-notification-open-close {
+        spring damping-ratio=0.6 stiffness=1000 epsilon=0.001
+    }
+
+    exit-confirmation-open-close {
+        spring damping-ratio=1.0 stiffness=500 epsilon=0.01
+    }
+
+    screenshot-ui-open {
+        duration-ms 200
+        curve "ease-out-quad"
+    }
+
+    overview-open-close {
+        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+    }
+
+    recent-windows-close {
+        spring damping-ratio=1.0 stiffness=900 epsilon=0.001
+    }
+}
+
 // ==================================================
 // Keybinds
 // ==================================================
 
 binds {
+    
     
     Mod+P repeat=false { spawn-sh "wl-mirror --fullscreen-output HDMI-A-1 eDP-1"; }
     
@@ -256,12 +216,15 @@ binds {
     // App Launchers
     Mod+Return      { spawn "kitty"; }
     Super+Alt+L     { spawn "swaylock"; }
-    Super+E         { spawn "nautilus"; }
+    Super+Ctrl+E         { spawn "nautilus"; }
+    Super+E { spawn "kitty" "-e" "yazi"; }
     Mod+Comma       { spawn "flatpak" "run" "emote"; }
     Ctrl+Shift+Print { spawn "flatpak" "run" "be.alexandervanhee.gradia"; }
     Mod+D           { spawn "code"; }
     Mod+B           { spawn "brave-origin"; }
 
+    Mod+Shift+B { spawn "dms" "ipc" "call" "bar" "toggle" "index" "0"; }   
+    
     // Accessibility
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
 
@@ -371,7 +334,6 @@ binds {
 
     Mod+V       { toggle-window-floating; }
     Mod+Shift+V { switch-focus-between-floating-and-tiling; }
-    // Mod+W       { toggle-column-tabbed-display; }
 
     // Screenshots
     Print       { screenshot; }
@@ -383,12 +345,3 @@ binds {
     Ctrl+Alt+Delete { quit; }
 }
 
-
-// ==================================================
-// External Includes
-// ==================================================
-
-include "dms/outputs.kdl"
-include "dms/binds.kdl"
-include "dms/windowrules.kdl"
-include "dms/cursor.kdl"
