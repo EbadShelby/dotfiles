@@ -87,13 +87,13 @@
 * **fresh**        - An IDE/text editor in your terminal
 * **snapper**      - Btrfs snapshot and rollback manager
 * **xytz**         - majestic youtube video downloader
-* **ghgrab**       - quickly download files and repos from GitHub
+* **fast-cli**     - network speed test on your terminal
 * **glazepkg**     - view installed tools from different sources in one view
 * **harlequin**    - Full-featured SQL IDE in the terminal
-* **gemini-cli**   - Google Gemini AI in the terminal
 * **opencode**     - AI coding assistant for the terminal
 * **mycli**        - Smart MySQL client with autocomplete
 * **lazygit**      - Terminal UI for Git
+* **yazi**         - Blazing fast file manager tui
 * **tldr**         - Simplified command examples
 * **bat**          - Better cat with syntax highlighting
 * **fd**           - Fast and user-friendly find alternative
@@ -102,7 +102,6 @@
 * **lsd**          - Modern replacement for ls
 * **fastfetch**    - Fast system information display
 * **podman-tui**   - tui for podman
-* **tlp + tlp-rdw**   - better battery and power management daemon
 
 ---
 
@@ -138,7 +137,6 @@
 * Brave-origin
 * LocalSend
 * Bitwarden
-* Emote
 
 ---
 
