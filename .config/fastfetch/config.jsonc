@@ -1,37 +1,67 @@
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
   "logo": {
-    "source": "~/.config/fastfetch/custom_logo.txt",
+    "type": "small",
+    "padding": {
+      "top": 1,
+      "left": 1,
+    }
+  },
+  "display": {
+    "constants": [
+      "───────────"
+    ]
   },
   "modules": [
-    "title",
-    "separator",
-    "os",
-    "host",
-    "kernel",
-    {
-    "type": "disk",
-    "key": "OS Age",
-    "folders": "/",
-    "format": "{days} days",
-    },
-    "uptime",
-    "shell",
-    "display",
-    "de",
-    "wm",
-    "wmtheme",
-    "theme",
-    "icons",
-    "font",
-    "cursor",
-    "terminal",
-    "terminalfont",
-    "cpu",
-    "gpu",
-    "memory",
-    "disk",
     "break",
-    "colors"
+    {
+      "type": "custom",
+      "format": "┌{$1}{$1}┐",
+      "outputColor": "90"
+    },
+    {
+      "key": "     ",
+      "type": "title",
+      "format": "{1}"
+    },
+    {
+      "type": "os",
+      "key": "    {icon} ",
+      "keyColor": "blue",
+      "format": "{2}"
+    },
+    {
+      "type": "host",
+      "key": "    {icon} ",
+      "keyColor": "blue",
+      "format": "{1}"
+    },
+    {
+      "key": "    {icon} ",
+      "type": "wm",
+      "format": "{1}"
+    },
+    {
+      "key": "    {icon} ",
+      "type": "shell",
+      "format": "{1}"
+    },
+    {
+      "key": "    {icon} ",
+      "type": "terminal",
+      "format": "{1}"
+    },
+    {
+      "type": "command",
+      "key": "    󰅐 ",
+      "text": "b=$(stat -c %W / 2>/dev/null); [ \"${b:-0}\" -le 0 ] && b=$(stat -c %Z /); echo \"$(( ($(date +%s) - b) / 86400 + 274 )) days\""
+    },
+    {
+      "type": "custom",
+      "format": "└{$1}{$1}┘",
+      "outputColor": "90"
+    },
+    "break"
+    
   ]
 }
