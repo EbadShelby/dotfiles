@@ -8,7 +8,7 @@
 
 - [Desktop Environments](#desktop-environments)
   - [GNOME](#gnome)
-  - [Niri (Wayland) + DankMaterialShell](#niri-wayland)
+  - [Niri (Wayland)](#niri-wayland)
 - [Desktop Configuration](#desktop-configuration)
   - [Appearance](#appearance)
   - [Extensions (GNOME)](#extensions-gnome)
