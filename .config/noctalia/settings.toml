@@ -1,0 +1,167 @@
+config_version = 8
+
+[bar.default]
+capsule_radius = 4
+center = []
+concave_edge_corners = false
+end = [ "tray", "notifications", "temp", "ram", "battery", "network", "volume", "clock" ]
+margin_ends = 0
+position = "bottom"
+radius = 0
+start = [ "launcher", "workspaces", "taskbar" ]
+widget_spacing = 12
+
+    [bar.default.dead_zone.actions]
+    scroll_down = "workspace-switch next"
+    scroll_up = "workspace-switch prev"
+
+[battery]
+warning_threshold = 40
+
+[control_center]
+hidden_tabs = [ "media", "screen-time" ]
+
+[dock]
+active_monitor_only = true
+
+[location]
+address = "Cotabato City, Philippines"
+
+[lockscreen]
+fingerprint = false
+
+[lockscreen_widgets]
+enabled = false
+schema_version = 2
+widget_order = [ "lockscreen-login-box@eDP-1" ]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+    box_height = 229.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 881.5
+    output = "eDP-1"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_weather = true
+
+[notification]
+position = "top_center"
+
+[shell]
+time_format = "{:%-I:%M %p}"
+
+    [shell.launcher]
+    categories = false
+    compact = true
+
+        [shell.launcher.providers.emoji]
+        global = true
+
+        [shell.launcher.providers.session]
+        global = true
+
+    [shell.panel]
+    open_near_click_control_center = true
+
+    [[shell.session.actions]]
+    action = "lock"
+    countdown_seconds = 0.0
+    enabled = false
+    shortcut = "1"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "logout"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "2"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "lock_and_suspend"
+    countdown_seconds = 0.0
+    enabled = false
+    shortcut = "3"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "reboot"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "4"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "shutdown"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "5"
+    variant = "destructive"
+
+[theme]
+builtin = "Catppuccin"
+custom_palette = "CatppuccinMochaBlue"
+source = "custom"
+
+[wallpaper]
+directory = "/home/ebadshelby/Pictures/wallpapers"
+transition = [ "disc" ]
+
+    [wallpaper.default]
+    path = "/home/ebadshelby/Pictures/wallpapers/IMG_20260729_195609.png"
+
+    [wallpaper.last]
+    path = "/home/ebadshelby/Pictures/wallpapers/IMG_20260729_195609.png"
+
+    [wallpaper.monitors.eDP-1]
+    path = "/home/ebadshelby/Pictures/wallpapers/IMG_20260729_195609.png"
+
+[widget.clock]
+format = "| {:%d %a} · {:%-I:%M %p}"
+
+    [widget.clock.actions]
+    left = "panel-toggle control-center home"
+
+[widget.launcher]
+color = "primary"
+custom_image = "/home/ebadshelby/Pictures/windows-legacy-svgrepo-com.svg"
+custom_image_colorize = true
+scale = 1.25
+
+[widget.network]
+show_label = false
+
+[widget.ram]
+display = "text"
+stat = "ram_pct"
+
+[widget.temp]
+display = "text"
+
+[widget.volume]
+show_label = false
+
+[widget.workspaces]
+active_pill_size = 1.5
+empty_color = "surface"
+occupied_color = "outline"
