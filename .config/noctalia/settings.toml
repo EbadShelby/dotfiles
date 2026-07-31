@@ -68,6 +68,7 @@ widget_order = [ "lockscreen-login-box@eDP-1" ]
 position = "top_center"
 
 [shell]
+corner_radius_scale = 0.40000000596046448
 time_format = "{:%-I:%M %p}"
 
     [shell.launcher]
@@ -154,6 +155,9 @@ show_label = false
 [widget.ram]
 display = "text"
 stat = "ram_pct"
+
+[widget.taskbar]
+only_active_workspace = true
 
 [widget.temp]
 display = "text"
