@@ -6,6 +6,7 @@ center = []
 concave_edge_corners = false
 end = [ "tray", "notifications", "temp", "ram", "battery", "network", "volume", "clock" ]
 margin_ends = 0
+padding = 10
 position = "bottom"
 radius = 0
 start = [ "launcher", "workspaces", "taskbar" ]
@@ -76,13 +77,18 @@ time_format = "{:%-I:%M %p}"
     compact = true
 
         [shell.launcher.providers.emoji]
-        global = true
+        global = false
+        prefix = "e"
 
         [shell.launcher.providers.session]
         global = true
 
+        [shell.launcher.providers.wallpaper]
+        prefix = "w"
+
     [shell.panel]
     open_near_click_control_center = true
+    wallpaper_position = "center"
 
     [[shell.session.actions]]
     action = "lock"
@@ -127,15 +133,19 @@ source = "custom"
 [wallpaper]
 directory = "/home/ebadshelby/Pictures/wallpapers"
 transition = [ "disc" ]
+transition_on_startup = true
+
+    [wallpaper.automation]
+    recursive = false
 
     [wallpaper.default]
-    path = "/home/ebadshelby/Pictures/wallpapers/IMG_20260729_195609.png"
+    path = "/home/ebadshelby/Pictures/wallpapers/lighthouse.jpg"
 
     [wallpaper.last]
-    path = "/home/ebadshelby/Pictures/wallpapers/IMG_20260729_195609.png"
+    path = "/home/ebadshelby/Pictures/wallpapers/lighthouse.jpg"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/ebadshelby/Pictures/wallpapers/IMG_20260729_195609.png"
+    path = "/home/ebadshelby/Pictures/wallpapers/lighthouse.jpg"
 
 [widget.clock]
 format = "| {:%d %a} · {:%-I:%M %p}"
@@ -145,22 +155,18 @@ format = "| {:%d %a} · {:%-I:%M %p}"
 
 [widget.launcher]
 color = "primary"
-custom_image = "/home/ebadshelby/Pictures/windows-legacy-svgrepo-com.svg"
-custom_image_colorize = true
-scale = 1.25
+custom_image = "/home/ebadshelby/Pictures/logos/niri.svg"
+glyph = "niri"
+scale = 2.2500000000000004
 
 [widget.network]
 show_label = false
 
 [widget.ram]
-display = "text"
 stat = "ram_pct"
 
 [widget.taskbar]
 only_active_workspace = true
-
-[widget.temp]
-display = "text"
 
 [widget.volume]
 show_label = false
