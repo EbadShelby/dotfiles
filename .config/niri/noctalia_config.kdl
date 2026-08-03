@@ -13,11 +13,6 @@ hotkey-overlay {
     skip-at-startup
 }
 
-debug {
-  // Allows notification actions and window activation from Noctalia.
-  honor-xdg-activation-with-invalid-serial
-}
-
 // ==================================================
 // Input
 // ==================================================
@@ -28,7 +23,7 @@ input {
     }
 
     touchpad {
-        off
+//         off
         tap
         natural-scroll
         scroll-factor 0.5
@@ -68,7 +63,7 @@ window-rule {
 
 // Maximized apps
 window-rule {
-    match app-id="^brave-origin$"
+    match app-id="^brave-browser$"
     match app-id="^firefox$"
     match app-id="^antigravity$"
     match app-id="^code$"
@@ -114,7 +109,7 @@ layout {
 
     focus-ring {
         width 3
-        active-color "#89b4fa"
+        active-color "#6c7086"
         inactive-color "#181825"
     }
 
@@ -183,6 +178,27 @@ animations {
     }
 }
 
+recent-windows {
+    debounce-ms 500
+    open-delay-ms 100
+
+    highlight {
+        active-color "#8aadf4ff"
+        urgent-color "#ed8796ff"
+        padding 8
+        corner-radius 4
+    }
+
+    previews {
+        max-height 200
+    }
+
+    binds {
+        Alt+Tab       { next-window     scope="workspace"; }
+        Alt+Shift+Tab { previous-window scope="workspace"; }
+    }
+}
+
 // ==================================================
 // Keybinds
 // ==================================================
@@ -194,9 +210,9 @@ binds {
 
     Ctrl+Space { spawn-sh "noctalia msg panel-toggle launcher"; }
     Mod+I { spawn-sh "noctalia msg settings-toggle"; }
-    Alt+Tab { spawn-sh "noctalia msg window-switcher"; }
     Mod+Shift+B { spawn "noctalia" "msg" "bar-toggle"; }
     Mod+Period { spawn "noctalia" "msg" "panel-toggle" "clipboard"; }
+    
     // App Launchers
     Mod+Return      { spawn "kitty"; }
     Super+Shift+L     { spawn "swaylock"; }
@@ -205,7 +221,7 @@ binds {
     Mod+Comma       { spawn "flatpak" "run" "emote"; }
     Ctrl+Shift+Print { spawn "flatpak" "run" "be.alexandervanhee.gradia"; }
     Mod+D           { spawn "code"; }
-    Mod+B           { spawn "brave-origin"; }
+    Mod+B           { spawn "helium"; }
 
     
     // Accessibility
@@ -319,7 +335,5 @@ binds {
     Alt+Print   { screenshot-window; }
 
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
-    Mod+Shift+E { quit; }
-    Ctrl+Alt+Delete { quit; }
 }
 

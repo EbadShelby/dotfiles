@@ -66,10 +66,19 @@ widget_order = [ "lockscreen-login-box@eDP-1" ]
         show_weather = true
 
 [notification]
-position = "top_center"
+border = false
+position = "bottom_center"
+
+[osd]
+border = false
+position = "bottom_center"
 
 [shell]
+button_borders = false
+card_borders = false
 corner_radius_scale = 0.40000000596046448
+input_borders = false
+popup_borders = false
 time_format = "{:%-I:%M %p}"
 
     [shell.launcher]
@@ -87,8 +96,9 @@ time_format = "{:%-I:%M %p}"
         prefix = "w"
 
     [shell.panel]
+    borders = false
     open_near_click_control_center = true
-    wallpaper_position = "center"
+    wallpaper_position = "bottom_right"
 
     [[shell.session.actions]]
     action = "lock"
@@ -126,8 +136,9 @@ time_format = "{:%-I:%M %p}"
     variant = "destructive"
 
 [theme]
-builtin = "Catppuccin"
+builtin = "Ayu"
 custom_palette = "CatppuccinMochaBlue"
+mode = "dark"
 source = "custom"
 
 [wallpaper]
@@ -139,15 +150,19 @@ transition_on_startup = true
     recursive = false
 
     [wallpaper.default]
-    path = "/home/ebadshelby/Pictures/wallpapers/lighthouse.jpg"
+    path = "/home/ebadshelby/Pictures/wallpapers/bunnies-road.png"
 
     [wallpaper.last]
-    path = "/home/ebadshelby/Pictures/wallpapers/lighthouse.jpg"
+    path = "/home/ebadshelby/Pictures/wallpapers/bunnies-road.png"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/ebadshelby/Pictures/wallpapers/lighthouse.jpg"
+    path = "/home/ebadshelby/Pictures/wallpapers/bunnies-road.png"
+
+[widget.battery]
+color = "#BAC2DE"
 
 [widget.clock]
+color = "#BAC2DE"
 format = "| {:%d %a} · {:%-I:%M %p}"
 
     [widget.clock.actions]
@@ -155,23 +170,35 @@ format = "| {:%d %a} · {:%-I:%M %p}"
 
 [widget.launcher]
 color = "primary"
-custom_image = "/home/ebadshelby/Pictures/logos/niri.svg"
+custom_image = "/home/ebadshelby/Pictures/logos/niri-gray.svg"
 glyph = "niri"
 scale = 2.2500000000000004
 
 [widget.network]
+icon_color = "#BAC2DE"
 show_label = false
 
+[widget.notifications]
+icon_color = "#BAC2DE"
+
 [widget.ram]
+color = "#BAC2DE"
+icon_color = "#BAC2DE"
 stat = "ram_pct"
 
 [widget.taskbar]
 only_active_workspace = true
 
+[widget.temp]
+color = "#BAC2DE"
+icon_color = "#BAC2DE"
+
 [widget.volume]
+icon_color = "#BAC2DE"
 show_label = false
 
 [widget.workspaces]
 active_pill_size = 1.5
 empty_color = "surface"
-occupied_color = "outline"
+focused_color = "outline"
+occupied_color = "surface_variant"
