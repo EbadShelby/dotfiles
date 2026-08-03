@@ -8,7 +8,7 @@
 
 - [Desktop Environments](#desktop-environments)
   - [GNOME](#gnome)
-  - [Niri (Wayland)](#niri-wayland)
+  - [Niri (Wayland)](#niri-wayland--noctalia)
 - [Desktop Configuration](#desktop-configuration)
   - [Appearance](#appearance)
   - [Extensions (GNOME)](#extensions-gnome)
@@ -27,17 +27,13 @@
 ![Fedora Workstation](./.dotfiles-assets/fedora-launcher.png)
 ![Fedora Workstation](./.dotfiles-assets/fedora-codee.png)
 
-## Niri (Wayland)
+## Niri (Wayland) + Noctalia
 
-![Fedora Workstation](./.dotfiles-assets/niri-v3-home.png)
-![Fedora Workstation](./.dotfiles-assets/niri-v3-bar.png)
-![Fedora Workstation](./.dotfiles-assets/niri-v3-search.png)
-![Fedora Workstation](./.dotfiles-assets/niri-v3-terminal.png)
-![Fedora Workstation](./.dotfiles-assets/niri-v3-fastfetch.png)
-![Fedora Workstation](./.dotfiles-assets/niri-v3-fastfetch-floating.png)
-![Fedora Workstation](./.dotfiles-assets/niri-v3-fedora.png)
-![Fedora Workstation](./.dotfiles-assets/niri-v3-brave-origin.png)
-![Fedora Workstation](./.dotfiles-assets/niri-v3-vscode.png)
+![Fedora Workstation](./.dotfiles-assets/dark-niri.png)
+![Fedora Workstation](./.dotfiles-assets/dark-noctalia.png)
+![Fedora Workstation](./.dotfiles-assets/dark-launcher.png)
+![Fedora Workstation](./.dotfiles-assets/dark-helium.png)
+![Fedora Workstation](./.dotfiles-assets/dark-fetch.png)
 
 ---
 
