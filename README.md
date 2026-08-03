@@ -41,9 +41,9 @@
 
 ### Appearance
 
-* **Theme:** Catppuccin Dark Macchiato
-* **Icons:** Kora
-* **Cursor:** Sunity
+* **Theme:** Catppuccin Dark Mocha
+* **Icons:** default
+* **Cursor:** default
 * **Terminal Font:** Monaspace Neon NF
 
 ---
@@ -87,7 +87,6 @@
 * **glazepkg**     - view installed tools from different sources in one view
 * **ghgrab**       - terminal tool that lets you browse and download files from GitHub
 * **usbtree**      - TUI for inspecting the USB device tree
-* **tuistore**     - find, search, and one-key-install hundreds of terminal apps
 * **harlequin**    - Full-featured SQL IDE in the terminal
 * **opencode**     - AI coding assistant for the terminal
 * **mycli**        - Smart MySQL client with autocomplete
@@ -99,6 +98,7 @@
 * **fzf**          - Fuzzy finder for files and commands
 * **ripgrep**      - Ultra-fast text search tool
 * **lsd**          - Modern replacement for ls
+* **nls**          - modern ls with useful tables
 * **fastfetch**    - Fast system information display
 * **podman-tui**   - tui for podman
 
@@ -127,13 +127,15 @@
 
 * GPU Screen Recorder
 * Audacity
-* flowblade
+* Davinci Resolve
+* Affinity
 * Upscaler
 * Gradia
 
 ## Web & Communication
 
 * Brave-origin
+* Helium
 * LocalSend
 * Bitwarden
 
