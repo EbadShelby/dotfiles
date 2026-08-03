@@ -85,6 +85,9 @@
 * **xytz**         - majestic youtube video downloader
 * **fast-cli**     - network speed test on your terminal
 * **glazepkg**     - view installed tools from different sources in one view
+* **ghgrab**       - terminal tool that lets you browse and download files from GitHub
+* **usbtree**      - TUI for inspecting the USB device tree
+* **tuistore**     - find, search, and one-key-install hundreds of terminal apps
 * **harlequin**    - Full-featured SQL IDE in the terminal
 * **opencode**     - AI coding assistant for the terminal
 * **mycli**        - Smart MySQL client with autocomplete
