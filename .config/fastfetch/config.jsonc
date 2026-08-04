@@ -54,7 +54,7 @@
     {
       "type": "command",
       "key": "    󰅐 ",
-      "text": "b=$(stat -c %W / 2>/dev/null); [ \"${b:-0}\" -le 0 ] && b=$(stat -c %Z /); echo \"$(( ($(date +%s) - b) / 86400 + 274 )) days\""
+      "text": "b=$(stat -c %W / 2>/dev/null); [ \"${b:-0}\" -le 0 ] && b=$(stat -c %Z /); echo \"$(( ($(date +%s) - b) / 86400 )) days\""
     },
     {
       "type": "custom",
