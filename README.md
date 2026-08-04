@@ -101,6 +101,7 @@
 * **nls**          - modern ls with useful tables
 * **fastfetch**    - Fast system information display
 * **podman-tui**   - tui for podman
+* **ps_mem**       - better way to show total ram usage of each app
 
 ---
 
@@ -115,10 +116,13 @@
 * Flatseal
 * Gearlever
 * rog-control-center
+* GDM settings
+* Gparted
 
 ## Work
 
 * VSCode
+* Antigravity
 * virt-manager
 * Helix Notes
 * ONLYOFFICE
@@ -128,16 +132,24 @@
 * GPU Screen Recorder
 * Audacity
 * Davinci Resolve
+* Kdenlive
+* Flowblade
 * Affinity
+* Photopea
 * Upscaler
 * Gradia
 
 ## Web & Communication
 
-* Brave-origin
+* Brave Browser
 * Helium
 * LocalSend
 * Bitwarden
+
+## Miscellaneous
+
+* Steam
+* Waydroid
 
 ---
 

@@ -40,14 +40,14 @@ input {
 output "eDP-1" {
     mode "1920x1080@144.000"
 //     mode "1920x1080@60.002"
-    position x=1920 y=0
+    position x=0 y=0
     focus-at-startup
 //     scale 1.2
 }
 
 output "HDMI-A-1" {
     mode "1920x1080@99.999"
-    position x=0 y=0
+    position x=1920 y=0
 }
 
 
@@ -72,8 +72,19 @@ window-rule {
     match app-id="^Flowblade$"
     match app-id="^Helixnotes$"
     match app-id="^Arduino IDE$"
+    match app-id="^chrome-jdklklfpinionkgpmghaghehojplfjio-Default$"
+    match app-id=r#"affinity"#
+    match app-id="^resolve$"
+    match app-id="^helixnotes$"
     open-maximized true
 }
+
+// DaVinci Resolve rule to block auto-fullscreen
+window-rule {
+    match app-id="^resolve$"
+    open-fullscreen false
+}
+
 
 // Floating apps
 window-rule {
@@ -109,7 +120,7 @@ layout {
 
     focus-ring {
         width 3
-        active-color "#6c7086"
+        active-color "#313244"
         inactive-color "#181825"
     }
 

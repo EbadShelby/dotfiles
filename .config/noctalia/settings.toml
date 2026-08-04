@@ -3,13 +3,17 @@ config_version = 8
 [bar.default]
 capsule_radius = 4
 center = []
+color = "#A6ADC8"
 concave_edge_corners = false
-end = [ "tray", "notifications", "temp", "ram", "battery", "network", "volume", "clock" ]
+end = [ "tray", "notifications", "temp", "ram", "cat", "battery", "network", "volume", "clock" ]
+font_family = "Ubuntu"
+icon_color = "#A6ADC8"
 margin_ends = 0
 padding = 10
 position = "bottom"
 radius = 0
 start = [ "launcher", "workspaces", "taskbar" ]
+thickness = 32
 widget_spacing = 12
 
     [bar.default.dead_zone.actions]
@@ -73,10 +77,15 @@ position = "bottom_center"
 border = false
 position = "bottom_center"
 
+[plugins]
+enabled = [ "dotnetrob/cat" ]
+
 [shell]
 button_borders = false
 card_borders = false
+clipboard_history_max_entries = 500
 corner_radius_scale = 0.40000000596046448
+font_family = "Ubuntu"
 input_borders = false
 popup_borders = false
 time_format = "{:%-I:%M %p}"
@@ -88,9 +97,6 @@ time_format = "{:%-I:%M %p}"
         [shell.launcher.providers.emoji]
         global = false
         prefix = "e"
-
-        [shell.launcher.providers.session]
-        global = true
 
         [shell.launcher.providers.wallpaper]
         prefix = "w"
@@ -141,6 +147,9 @@ custom_palette = "CatppuccinMochaBlue"
 mode = "dark"
 source = "custom"
 
+    [theme.templates]
+    enable_builtin_templates = false
+
 [wallpaper]
 directory = "/home/ebadshelby/Pictures/wallpapers"
 transition = [ "disc" ]
@@ -159,10 +168,15 @@ transition_on_startup = true
     path = "/home/ebadshelby/Pictures/wallpapers/bunnies-road.png"
 
 [widget.battery]
-color = "#BAC2DE"
+show_label = false
+
+[widget.cat]
+cat_color = "#A6ADC8"
+cat_color_mode = "custom"
+type = "dotnetrob/cat:cat"
 
 [widget.clock]
-color = "#BAC2DE"
+color = "#A6ADC8"
 format = "| {:%d %a} · {:%-I:%M %p}"
 
     [widget.clock.actions]
@@ -175,26 +189,19 @@ glyph = "niri"
 scale = 2.2500000000000004
 
 [widget.network]
-icon_color = "#BAC2DE"
 show_label = false
 
-[widget.notifications]
-icon_color = "#BAC2DE"
-
 [widget.ram]
-color = "#BAC2DE"
-icon_color = "#BAC2DE"
+show_label = false
 stat = "ram_pct"
 
 [widget.taskbar]
 only_active_workspace = true
 
 [widget.temp]
-color = "#BAC2DE"
-icon_color = "#BAC2DE"
+show_label = false
 
 [widget.volume]
-icon_color = "#BAC2DE"
 show_label = false
 
 [widget.workspaces]
