@@ -142,7 +142,6 @@
 ## Web & Communication
 
 * Brave Browser
-* Helium
 * LocalSend
 * Bitwarden
 
