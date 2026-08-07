@@ -5,7 +5,7 @@ capsule_radius = 4
 center = []
 color = "#A6ADC8"
 concave_edge_corners = false
-end = [ "tray", "notifications", "temp", "ram", "cat", "battery", "network", "volume", "clock" ]
+end = [ "tray", "notifications", "temp", "ram", "battery", "network", "volume", "clock" ]
 font_family = "Ubuntu"
 icon_color = "#A6ADC8"
 margin_ends = 0
@@ -25,6 +25,24 @@ warning_threshold = 40
 
 [control_center]
 hidden_tabs = [ "media", "screen-time" ]
+
+    [[control_center.shortcuts]]
+    type = "wifi"
+
+    [[control_center.shortcuts]]
+    type = "bluetooth"
+
+    [[control_center.shortcuts]]
+    type = "caffeine"
+
+    [[control_center.shortcuts]]
+    type = "nightlight"
+
+    [[control_center.shortcuts]]
+    type = "power_profile"
+
+    [[control_center.shortcuts]]
+    type = "notification"
 
 [dock]
 active_monitor_only = true
@@ -78,7 +96,7 @@ border = false
 position = "bottom_center"
 
 [plugins]
-enabled = [ "dotnetrob/cat" ]
+enabled = []
 
 [shell]
 button_borders = false
@@ -170,14 +188,9 @@ transition_on_startup = true
 [widget.battery]
 show_label = false
 
-[widget.cat]
-cat_color = "#A6ADC8"
-cat_color_mode = "custom"
-type = "dotnetrob/cat:cat"
-
 [widget.clock]
 color = "#A6ADC8"
-format = "| {:%d %a} · {:%-I:%M %p}"
+format = "|  {:%d %a} · {:%-I:%M %p}"
 
     [widget.clock.actions]
     left = "panel-toggle control-center home"
