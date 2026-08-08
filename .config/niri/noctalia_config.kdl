@@ -74,17 +74,11 @@ window-rule {
     match app-id="^Arduino IDE$"
     match app-id="^chrome-jdklklfpinionkgpmghaghehojplfjio-Default$"
     match app-id=r#"affinity"#
-    match app-id="^resolve$"
     match app-id="^helixnotes$"
+    match app-id="^antigravity-ide$"
+    match app-id="^org.kde.kdenlive$"
     open-maximized true
 }
-
-// DaVinci Resolve rule to block auto-fullscreen
-window-rule {
-    match app-id="^resolve$"
-    open-fullscreen false
-}
-
 
 // Floating apps
 window-rule {
@@ -99,7 +93,6 @@ window-rule {
     default-column-width { fixed 942; }
     default-window-height { fixed 602; }
 }
-
 // ==================================================
 // Layout & Visuals
 // ==================================================
@@ -232,7 +225,7 @@ binds {
     Mod+Comma       { spawn "flatpak" "run" "emote"; }
     Ctrl+Shift+Print { spawn "flatpak" "run" "be.alexandervanhee.gradia"; }
     Mod+D           { spawn "code"; }
-    Mod+B           { spawn "helium"; }
+    Mod+B           { spawn "brave-browser"; }
 
     
     // Accessibility
