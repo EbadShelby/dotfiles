@@ -64,7 +64,7 @@ window-rule {
 // Maximized apps
 window-rule {
     match app-id="^brave-browser$"
-    match app-id="^firefox$"
+    match app-id="^org.mozilla.firefox$"
     match app-id="^antigravity$"
     match app-id="^code$"
     match app-id="^helium$"
@@ -77,6 +77,7 @@ window-rule {
     match app-id="^helixnotes$"
     match app-id="^antigravity-ide$"
     match app-id="^org.kde.kdenlive$"
+    match app-id="^be.alexandervanhee.gradia$"
     open-maximized true
 }
 
@@ -93,6 +94,15 @@ window-rule {
     default-column-width { fixed 942; }
     default-window-height { fixed 602; }
 }
+window-rule {
+    open-floating true
+    
+    match app-id="^lxqt-policykit-agent$"
+    match app-id="^localsend$"
+    match app-id="^com.dec05eba.gpu_screen_recorder$"
+
+}
+
 // ==================================================
 // Layout & Visuals
 // ==================================================
@@ -220,12 +230,12 @@ binds {
     // App Launchers
     Mod+Return      { spawn "kitty"; }
     Super+Shift+L     { spawn "swaylock"; }
-    Super+Ctrl+E         { spawn "nautilus"; }
-    Super+E { spawn "kitty" "-e" "yazi"; }
+    Super+E         { spawn "nautilus"; }
+//     Super+E { spawn "kitty" "-e" "yazi"; }
     Mod+Comma       { spawn "flatpak" "run" "emote"; }
     Ctrl+Shift+Print { spawn "flatpak" "run" "be.alexandervanhee.gradia"; }
     Mod+D           { spawn "code"; }
-    Mod+B           { spawn "brave-browser"; }
+    Mod+B           { spawn "firefox"; }
 
     
     // Accessibility
