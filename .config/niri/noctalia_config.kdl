@@ -64,6 +64,7 @@ window-rule {
 // Maximized apps
 window-rule {
     match app-id="^brave-browser$"
+    match app-id="^brave-origin$"
     match app-id="^org.mozilla.firefox$"
     match app-id="^antigravity$"
     match app-id="^code$"
@@ -85,22 +86,10 @@ window-rule {
 window-rule {
     open-floating true
     
-    match app-id="^org.gnome.Nautilus$"
-    
-    background-effect {
-        xray false
-    }
-
-    default-column-width { fixed 942; }
-    default-window-height { fixed 602; }
-}
-window-rule {
-    open-floating true
-    
     match app-id="^lxqt-policykit-agent$"
     match app-id="^localsend$"
     match app-id="^com.dec05eba.gpu_screen_recorder$"
-
+    match app-id="^org.gnome.Nautilus$"
 }
 
 // ==================================================
@@ -110,6 +99,12 @@ window-rule {
 overview {
     backdrop-color "#181825"
 }
+
+workspace "1"
+workspace "2"
+workspace "3"
+workspace "4"
+workspace "5"
 
 layout {
     gaps 12
@@ -137,11 +132,26 @@ layout {
     }
 }
 
-workspace "1"
-workspace "2"
-workspace "3"
-workspace "4"
-workspace "5"
+recent-windows {
+    debounce-ms 500
+    open-delay-ms 100
+
+    highlight {
+        active-color "#8aadf4ff"
+        urgent-color "#ed8796ff"
+        padding 8
+        corner-radius 4
+    }
+
+    previews {
+        max-height 200
+    }
+
+    binds {
+        Alt+Tab       { next-window     scope="workspace"; }
+        Alt+Shift+Tab { previous-window scope="workspace"; }
+    }
+}
 
 animations {
     workspace-switch {
@@ -192,33 +202,11 @@ animations {
     }
 }
 
-recent-windows {
-    debounce-ms 500
-    open-delay-ms 100
-
-    highlight {
-        active-color "#8aadf4ff"
-        urgent-color "#ed8796ff"
-        padding 8
-        corner-radius 4
-    }
-
-    previews {
-        max-height 200
-    }
-
-    binds {
-        Alt+Tab       { next-window     scope="workspace"; }
-        Alt+Shift+Tab { previous-window scope="workspace"; }
-    }
-}
-
 // ==================================================
 // Keybinds
 // ==================================================
 
 binds {
-    
     
     Mod+P repeat=false { spawn-sh "wl-mirror --fullscreen-output HDMI-A-1 eDP-1"; }
 
@@ -231,15 +219,11 @@ binds {
     Mod+Return      { spawn "kitty"; }
     Super+Shift+L     { spawn "swaylock"; }
     Super+E         { spawn "nautilus"; }
-//     Super+E { spawn "kitty" "-e" "yazi"; }
     Mod+Comma       { spawn "flatpak" "run" "emote"; }
     Ctrl+Shift+Print { spawn "flatpak" "run" "be.alexandervanhee.gradia"; }
     Mod+D           { spawn "code"; }
     Mod+B           { spawn "firefox"; }
 
-    
-    // Accessibility
-    Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
 
     // Media & System Volume Keys
     XF86AudioRaiseVolume { spawn "noctalia" "msg" "volume-up"; }

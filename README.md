@@ -132,7 +132,6 @@
 * GPU Screen Recorder
 * Audacity
 * Davinci Resolve
-* Kdenlive
 * Flowblade
 * Affinity
 * Photopea
