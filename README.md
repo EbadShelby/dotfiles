@@ -118,6 +118,7 @@
 * rog-control-center
 * GDM settings
 * Gparted
+* System Monitor
 
 ## Work
 
@@ -125,6 +126,7 @@
 * Antigravity
 * virt-manager
 * Helix Notes
+* GNOME text editor
 * ONLYOFFICE
 
 ## Media
@@ -133,13 +135,15 @@
 * Audacity
 * Davinci Resolve
 * Flowblade
+* Photopea (Web App)
 * Affinity
-* Photopea
 * Upscaler
 * Gradia
 
 ## Web & Communication
 
+* Helium
+* Firefox
 * Brave Browser
 * LocalSend
 * Bitwarden
