@@ -42,8 +42,8 @@
 ### Appearance
 
 * **Theme:** Catppuccin Dark Mocha
-* **Icons:** default
-* **Cursor:** default
+* **Icons:** Fedora default
+* **Cursor:** Fedora default
 * **Terminal Font:** Monaspace Neon NF
 
 ---
