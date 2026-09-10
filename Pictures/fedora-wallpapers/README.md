@@ -1,4 +1,4 @@
-# 🖼️ Wallpapers
+# Fedora Wallpapers
 
 <table>
   <tr>
