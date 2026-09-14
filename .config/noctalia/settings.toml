@@ -1,7 +1,7 @@
-config_version = 8
+config_version = 14
 
 [bar.default]
-capsule_radius = 4
+capsule_radius = 2
 center = []
 color = "#A6ADC8"
 concave_edge_corners = false
@@ -13,10 +13,10 @@ padding = 10
 position = "bottom"
 radius = 0
 start = [ "launcher", "workspaces", "taskbar" ]
-thickness = 32
 widget_spacing = 12
 
     [bar.default.dead_zone.actions]
+    right = "none"
     scroll_down = "workspace-switch next"
     scroll_up = "workspace-switch prev"
 
@@ -64,11 +64,13 @@ widget_order = [ "lockscreen-login-box@eDP-1" ]
     visible = true
 
     [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
-    box_height = 229.0
+    box_height = 196.0
     box_width = 810.0
-    cx = 960.0
-    cy = 881.5
+    cx = 959.99993896484375
+    cy = 881.49993896484375
     output = "eDP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
     rotation = 0.0
     type = "login_box"
 
@@ -85,6 +87,7 @@ widget_order = [ "lockscreen-login-box@eDP-1" ]
         show_login_button = true
         show_media = true
         show_session_buttons = true
+        show_unlock_hint = true
         show_weather = true
 
 [notification]
@@ -102,15 +105,21 @@ enabled = []
 button_borders = false
 card_borders = false
 clipboard_history_max_entries = 500
-corner_radius_scale = 0.40000000596046448
+corner_radius_scale = 0.20000000298023224
 font_family = "Ubuntu"
 input_borders = false
 popup_borders = false
 time_format = "{:%-I:%M %p}"
 
+    [shell.animation]
+    enabled = false
+    speed = 2.0000000298023224
+
     [shell.launcher]
     categories = false
     compact = true
+    show_app_origin_indicator = false
+    sort_by_usage = false
 
         [shell.launcher.providers.emoji]
         global = false
@@ -177,13 +186,19 @@ transition_on_startup = true
     recursive = false
 
     [wallpaper.default]
-    path = "/home/ebadshelby/Pictures/wallpapers/bunnies-road.png"
+    path = "/home/ebadshelby/Pictures/wallpapers/night-snow.jpg"
 
     [wallpaper.last]
-    path = "/home/ebadshelby/Pictures/wallpapers/bunnies-road.png"
+    path = "/home/ebadshelby/Pictures/wallpapers/night-snow.jpg"
 
     [wallpaper.monitors.eDP-1]
+    path = "/home/ebadshelby/Pictures/wallpapers/night-snow.jpg"
+
+    [[wallpaper.favorite]]
+    custom_palette = "CatppuccinMochaBlue"
+    palette_source = "custom"
     path = "/home/ebadshelby/Pictures/wallpapers/bunnies-road.png"
+    theme_mode = "dark"
 
 [widget.battery]
 show_label = false
@@ -196,23 +211,26 @@ format = "|  {:%d %a} · {:%-I:%M %p}"
     left = "panel-toggle control-center home"
 
 [widget.launcher]
-color = "primary"
-custom_image = "/home/ebadshelby/Pictures/logos/niri-gray.svg"
-glyph = "niri"
-scale = 2.2500000000000004
+custom_image = "/home/ebadshelby/dotfiles/Pictures/logos/Linux-Fill--Streamline-Mingcute-Fill (1).svg"
+scale = 1.4000000000000001
 
 [widget.network]
 show_label = false
 
 [widget.ram]
 show_label = false
+show_value = false
 stat = "ram_pct"
 
 [widget.taskbar]
+inactive_opacity = 0.80000000000000004
 only_active_workspace = true
+show_active_indicator = false
+window_title_max_width = 32
 
 [widget.temp]
 show_label = false
+show_value = false
 
 [widget.volume]
 show_label = false

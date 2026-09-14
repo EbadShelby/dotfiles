@@ -42,7 +42,7 @@ output "eDP-1" {
 //     mode "1920x1080@60.002"
     position x=0 y=0
     focus-at-startup
-//     scale 1.2
+//     scale 1.1
 }
 
 output "HDMI-A-1" {
@@ -57,7 +57,7 @@ output "HDMI-A-1" {
 
 // Global corner radius
 window-rule {
-    geometry-corner-radius 4
+    geometry-corner-radius 0
     clip-to-geometry true
 }
 
@@ -66,7 +66,6 @@ window-rule {
     match app-id="^brave-browser$"
     match app-id="^brave-origin$"
     match app-id="^org.mozilla.firefox$"
-    match app-id="^antigravity$"
     match app-id="^code$"
     match app-id="^helium$"
     match app-id="^ONLYOFFICE$"
@@ -88,8 +87,33 @@ window-rule {
     
     match app-id="^lxqt-policykit-agent$"
     match app-id="^localsend$"
+    match app-id="^dev.noctalia.Noctalia$"
     match app-id="^com.dec05eba.gpu_screen_recorder$"
     match app-id="^org.gnome.Nautilus$"
+    match app-id="^org.gnome.Loupe$"
+    match app-id="^org.gnome.Showtime$"
+    match app-id="^Waydroid$"
+}
+
+window-rule {
+    match app-id="^helium$"
+    match app-id="^brave-browser$"
+    match app-id="^brave-origin$"
+    match app-id="^org.mozilla.firefox$"
+    open-on-workspace "1"
+}
+window-rule {
+    match app-id="^antigravity-ide$"
+    match app-id="^code$"
+    open-on-workspace "2"
+}
+window-rule {
+    match app-id="^Waydroid$"
+    open-on-workspace "3"
+}
+window-rule {
+    match app-id="^com.dec05eba.gpu_screen_recorder$"
+    open-on-workspace "5"
 }
 
 // ==================================================
@@ -137,7 +161,7 @@ recent-windows {
     open-delay-ms 100
 
     highlight {
-        active-color "#8aadf4ff"
+        active-color "#89b4fa"
         urgent-color "#ed8796ff"
         padding 8
         corner-radius 4
@@ -155,50 +179,40 @@ recent-windows {
 
 animations {
     workspace-switch {
-        spring damping-ratio=1.0 stiffness=1000 epsilon=0.0001
+        spring damping-ratio=1.0 stiffness=4000 epsilon=0.0001
     }
-
     window-open {
-        duration-ms 160
+        duration-ms 80
         curve "ease-out-expo"
     }
-
     window-close {
-        duration-ms 120
+        duration-ms 60
         curve "ease-out-quad"
     }
-
     horizontal-view-movement {
-        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+        spring damping-ratio=1.0 stiffness=3200 epsilon=0.0001
     }
-
     window-movement {
-        spring damping-ratio=1.0 stiffness=900 epsilon=0.0001
+        spring damping-ratio=1.0 stiffness=3600 epsilon=0.0001
     }
-
     window-resize {
-        spring damping-ratio=1.0 stiffness=900 epsilon=0.0001
+        spring damping-ratio=1.0 stiffness=3600 epsilon=0.0001
     }
-
     config-notification-open-close {
-        spring damping-ratio=0.6 stiffness=1000 epsilon=0.001
+        spring damping-ratio=0.6 stiffness=4000 epsilon=0.001
     }
-
     exit-confirmation-open-close {
-        spring damping-ratio=1.0 stiffness=500 epsilon=0.01
+        spring damping-ratio=1.0 stiffness=2000 epsilon=0.01
     }
-
     screenshot-ui-open {
-        duration-ms 200
+        duration-ms 100
         curve "ease-out-quad"
     }
-
     overview-open-close {
-        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+        spring damping-ratio=1.0 stiffness=3200 epsilon=0.0001
     }
-
     recent-windows-close {
-        spring damping-ratio=1.0 stiffness=900 epsilon=0.001
+        spring damping-ratio=1.0 stiffness=3600 epsilon=0.001
     }
 }
 
@@ -222,7 +236,7 @@ binds {
     Mod+Comma       { spawn "flatpak" "run" "emote"; }
     Ctrl+Shift+Print { spawn "flatpak" "run" "be.alexandervanhee.gradia"; }
     Mod+D           { spawn "code"; }
-    Mod+B           { spawn "firefox"; }
+    Mod+B           { spawn "helium"; }
 
 
     // Media & System Volume Keys
