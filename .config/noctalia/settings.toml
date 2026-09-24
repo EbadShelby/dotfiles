@@ -66,8 +66,8 @@ widget_order = [ "lockscreen-login-box@eDP-1" ]
     [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
     box_height = 196.0
     box_width = 810.0
-    cx = 959.99993896484375
-    cy = 881.49993896484375
+    cx = 959.9998779296875
+    cy = 881.4998779296875
     output = "eDP-1"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -186,13 +186,13 @@ transition_on_startup = true
     recursive = false
 
     [wallpaper.default]
-    path = "/home/ebadshelby/Pictures/wallpapers/night-snow.jpg"
+    path = "/home/ebadshelby/Pictures/wallpapers/Purpose..png"
 
     [wallpaper.last]
-    path = "/home/ebadshelby/Pictures/wallpapers/night-snow.jpg"
+    path = "/home/ebadshelby/Pictures/wallpapers/Purpose..png"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/ebadshelby/Pictures/wallpapers/night-snow.jpg"
+    path = "/home/ebadshelby/Pictures/wallpapers/Purpose..png"
 
     [[wallpaper.favorite]]
     custom_palette = "CatppuccinMochaBlue"
