@@ -131,8 +131,9 @@ workspace "4"
 workspace "5"
 
 layout {
-    gaps 12
+    gaps 16
     center-focused-column "never"
+    always-center-single-column
 
     preset-column-widths {
         proportion 0.33333
@@ -248,6 +249,7 @@ binds {
     XF86MonBrightnessUp   { spawn "noctalia" "msg" "brightness-up"; }
     XF86MonBrightnessDown { spawn "noctalia" "msg" "brightness-down"; }
     
+
     // Window & Navigation
     Mod+O repeat=false  { toggle-overview; }
     Mod+Shift+Q repeat=false { close-window; }
