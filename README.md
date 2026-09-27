@@ -100,6 +100,7 @@
 * **fastfetch**    - Fast system information display
 * **podman-tui**   - tui for podman
 * **ps_mem**       - better way to show total ram usage of each app
+* **system-config-printer** - manage printer. useful for wm like niri
 
 ---
 
@@ -110,7 +111,7 @@
 * btrfs-assistant
 * Pika Backup
 * Extension Manager
-* Tweaks
+* Gnome Tweaks
 * Flatseal
 * Gearlever
 * rog-control-center
@@ -123,9 +124,10 @@
 * VSCode
 * Antigravity
 * virt-manager
-* Helix Notes
+* obsidian
 * GNOME text editor
 * ONLYOFFICE
+* PDF Arranger
 
 ## Media
 
@@ -137,18 +139,21 @@
 * Affinity
 * Upscaler
 * Gradia
+* SimpleScan - docu scanner
+* Decibels - audio player
+* Papers - docu viewer
+* Loupe - image viewer
+* TextEditor
 
 ## Web & Communication
 
 * Helium
-* Firefox
-* Brave Browser
+* Telegram
 * LocalSend
-* Bitwarden
+* Bitwarden (browser extension)
 
 ## Miscellaneous
 
-* Steam
 * Waydroid
 
 ---
