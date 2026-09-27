@@ -136,6 +136,7 @@
 * Davinci Resolve
 * Flowblade
 * ShutterEncoder
+* VideoTrimmer
 * Photopea (Web App)
 * Affinity
 * Upscaler
