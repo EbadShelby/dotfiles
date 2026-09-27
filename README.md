@@ -89,16 +89,13 @@
 * **opencode**     - AI coding assistant for the terminal
 * **mycli**        - Smart MySQL client with autocomplete
 * **lazygit**      - Terminal UI for Git
-* **yazi**         - Blazing fast file manager tui
 * **tldr**         - Simplified command examples
 * **bat**          - Better cat with syntax highlighting
 * **fd**           - Fast and user-friendly find alternative
 * **fzf**          - Fuzzy finder for files and commands
 * **ripgrep**      - Ultra-fast text search tool
 * **lsd**          - Modern replacement for ls
-* **nls**          - modern ls with useful tables
 * **fastfetch**    - Fast system information display
-* **podman-tui**   - tui for podman
 * **ps_mem**       - better way to show total ram usage of each app
 * **system-config-printer** - manage printer. useful for wm like niri
 
@@ -128,6 +125,7 @@
 * GNOME text editor
 * ONLYOFFICE
 * PDF Arranger
+* TextEditor
 
 ## Media
 
@@ -145,7 +143,6 @@
 * Decibels - audio player
 * Papers - docu viewer
 * Loupe - image viewer
-* TextEditor
 
 ## Web & Communication
 
