@@ -135,6 +135,7 @@
 * Audacity
 * Davinci Resolve
 * Flowblade
+* ShutterEncoder
 * Photopea (Web App)
 * Affinity
 * Upscaler
