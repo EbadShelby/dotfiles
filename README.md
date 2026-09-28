@@ -125,7 +125,6 @@
 * GNOME text editor
 * ONLYOFFICE
 * PDF Arranger
-* TextEditor
 
 ## Media
 
