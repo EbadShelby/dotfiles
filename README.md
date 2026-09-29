@@ -1,6 +1,6 @@
 # 🐧 Fedora Workstation
 
-> Optimized for a **majestic, fast, and productive Fedora Workstation** experience.
+> Optimized for a **majestic, fast, and productive Fedora Workstation with Niri** experience.
 
 ---
 
@@ -41,7 +41,7 @@
 
 ### Appearance
 
-* **Theme:** Catppuccin Dark Mocha
+* **Theme:** Catppuccin Mocha
 * **Terminal Font:** Monaspace Neon NF
 
 ---
