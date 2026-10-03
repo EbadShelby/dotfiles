@@ -152,6 +152,7 @@
 
 ## Miscellaneous
 
+* Steam
 * Waydroid
 
 ---
