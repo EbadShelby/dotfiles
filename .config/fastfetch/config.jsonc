@@ -1,65 +1,94 @@
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
-  "logo": {
-    "type": "small",
-    "padding": {
-      "top": 2,
-      "left": 1,
-    }
-  },
   "display": {
-    "constants": [
-      "───────────"
-    ]
+    "separator": ""
   },
   "modules": [
     "break",
     {
-      "type": "custom",
-      "format": "┌{$1}{$1}┐",
-      "outputColor": "90"
+      "type": "os",
+      "key": " ",
+      "format": "{3}"
     },
     {
-      "key": "     ",
+      "type": "separator",
+      "string": "-",
+      "times": 37
+    },
+    {
+      "key": "User: ",
       "type": "title",
       "format": "{1}"
     },
     {
-      "type": "os",
-      "key": "    {icon} ",
-      "keyColor": "blue",
-      "format": "{2}"
-    },
-    {
       "type": "host",
-      "key": "    {icon} ",
-      "keyColor": "blue",
+      "key": "Host: ",
       "format": "{1}"
     },
     {
-      "key": "    {icon} ",
+      "key": "WM: ",
       "type": "wm",
       "format": "{1}"
     },
     {
-      "key": "    {icon} ",
+      "type": "custom",
+      "key": "Bar: ",
+      "format": "noctalia"
+    },
+    {
+      "key": "Shell: ",
       "type": "shell",
       "format": "{1}"
     },
     {
-      "key": "    {icon} ",
+      "key": "Terminal: ",
       "type": "terminal",
       "format": "{1}"
     },
     {
-      "type": "command",
-      "key": "    󰅐 ",
-      "text": "b=$(stat -c %W / 2>/dev/null); [ \"${b:-0}\" -le 0 ] && b=$(stat -c %Z /); echo \"$(( ($(date +%s) - b) / 86400 )) days\""
+      "type": "terminalfont",
+      "key": "Term Font: ",
+      "format": "{2}"
     },
     {
       "type": "custom",
-      "format": "└{$1}{$1}┘",
-      "outputColor": "90"
+      "key": "Theme: ",
+      "format": "Catppuccin Mocha"
+    },
+    {
+      "type": "kernel",
+      "key": "Kernel: ",
+      "format": "{2}"
+    },
+    {
+      "type": "cpu",
+      "key": "CPU: ",
+      "format": "{1}"
+    },
+    {
+      "type": "gpu",
+      "key": "GPU: ",
+      "format": "{2}"
+    },
+    {
+      "type": "memory",
+      "key": "Memory: ",
+      "format": "{1}/{2} ({3})"
+    },
+    {
+      "type": "disk",
+      "mountpoint": "/",
+      "key": "Disk: ",
+      "format": "{1}/{2} ({3})"
+    },
+    {
+      "type": "command",
+      "key": "Age: ",
+      "text": "b=$(stat -c %W / 2>/dev/null); [ \"${b:-0}\" -le 0 ] && b=$(stat -c %Z /); echo \"$(( ($(date +%s) - b) / 86400 )) days\""
+    },
+    "break",
+    {
+      "type": "colors"
     },
     "break"
   ]
