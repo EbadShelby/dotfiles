@@ -80,7 +80,6 @@
 
 * **fresh**        - An IDE/text editor in your terminal
 * **snapper**      - Btrfs snapshot and rollback manager
-* **xytz**         - majestic youtube video downloader
 * **fast-cli**     - network speed test on your terminal
 * **glazepkg**     - view installed tools from different sources in one view
 * **ghgrab**       - terminal tool that lets you browse and download files from GitHub
@@ -134,6 +133,7 @@
 * Flowblade
 * ShutterEncoder
 * VideoTrimmer
+* VideoDownloader
 * Photopea (Web App)
 * Affinity
 * Upscaler
