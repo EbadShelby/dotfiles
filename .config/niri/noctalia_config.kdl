@@ -38,8 +38,8 @@ input {
 // ==================================================
 
 output "eDP-1" {
-    mode "1920x1080@144.000"
-//     mode "1920x1080@60.002"
+//     mode "1920x1080@144.000"
+    mode "1920x1080@60.002"
     position x=0 y=0
     focus-at-startup
 //     scale 1.1
@@ -57,7 +57,7 @@ output "HDMI-A-1" {
 
 // Global corner radius
 window-rule {
-    geometry-corner-radius 0
+    geometry-corner-radius 4
     clip-to-geometry true
 }
 
@@ -75,6 +75,7 @@ window-rule {
     match app-id="^chrome-jdklklfpinionkgpmghaghehojplfjio-Default$"
     match app-id=r#"affinity"#
     match app-id="^helixnotes$"
+    match app-id="^steam$"
     match app-id="^antigravity-ide$"
     match app-id="^org.kde.kdenlive$"
     match app-id="^be.alexandervanhee.gradia$"
@@ -114,6 +115,13 @@ window-rule {
 window-rule {
     match app-id="^com.dec05eba.gpu_screen_recorder$"
     open-on-workspace "5"
+}
+
+window-rule {
+    match app-id="chrome-ngceodoilcgpmkijopinlkmohnfifjfb-Default"
+    match app-id="io.missioncenter.MissionCenter"
+    default-window-height { fixed 1014; }
+    default-column-width { fixed 1253; }
 }
 
 // ==================================================
@@ -344,9 +352,9 @@ binds {
     Mod+Shift+V { switch-focus-between-floating-and-tiling; }
 
     // Screenshots
-    Print       { screenshot; }
-    Ctrl+Print  { screenshot-screen; }
-    Alt+Print   { screenshot-window; }
+    Print       { spawn-sh "noctalia msg screenshot-region"; }
+    Ctrl+Print  { spawn-sh "noctalia msg screenshot-fullscreen pick"; }
+    Alt+Print   { spawn-sh "noctalia msg screenshot-annotate"; }
 
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 }
