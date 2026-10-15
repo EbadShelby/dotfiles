@@ -5,13 +5,14 @@ capsule_radius = 2
 center = []
 color = "#A6ADC8"
 concave_edge_corners = false
-end = [ "tray", "notifications", "temp", "ram", "battery", "network", "volume", "clock" ]
-font_family = "Ubuntu"
+end = [ "tray", "printer", "notifications", "github", "temp", "ram", "battery", "network", "volume", "clock" ]
+font_family = "Ubuntu Nerd Font"
 icon_color = "#A6ADC8"
-margin_ends = 0
+margin_edge = 8
+margin_ends = 14
 padding = 10
-position = "bottom"
-radius = 0
+radius = 6
+show_on_workspace_switch = false
 start = [ "launcher", "workspaces", "taskbar" ]
 widget_spacing = 12
 
@@ -24,7 +25,8 @@ widget_spacing = 12
 warning_threshold = 40
 
 [control_center]
-hidden_tabs = [ "media", "screen-time" ]
+hidden_tabs = [ "screen-time" ]
+sidebar_section = "none"
 
     [[control_center.shortcuts]]
     type = "wifi"
@@ -41,9 +43,6 @@ hidden_tabs = [ "media", "screen-time" ]
     [[control_center.shortcuts]]
     type = "power_profile"
 
-    [[control_center.shortcuts]]
-    type = "notification"
-
 [dock]
 active_monitor_only = true
 
@@ -56,12 +55,39 @@ fingerprint = false
 [lockscreen_widgets]
 enabled = false
 schema_version = 2
-widget_order = [ "lockscreen-login-box@eDP-1" ]
+widget_order = [ "lockscreen-login-box@HDMI-A-1", "lockscreen-login-box@eDP-1" ]
 
     [lockscreen_widgets.grid]
     cell_size = 16
     major_interval = 4
     visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 898.0
+    output = "HDMI-A-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
 
     [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
     box_height = 196.0
@@ -90,34 +116,39 @@ widget_order = [ "lockscreen-login-box@eDP-1" ]
         show_unlock_hint = true
         show_weather = true
 
+[nightlight]
+enabled = true
+temperature_day = 10000
+temperature_night = 5000
+
 [notification]
 border = false
-position = "bottom_center"
+position = "top_center"
 
 [osd]
 border = false
 position = "bottom_center"
 
 [plugins]
-enabled = []
+enabled = [ "shangshui0302/github-kanban", "andrewdems/printers" ]
 
 [shell]
 button_borders = false
 card_borders = false
 clipboard_history_max_entries = 500
-corner_radius_scale = 0.20000000298023224
-font_family = "Ubuntu"
+corner_radius_scale = 0.40000000596046448
+font_family = "Ubuntu Nerd Font"
 input_borders = false
 popup_borders = false
 time_format = "{:%-I:%M %p}"
 
     [shell.animation]
-    enabled = false
-    speed = 2.0000000298023224
+    speed = 1.5000000223517418
 
     [shell.launcher]
     categories = false
     compact = true
+    fetch_exchange_rates = false
     show_app_origin_indicator = false
     sort_by_usage = false
 
@@ -132,6 +163,9 @@ time_format = "{:%-I:%M %p}"
     borders = false
     open_near_click_control_center = true
     wallpaper_position = "bottom_right"
+
+    [shell.screenshot]
+    directory = "/home/ebadshelby/Pictures/Screenshots"
 
     [[shell.session.actions]]
     action = "lock"
@@ -186,19 +220,16 @@ transition_on_startup = true
     recursive = false
 
     [wallpaper.default]
-    path = "/home/ebadshelby/Pictures/wallpapers/Purpose..png"
+    path = "/home/ebadshelby/Pictures/wallpapers/just-start.png"
 
     [wallpaper.last]
-    path = "/home/ebadshelby/Pictures/wallpapers/Purpose..png"
+    path = "/home/ebadshelby/Pictures/wallpapers/just-start.png"
+
+    [wallpaper.monitors.HDMI-A-1]
+    path = "/home/ebadshelby/Pictures/wallpapers/hollow-knight.jpg"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/ebadshelby/Pictures/wallpapers/Purpose..png"
-
-    [[wallpaper.favorite]]
-    custom_palette = "CatppuccinMochaBlue"
-    palette_source = "custom"
-    path = "/home/ebadshelby/Pictures/wallpapers/bunnies-road.png"
-    theme_mode = "dark"
+    path = "/home/ebadshelby/Pictures/wallpapers/just-start.png"
 
 [widget.battery]
 show_label = false
@@ -210,12 +241,18 @@ format = "|  {:%d %a} · {:%-I:%M %p}"
     [widget.clock.actions]
     left = "panel-toggle control-center home"
 
+[widget.github]
+type = "shangshui0302/github-kanban:github"
+
 [widget.launcher]
 custom_image = "/home/ebadshelby/dotfiles/Pictures/logos/Linux-Fill--Streamline-Mingcute-Fill (1).svg"
 scale = 1.4000000000000001
 
 [widget.network]
 show_label = false
+
+[widget.printer]
+type = "andrewdems/printers:printer"
 
 [widget.ram]
 show_label = false
