@@ -46,8 +46,9 @@ output "eDP-1" {
 }
 
 output "HDMI-A-1" {
-    mode "1920x1080@99.999"
-    position x=1920 y=0
+//     mode "1920x1080@99.999"
+    mode "1920x1080@60.000"    
+    position x=-1920 y=0
 }
 
 
@@ -67,6 +68,10 @@ window-rule {
     match app-id="^brave-origin$"
     match app-id="^org.mozilla.firefox$"
     match app-id="^code$"
+    match app-id="^ai.storyteller.filmcraft$"
+    match app-id="^ai.storyteller.pdfcraft$"
+    match app-id="^ai.storyteller.photocraft$"
+    match app-id="^ai.storyteller.artcraft-launcher$"
     match app-id="^helium$"
     match app-id="^ONLYOFFICE$"
     match app-id="^Flowblade$"
@@ -120,6 +125,7 @@ window-rule {
 window-rule {
     match app-id="chrome-ngceodoilcgpmkijopinlkmohnfifjfb-Default"
     match app-id="io.missioncenter.MissionCenter"
+    match app-id="org.qbittorrent.qBittorrent"    
     default-window-height { fixed 1014; }
     default-column-width { fixed 1253; }
 }

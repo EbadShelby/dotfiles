@@ -1,4 +1,4 @@
-config_version = 14
+config_version = 15
 
 [bar.default]
 capsule_radius = 2
@@ -8,10 +8,12 @@ concave_edge_corners = false
 end = [ "tray", "printer", "notifications", "github", "temp", "ram", "battery", "network", "volume", "clock" ]
 font_family = "Ubuntu Nerd Font"
 icon_color = "#A6ADC8"
-margin_edge = 8
-margin_ends = 14
+margin_ends = 0
 padding = 10
-radius = 6
+position = "bottom"
+radius = 0
+radius_bottom_left = 0
+radius_bottom_right = 0
 show_on_workspace_switch = false
 start = [ "launcher", "workspaces", "taskbar" ]
 widget_spacing = 12
@@ -42,9 +44,6 @@ sidebar_section = "none"
 
     [[control_center.shortcuts]]
     type = "power_profile"
-
-[dock]
-active_monitor_only = true
 
 [location]
 address = "Cotabato City, Philippines"
@@ -149,6 +148,7 @@ time_format = "{:%-I:%M %p}"
     categories = false
     compact = true
     fetch_exchange_rates = false
+    layout = "simple"
     show_app_origin_indicator = false
     sort_by_usage = false
 
@@ -202,6 +202,9 @@ time_format = "{:%-I:%M %p}"
     shortcut = "5"
     variant = "destructive"
 
+    [shell.window_switcher]
+    show_all_outputs = false
+
 [theme]
 builtin = "Ayu"
 custom_palette = "CatppuccinMochaBlue"
@@ -220,16 +223,16 @@ transition_on_startup = true
     recursive = false
 
     [wallpaper.default]
-    path = "/home/ebadshelby/Pictures/wallpapers/just-start.png"
+    path = "/home/ebadshelby/Pictures/wallpapers/code.png"
 
     [wallpaper.last]
-    path = "/home/ebadshelby/Pictures/wallpapers/just-start.png"
+    path = "/home/ebadshelby/Pictures/wallpapers/code.png"
 
     [wallpaper.monitors.HDMI-A-1]
-    path = "/home/ebadshelby/Pictures/wallpapers/hollow-knight.jpg"
+    path = "/home/ebadshelby/Pictures/wallpapers/code.png"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/ebadshelby/Pictures/wallpapers/just-start.png"
+    path = "/home/ebadshelby/Pictures/wallpapers/code.png"
 
 [widget.battery]
 show_label = false
@@ -240,6 +243,8 @@ format = "|  {:%d %a} · {:%-I:%M %p}"
 
     [widget.clock.actions]
     left = "panel-toggle control-center home"
+    scroll_down = "brightness-down"
+    scroll_up = "brightness-up"
 
 [widget.github]
 type = "shangshui0302/github-kanban:github"
