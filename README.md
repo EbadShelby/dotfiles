@@ -119,23 +119,22 @@
 
 * VSCode
 * Antigravity
-* virt-manager
-* obsidian
+* Virt-manager
+* Obsidian
 * GNOME text editor
 * ONLYOFFICE
-* PDF Arranger
 
 ## Media
 
 * GPU Screen Recorder
 * Audacity
 * Davinci Resolve
-* Flowblade
+* Filmcraft
+* Pdfcraft
+* Photocraft
 * ShutterEncoder
 * VideoTrimmer
 * VideoDownloader
-* Photopea (Web App)
-* Affinity
 * Upscaler
 * Gradia
 * SimpleScan - docu scanner
