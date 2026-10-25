@@ -88,6 +88,7 @@
 * **opencode**     - AI coding assistant for the terminal
 * **mycli**        - Smart MySQL client with autocomplete
 * **lazygit**      - Terminal UI for Git
+* **unar**         - better way to extract files on your terminal
 * **tldr**         - Simplified command examples
 * **bat**          - Better cat with syntax highlighting
 * **fd**           - Fast and user-friendly find alternative
@@ -113,7 +114,7 @@
 * rog-control-center
 * GDM settings
 * Gparted
-* System Monitor
+* Mission Center
 
 ## Work
 
@@ -128,10 +129,10 @@
 
 * GPU Screen Recorder
 * Audacity
-* Davinci Resolve
 * Filmcraft
 * Pdfcraft
 * Photocraft
+* Figcraft
 * ShutterEncoder
 * VideoTrimmer
 * VideoDownloader
@@ -153,5 +154,6 @@
 
 * Steam
 * Waydroid
+* Faugus Launcher
 
 ---
