@@ -228,10 +228,15 @@ binds {
     Mod+Down  { focus-window-down; }
     Mod+Up    { focus-window-up; }
 
-    Super+Shift+Left  { move-column-left; }
-    Super+Shift+Down  { move-window-down; }
-    Super+Shift+Up    { move-window-up; }
-    Super+Shift+Right { move-column-right; }
+//     Super+Shift+Left  { move-column-left; }
+//     Super+Shift+Down  { move-window-down; }
+//     Super+Shift+Up    { move-window-up; }
+//     Super+Shift+Right { move-column-right; }
+    
+    Mod+Shift+Left  { spawn-sh "niri msg action move-floating-window -x -200"; }
+    Mod+Shift+Right { spawn-sh "niri msg action move-floating-window -x +200"; }
+    Mod+Shift+Up    { spawn-sh "niri msg action move-floating-window -y -200"; }
+    Mod+Shift+Down  { spawn-sh "niri msg action move-floating-window -y +200"; }
 
     Mod+Home      { focus-column-first; }
     Mod+End       { focus-column-last; }
