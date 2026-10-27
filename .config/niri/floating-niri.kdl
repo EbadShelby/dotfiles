@@ -9,6 +9,11 @@ spawn-at-startup "/usr/libexec/lxqt-policykit-agent"
 
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
+cursor {
+    xcursor-theme "Bibata-Modern-Ice"
+    xcursor-size 24
+}
+
 hotkey-overlay {
     skip-at-startup
 }
@@ -71,17 +76,6 @@ window-rule {
     match is-active=false
     opacity 0.95
 }
-
-window-rule {
-    match app-id="ONLYOFFICE"
-    
-    draw-border-with-background false
-    
-    border {
-        off
-    }
-}
-
 
 // ==================================================
 // Layout & Visuals
