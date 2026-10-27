@@ -110,9 +110,6 @@ layout {
 
     focus-ring {
         off
-//         width 3
-//         active-color "#313244"
-//         inactive-color "#181825"
     }
 
     shadow {
@@ -131,7 +128,7 @@ recent-windows {
     open-delay-ms 100
 
     highlight {
-        active-color "#89b4fa"
+        active-color "#1e1e2e"
         urgent-color "#ed8796ff"
         padding 8
         corner-radius 4
@@ -228,10 +225,10 @@ binds {
     Mod+Down  { focus-window-down; }
     Mod+Up    { focus-window-up; }
 
-//     Super+Shift+Left  { move-column-left; }
-//     Super+Shift+Down  { move-window-down; }
-//     Super+Shift+Up    { move-window-up; }
-//     Super+Shift+Right { move-column-right; }
+    Super+Ctrl+Left  { move-column-left; }
+    Super+Ctrl+Down  { move-window-down; }
+    Super+Ctrl+Up    { move-window-up; }
+    Super+Ctrl+Right { move-column-right; }
     
     Mod+Shift+Left  { spawn-sh "niri msg action move-floating-window -x -200"; }
     Mod+Shift+Right { spawn-sh "niri msg action move-floating-window -x +200"; }

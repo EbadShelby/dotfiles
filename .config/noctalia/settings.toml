@@ -146,6 +146,7 @@ time_format = "{:%-I:%M %p}"
 
     [shell.launcher]
     categories = false
+    category_icons_only = true
     compact = true
     fetch_exchange_rates = false
     layout = "simple"
@@ -162,6 +163,7 @@ time_format = "{:%-I:%M %p}"
     [shell.panel]
     borders = false
     open_near_click_control_center = true
+    open_near_click_launcher = true
     wallpaper_position = "bottom_right"
 
     [shell.screenshot]
@@ -223,16 +225,16 @@ transition_on_startup = true
     recursive = false
 
     [wallpaper.default]
-    path = "/home/ebadshelby/Pictures/wallpapers/code.png"
+    path = "/home/ebadshelby/Pictures/wallpapers/dark-11.jpg"
 
     [wallpaper.last]
-    path = "/home/ebadshelby/Pictures/wallpapers/code.png"
+    path = "/home/ebadshelby/Pictures/wallpapers/dark-11.jpg"
 
     [wallpaper.monitors.HDMI-A-1]
     path = "/home/ebadshelby/Pictures/wallpapers/code.png"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/ebadshelby/Pictures/wallpapers/code.png"
+    path = "/home/ebadshelby/Pictures/wallpapers/dark-11.jpg"
 
 [widget.battery]
 show_label = false
@@ -250,8 +252,7 @@ format = "|  {:%d %a} · {:%-I:%M %p}"
 type = "shangshui0302/github-kanban:github"
 
 [widget.launcher]
-custom_image = "/home/ebadshelby/dotfiles/Pictures/logos/Linux-Fill--Streamline-Mingcute-Fill (1).svg"
-scale = 1.4000000000000001
+custom_image = "/home/ebadshelby/dotfiles/Pictures/logos/windows-11 (1).svg"
 
 [widget.network]
 show_label = false
@@ -265,6 +266,7 @@ show_value = false
 stat = "ram_pct"
 
 [widget.taskbar]
+icon_scale = 1.2000000000000002
 inactive_opacity = 0.80000000000000004
 only_active_workspace = true
 show_active_indicator = false
