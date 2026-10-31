@@ -1,4 +1,4 @@
-config_version = 15
+config_version = 16
 
 [bar.default]
 capsule_radius = 2
@@ -14,8 +14,10 @@ position = "bottom"
 radius = 0
 radius_bottom_left = 0
 radius_bottom_right = 0
+scale = 1.0500000081956387
 show_on_workspace_switch = false
 start = [ "launcher", "workspaces", "taskbar" ]
+thickness = 36
 widget_spacing = 12
 
     [bar.default.dead_zone.actions]
@@ -27,7 +29,8 @@ widget_spacing = 12
 warning_threshold = 40
 
 [control_center]
-hidden_tabs = [ "screen-time" ]
+hidden_tabs = [ "monitor", "screen-time" ]
+sidebar = "full"
 sidebar_section = "none"
 
     [[control_center.shortcuts]]
@@ -43,7 +46,21 @@ sidebar_section = "none"
     type = "nightlight"
 
     [[control_center.shortcuts]]
-    type = "power_profile"
+    type = "andrewdems/printers:toggle"
+
+    [[control_center.shortcuts]]
+    type = "noctalia/screen_recorder:toggle"
+
+[desktop_widgets]
+schema_version = 2
+widget_order = []
+
+    [desktop_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [desktop_widgets.widget]
 
 [location]
 address = "Cotabato City, Philippines"
@@ -73,7 +90,7 @@ widget_order = [ "lockscreen-login-box@HDMI-A-1", "lockscreen-login-box@eDP-1" ]
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1".settings]
-        background_color = "surface_variant"
+        background_color = "surface_container"
         background_opacity = 0.88
         background_radius = 12.0
         center_password_text = false
@@ -100,7 +117,7 @@ widget_order = [ "lockscreen-login-box@HDMI-A-1", "lockscreen-login-box@eDP-1" ]
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
-        background_color = "surface_variant"
+        background_color = "surface_container"
         background_opacity = 0.88
         background_radius = 12.0
         center_password_text = false
@@ -122,14 +139,33 @@ temperature_night = 5000
 
 [notification]
 border = false
-position = "top_center"
+offset_x = 8
+position = "bottom_right"
 
 [osd]
 border = false
 position = "bottom_center"
 
+[plugin_settings."andrewdems/printers"]
+panel_placement = "floating"
+panel_position = "bottom_right"
+
+[plugin_settings."h-jangra/keyviz"]
+font_size = "small"
+overlay_layer = "overlay"
+overlay_position = "bottom_right"
+
+[plugin_settings."noctalia/screen_recorder"]
+audio_source = "default_output"
+directory = "~/Videos/sr"
+video_source = "region"
+
+[plugin_settings."shangshui0302/github-kanban"]
+kanban_placement = "floating"
+kanban_position = "bottom_right"
+
 [plugins]
-enabled = [ "shangshui0302/github-kanban", "andrewdems/printers" ]
+enabled = [ "shangshui0302/github-kanban", "andrewdems/printers", "noctalia/screen_recorder" ]
 
 [shell]
 button_borders = false
@@ -151,7 +187,6 @@ time_format = "{:%-I:%M %p}"
     fetch_exchange_rates = false
     layout = "simple"
     show_app_origin_indicator = false
-    sort_by_usage = false
 
         [shell.launcher.providers.emoji]
         global = false
@@ -162,8 +197,14 @@ time_format = "{:%-I:%M %p}"
 
     [shell.panel]
     borders = false
+    control_center_placement = "floating"
+    control_center_position = "bottom_right"
+    launcher_position = "bottom_left"
     open_near_click_control_center = true
     open_near_click_launcher = true
+    session_placement = "floating"
+    session_position = "bottom_center"
+    wallpaper_placement = "floating"
     wallpaper_position = "bottom_right"
 
     [shell.screenshot]
@@ -225,16 +266,16 @@ transition_on_startup = true
     recursive = false
 
     [wallpaper.default]
-    path = "/home/ebadshelby/Pictures/wallpapers/dark-11.jpg"
+    path = "/home/ebadshelby/Pictures/wallpapers/bloom (Copy).png"
 
     [wallpaper.last]
-    path = "/home/ebadshelby/Pictures/wallpapers/dark-11.jpg"
+    path = "/home/ebadshelby/Pictures/wallpapers/bloom (Copy).png"
 
     [wallpaper.monitors.HDMI-A-1]
-    path = "/home/ebadshelby/Pictures/wallpapers/code.png"
+    path = "/home/ebadshelby/Pictures/wallpapers/bloom.jpg"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/ebadshelby/Pictures/wallpapers/dark-11.jpg"
+    path = "/home/ebadshelby/Pictures/wallpapers/bloom (Copy).png"
 
 [widget.battery]
 show_label = false
@@ -252,7 +293,8 @@ format = "|  {:%d %a} · {:%-I:%M %p}"
 type = "shangshui0302/github-kanban:github"
 
 [widget.launcher]
-custom_image = "/home/ebadshelby/dotfiles/Pictures/logos/windows-11 (1).svg"
+custom_image = "/home/ebadshelby/dotfiles/Pictures/logos/windows11.svg"
+scale = 1.1000000000000001
 
 [widget.network]
 show_label = false
@@ -282,5 +324,5 @@ show_label = false
 [widget.workspaces]
 active_pill_size = 1.5
 empty_color = "surface"
-focused_color = "outline"
-occupied_color = "surface_variant"
+focused_color = "outline_variant"
+occupied_color = "surface_container"
