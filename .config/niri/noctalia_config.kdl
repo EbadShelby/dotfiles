@@ -244,10 +244,16 @@ binds {
     Super+Ctrl+Up    { move-window-up; }
     Super+Ctrl+Right { move-column-right; }
     
-    Mod+Shift+Left  { spawn-sh "niri msg action move-floating-window -x -200"; }
-    Mod+Shift+Right { spawn-sh "niri msg action move-floating-window -x +200"; }
-    Mod+Shift+Up    { spawn-sh "niri msg action move-floating-window -y -200"; }
-    Mod+Shift+Down  { spawn-sh "niri msg action move-floating-window -y +200"; }
+    Super+Shift+Left  { move-column-left; }
+    Super+Shift+Down  { move-window-down; }
+    Super+Shift+Up    { move-window-up; }
+    Super+Shift+Right { move-column-right; }
+
+    // Workspaces
+    Mod+Shift+Left  { focus-monitor-left; }
+    Mod+Shift+Down  { focus-monitor-down; }
+    Mod+Shift+Up    { focus-monitor-up; }
+    Mod+Shift+Right { focus-monitor-right; }
 
     Mod+Home      { focus-column-first; }
     Mod+End       { focus-column-last; }
@@ -258,10 +264,6 @@ binds {
     Mod+Shift+Ctrl+Down  { move-column-to-monitor-down; }
     Mod+Shift+Ctrl+Up    { move-column-to-monitor-up; }
     Mod+Shift+Ctrl+Right { move-column-to-monitor-right; }
-
-    // Workspaces
-    Mod+Shift+Page_Down { move-workspace-down; }
-    Mod+Shift+Page_Up   { move-workspace-up; }
 
     Mod+WheelScrollDown      cooldown-ms=150 { focus-workspace-down; }
     Mod+WheelScrollUp        cooldown-ms=150 { focus-workspace-up; }
