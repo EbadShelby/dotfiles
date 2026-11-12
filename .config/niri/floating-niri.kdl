@@ -3,16 +3,11 @@
 // ==================================================
 
 prefer-no-csd
-spawn-at-startup "wl-clip-persist" "--clipboard" "regular"
 spawn-at-startup "noctalia"
+spawn-at-startup "wl-clip-persist" "--clipboard" "regular"
 spawn-at-startup "/usr/libexec/lxqt-policykit-agent"
 
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
-
-cursor {
-    xcursor-theme "Bibata-Modern-Ice"
-    xcursor-size 24
-}
 
 hotkey-overlay {
     skip-at-startup
@@ -47,14 +42,13 @@ output "eDP-1" {
     mode "1920x1080@60.002"
     position x=0 y=0
     focus-at-startup
-//     scale 1.1
+//     scale 1.2
 }
 
-// output "HDMI-A-1" {
-//     mode "1920x1080@99.999"
-//     mode "1920x1080@60.000"    
-//     position x=-1920 y=0
-// }
+output "HDMI-A-1" {
+    mode "1920x1080@60.000"    
+    position x=-1920 y=0
+}
 
 
 // ==================================================
@@ -62,19 +56,15 @@ output "eDP-1" {
 // ==================================================
 
 window-rule {
-    open-floating true
-    geometry-corner-radius 4
-    clip-to-geometry true
-    background-effect {
-    blur true
-    xray false
-}
-
+    match app-id="^at.yrlf.wl_mirror$"
+    open-on-output "HDMI-A-1"
+    open-fullscreen true
 }
 
 window-rule {
-    match is-active=false
-    opacity 0.95
+    open-floating true
+    geometry-corner-radius 4
+    clip-to-geometry true
 }
 
 // ==================================================
@@ -92,7 +82,7 @@ workspace "4"
 workspace "5"
 
 layout {
-    gaps 16
+    gaps 12
     center-focused-column "never"
     always-center-single-column
 
@@ -103,14 +93,16 @@ layout {
     }
 
     focus-ring {
-        off
+        width 3
+        active-color "#313244"
+        inactive-color "#181825"
     }
 
     shadow {
         on
         draw-behind-window true
-        softness 40
-        spread 2
+        softness 30
+        spread 0
         offset x=0 y=8
         color "#11111b"
     }
@@ -129,7 +121,7 @@ recent-windows {
     }
 
     previews {
-        max-height 200
+        max-height 300
     }
 
     binds {
@@ -182,10 +174,9 @@ animations {
 // ==================================================
 
 binds {
-    
-    Mod+P repeat=false { spawn-sh "wl-mirror --fullscreen-output HDMI-A-1 eDP-1"; }
 
-    Ctrl+Space { spawn-sh "noctalia msg panel-toggle launcher"; }
+    Mod+P repeat=false { spawn-sh "wl-mirror eDP-1"; }
+    Ctrl+Space { spawn "noctalia" "msg" "panel-toggle" "launcher"; }
     Mod+I { spawn-sh "noctalia msg settings-toggle"; }
     Mod+Shift+B { spawn "noctalia" "msg" "bar-toggle"; }
     Mod+Period { spawn "noctalia" "msg" "panel-toggle" "clipboard"; }
@@ -194,10 +185,8 @@ binds {
     Mod+Return      { spawn "kitty"; }
     Super+Shift+L     { spawn "swaylock"; }
     Super+E         { spawn "nautilus"; }
-    Mod+Comma       { spawn "flatpak" "run" "emote"; }
-    Ctrl+Shift+Print { spawn "flatpak" "run" "be.alexandervanhee.gradia"; }
     Mod+D           { spawn "code"; }
-    Mod+B           { spawn "helium"; }
+    Mod+B           { spawn "brave-origin"; }
 
 
     // Media & System Volume Keys
@@ -224,10 +213,16 @@ binds {
     Super+Ctrl+Up    { move-window-up; }
     Super+Ctrl+Right { move-column-right; }
     
-    Mod+Shift+Left  { spawn-sh "niri msg action move-floating-window -x -200"; }
-    Mod+Shift+Right { spawn-sh "niri msg action move-floating-window -x +200"; }
-    Mod+Shift+Up    { spawn-sh "niri msg action move-floating-window -y -200"; }
-    Mod+Shift+Down  { spawn-sh "niri msg action move-floating-window -y +200"; }
+    Super+Shift+Left  { move-column-left; }
+    Super+Shift+Down  { move-window-down; }
+    Super+Shift+Up    { move-window-up; }
+    Super+Shift+Right { move-column-right; }
+
+    // Workspaces
+    Mod+Shift+Left  { focus-monitor-left; }
+    Mod+Shift+Down  { focus-monitor-down; }
+    Mod+Shift+Up    { focus-monitor-up; }
+    Mod+Shift+Right { focus-monitor-right; }
 
     Mod+Home      { focus-column-first; }
     Mod+End       { focus-column-last; }
@@ -238,10 +233,6 @@ binds {
     Mod+Shift+Ctrl+Down  { move-column-to-monitor-down; }
     Mod+Shift+Ctrl+Up    { move-column-to-monitor-up; }
     Mod+Shift+Ctrl+Right { move-column-to-monitor-right; }
-
-    // Workspaces
-    Mod+Shift+Page_Down { move-workspace-down; }
-    Mod+Shift+Page_Up   { move-workspace-up; }
 
     Mod+WheelScrollDown      cooldown-ms=150 { focus-workspace-down; }
     Mod+WheelScrollUp        cooldown-ms=150 { focus-workspace-up; }
@@ -288,9 +279,8 @@ binds {
     Mod+Shift+R { switch-preset-window-height; }
     Mod+Ctrl+R  { reset-window-height; }
 
-    Mod+F       { maximize-column; }
-    Mod+Shift+F { fullscreen-window; }
-    Mod+Ctrl+F  { expand-column-to-available-width; }
+    Mod+Shift+F { maximize-column; }
+    Mod+F       { maximize-window-to-edges; }
 
     Mod+C       { center-column; }
     Mod+Ctrl+C  { center-visible-columns; }
