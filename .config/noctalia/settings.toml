@@ -4,11 +4,12 @@ config_version = 16
 order = [ "default" ]
 
     [bar.default]
-    capsule_radius = 2
-    center = []
+    background_opacity = 0.79999998211860657
+    capsule_radius = 0
+    center = [ "bar_3" ]
     color = "#A6ADC8"
     concave_edge_corners = false
-    end = [ "tray", "printer", "notifications", "github", "temp", "ram", "battery", "network", "volume", "clock" ]
+    end = [ "tray", "printer", "notifications", "github", "temp", "ram", "network", "volume", "battery", "clock" ]
     font_family = "Ubuntu Nerd Font"
     icon_color = "#A6ADC8"
     margin_ends = 0
@@ -17,10 +18,8 @@ order = [ "default" ]
     radius = 0
     radius_bottom_left = 0
     radius_bottom_right = 0
-    scale = 1.0500000081956387
     show_on_workspace_switch = false
     start = [ "launcher", "workspaces", "taskbar" ]
-    thickness = 38
     widget_spacing = 12
 
         [bar.default.dead_zone.actions]
@@ -84,11 +83,11 @@ widget_order = [ "lockscreen-login-box@HDMI-A-1", "lockscreen-login-box@eDP-1" ]
     [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1"]
     box_height = 196.0
     box_width = 810.0
-    cx = 960.0
-    cy = 898.0
+    cx = 512.0
+    cy = 638.57781982421875
     output = "HDMI-A-1"
-    placement_height = 1080.0
-    placement_width = 1920.0
+    placement_height = 768.0
+    placement_width = 1024.0
     rotation = 0.0
     type = "login_box"
 
@@ -104,6 +103,7 @@ widget_order = [ "lockscreen-login-box@HDMI-A-1", "lockscreen-login-box@eDP-1" ]
         show_keyboard_layout = true
         show_login_button = true
         show_media = true
+        show_password_reveal = true
         show_session_buttons = true
         show_unlock_hint = true
         show_weather = true
@@ -111,7 +111,7 @@ widget_order = [ "lockscreen-login-box@HDMI-A-1", "lockscreen-login-box@eDP-1" ]
     [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
     box_height = 196.0
     box_width = 810.0
-    cx = 959.9998779296875
+    cx = 959.99981689453125
     cy = 881.4998779296875
     output = "eDP-1"
     placement_height = 1080.0
@@ -131,6 +131,7 @@ widget_order = [ "lockscreen-login-box@HDMI-A-1", "lockscreen-login-box@eDP-1" ]
         show_keyboard_layout = true
         show_login_button = true
         show_media = true
+        show_password_reveal = true
         show_session_buttons = true
         show_unlock_hint = true
         show_weather = true
@@ -140,47 +141,68 @@ temperature_day = 10000
 temperature_night = 5000
 
 [notification]
+background_opacity = 0.79999998211860657
 border = false
 offset_x = 8
 position = "bottom_center"
 
 [osd]
+background_opacity = 0.79999998211860657
 border = false
 position = "bottom_center"
 
+[plugin_settings."ahmedhossamdev/sticky-notes"]
+default_color = "blue"
+
 [plugin_settings."andrewdems/printers"]
 panel_placement = "floating"
-panel_position = "bottom_right"
 
 [plugin_settings."h-jangra/keyviz"]
 font_size = "small"
 overlay_layer = "overlay"
 overlay_position = "bottom_right"
 
+[plugin_settings."nightwatch75/todo"]
+panel_placement = "floating"
+sound_on_complete = true
+
 [plugin_settings."noctalia/screen_recorder"]
 audio_source = "default_output"
 directory = "~/Videos/sr"
 video_source = "portal"
 
+[plugin_settings."noctalia/timer"]
+panel_placement = "floating"
+
 [plugin_settings."shangshui0302/github-kanban"]
 kanban_placement = "floating"
-kanban_position = "bottom_right"
+
+[plugin_settings."ycf/mawaqit"]
+city = "Cotabato"
+country = "Philippines"
+tune = true
+tuneAsr = 2
+tuneDhuhr = 16
+tuneFajr = 1
+tuneIsha = 2
+tuneMaghrib = 2
+twelveHourFormat = true
 
 [plugins]
-enabled = [ "shangshui0302/github-kanban", "andrewdems/printers", "noctalia/screen_recorder" ]
+enabled = [ "shangshui0302/github-kanban", "andrewdems/printers", "noctalia/screen_recorder", "ycf/mawaqit" ]
 
 [shell]
 button_borders = false
 card_borders = false
 clipboard_history_max_entries = 500
-corner_radius_scale = 0.40000000596046448
+corner_radius_scale = 0.0
 font_family = "Ubuntu Nerd Font"
 input_borders = false
 popup_borders = false
 time_format = "{:%-I:%M %p}"
 
     [shell.animation]
-    speed = 1.5000000223517418
+    speed = 2.0000000298023224
 
     [shell.launcher]
     categories = false
@@ -202,11 +224,11 @@ time_format = "{:%-I:%M %p}"
     borders = false
     control_center_placement = "floating"
     control_center_position = "bottom_right"
-    launcher_position = "bottom_left"
     open_near_click_control_center = true
     open_near_click_launcher = true
     session_placement = "floating"
     session_position = "bottom_center"
+    transparency_mode = "soft"
     wallpaper_placement = "floating"
     wallpaper_position = "bottom_right"
 
@@ -248,6 +270,9 @@ time_format = "{:%-I:%M %p}"
     shortcut = "5"
     variant = "destructive"
 
+    [shell.shadow]
+    alpha = 0.24999999441206455
+
     [shell.window_switcher]
     show_all_outputs = false
 
@@ -269,25 +294,29 @@ transition_on_startup = true
     recursive = false
 
     [wallpaper.default]
-    path = "/home/ebadshelby/Pictures/wallpapers/bloom mochar.png"
+    path = "/home/ebadshelby/Pictures/wallpapers/wallhaven-vpz9g8.jpg"
 
     [wallpaper.last]
-    path = "/home/ebadshelby/Pictures/wallpapers/bloom mochar.png"
+    path = "/home/ebadshelby/Pictures/wallpapers/wallhaven-vpz9g8.jpg"
 
     [wallpaper.monitors.HDMI-A-1]
     path = "/home/ebadshelby/Pictures/wallpapers/bloom.jpg"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/ebadshelby/Pictures/wallpapers/bloom mochar.png"
+    path = "/home/ebadshelby/Pictures/wallpapers/wallhaven-vpz9g8.jpg"
 
 [widget.audio_visualizer]
 mirrored = false
 
+[widget.bar_3]
+dynamicIcon = true
+type = "ycf/mawaqit:bar"
+
 [widget.battery]
-show_label = false
+display_mode = "graphic"
+scale = 0.69999999999999996
 
 [widget.clock]
-color = "#A6ADC8"
 format = "|  {:%d %a} · {:%-I:%M %p}"
 
     [widget.clock.actions]
@@ -300,6 +329,7 @@ type = "shangshui0302/github-kanban:github"
 
 [widget.launcher]
 custom_image = "/home/ebadshelby/dotfiles/Pictures/logos/windows-11-gradient.svg"
+enabled = false
 scale = 1.1500000000000001
 
 [widget.network]
@@ -321,7 +351,6 @@ active_indicator_color = "on_hover"
 icon_scale = 1.1500000000000001
 only_active_workspace = true
 pinned_opacity = 1.0
-window_title_max_width = 32
 
 [widget.temp]
 show_label = false
@@ -331,8 +360,8 @@ show_value = false
 show_label = false
 
 [widget.workspaces]
-active_pill_size = 1.25
+active_pill_size = 1.5
 empty_color = "surface"
 focused_output_only = true
 font_family = "MonaspiceNe NF"
-occupied_color = "surface_container"
+occupied_color = "surface_container_high"

@@ -64,6 +64,13 @@ window-rule {
 window-rule {
     geometry-corner-radius 4
     clip-to-geometry true
+    draw-border-with-background false
+    opacity 0.8
+
+    background-effect {
+        blur true
+        xray false
+    }
 }
 
 // Maximized apps
@@ -96,8 +103,27 @@ window-rule {
 }
 
 // ==================================================
+// Layer Rules (Noctalia panels, excluding bar)
+// ==================================================
+
+layer-rule {
+    match namespace="^noctalia-(panel|attached-panel|dock|notification|osd|overview-launcher|window-switcher|desktop-widget-)"
+
+    background-effect {
+        xray false
+    }
+}
+
+// ==================================================
 // Layout & Visuals
 // ==================================================
+
+blur {
+    passes 3
+    offset 4
+    noise 0.02
+    saturation 1.2
+}
 
 overview {
     backdrop-color "#181825"
@@ -128,7 +154,7 @@ layout {
 
     shadow {
         on
-        draw-behind-window true
+        draw-behind-window false
         softness 30
         spread 0
         offset x=0 y=8
@@ -323,6 +349,7 @@ binds {
 
     Mod+V       { toggle-window-floating; }
     Mod+Shift+V { switch-focus-between-floating-and-tiling; }
+    Mod+Shift+O       { toggle-window-rule-opacity; }
 
     // Screenshots
     Print       { spawn-sh "noctalia msg screenshot-region"; }

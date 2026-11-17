@@ -56,20 +56,58 @@ output "HDMI-A-1" {
 // ==================================================
 
 window-rule {
+    open-floating true
+    geometry-corner-radius 0
+    clip-to-geometry true
+    draw-border-with-background false
+    opacity 0.8
+
+    background-effect {
+        blur true
+        xray false
+    }
+}
+
+window-rule {
     match app-id="^at.yrlf.wl_mirror$"
     open-on-output "HDMI-A-1"
     open-fullscreen true
 }
 
 window-rule {
-    open-floating true
-    geometry-corner-radius 4
-    clip-to-geometry true
+    match app-id="^kanri$"
+    default-column-width {fixed 1239; }
+    default-window-height { fixed 945; }
+    
+}
+
+window-rule {
+    match app-id="(?i)^(onlyoffice(-desktopeditors)?|desktopeditors)$"
+    open-maximized-to-edges true
+}
+
+// ==================================================
+// Layer Rules (Noctalia panels, excluding bar)
+// ==================================================
+
+layer-rule {
+    match namespace="^noctalia-(panel|attached-panel|dock|notification|osd|overview-launcher|window-switcher|desktop-widget-)"
+
+    background-effect {
+        xray false
+    }
 }
 
 // ==================================================
 // Layout & Visuals
 // ==================================================
+
+blur {
+    passes 4
+    offset 5
+    noise 0.02
+    saturation 1.2
+}
 
 overview {
     backdrop-color "#181825"
@@ -100,11 +138,11 @@ layout {
 
     shadow {
         on
-        draw-behind-window true
-        softness 30
+        draw-behind-window false
+        softness 28
         spread 0
-        offset x=0 y=8
-        color "#11111b"
+        offset x=0 y=6
+        color "#11111b99"
     }
 
 }
@@ -114,14 +152,15 @@ recent-windows {
     open-delay-ms 100
 
     highlight {
-        active-color "#1e1e2e"
-        urgent-color "#ed8796ff"
-        padding 8
-        corner-radius 4
+        active-color "#585b70aa"
+        urgent-color "#f38ba8cc"
+        padding 12
+        corner-radius 0
     }
 
     previews {
-        max-height 300
+        max-height 360
+        max-scale 0.35
     }
 
     binds {
@@ -131,6 +170,7 @@ recent-windows {
 }
 
 animations {
+//     off
     workspace-switch {
         spring damping-ratio=1.0 stiffness=2250 epsilon=0.0001
     }
@@ -174,7 +214,6 @@ animations {
 // ==================================================
 
 binds {
-
     Mod+P repeat=false { spawn-sh "wl-mirror eDP-1"; }
     Ctrl+Space { spawn "noctalia" "msg" "panel-toggle" "launcher"; }
     Mod+I { spawn-sh "noctalia msg settings-toggle"; }
@@ -213,10 +252,10 @@ binds {
     Super+Ctrl+Up    { move-window-up; }
     Super+Ctrl+Right { move-column-right; }
     
-    Super+Shift+Left  { move-column-left; }
-    Super+Shift+Down  { move-window-down; }
-    Super+Shift+Up    { move-window-up; }
-    Super+Shift+Right { move-column-right; }
+    Super+Shift+Left  { spawn-sh "niri msg action move-floating-window -x -200"; }
+    Super+Shift+Right  { spawn-sh "niri msg action move-floating-window -x +200"; }
+    Super+Shift+Up  { spawn-sh "niri msg action move-floating-window -y -200"; }
+    Super+Shift+Down  { spawn-sh "niri msg action move-floating-window -y +200"; }
 
     // Workspaces
     Mod+Shift+Left  { focus-monitor-left; }
@@ -279,8 +318,8 @@ binds {
     Mod+Shift+R { switch-preset-window-height; }
     Mod+Ctrl+R  { reset-window-height; }
 
-    Mod+Shift+F { maximize-column; }
-    Mod+F       { maximize-window-to-edges; }
+    Mod+F { spawn-sh "niri msg action move-window-to-floating; niri msg action set-window-width 100%; niri msg action set-window-height 100%; sleep 0.1; niri msg action center-window"; }
+//     Mod+Shift+F       { maximize-window-to-edges; }
 
     Mod+C       { center-column; }
     Mod+Ctrl+C  { center-visible-columns; }
@@ -292,6 +331,7 @@ binds {
 
     Mod+V       { toggle-window-floating; }
     Mod+Shift+V { switch-focus-between-floating-and-tiling; }
+    Mod+Shift+O       { toggle-window-rule-opacity; }
 
     // Screenshots
     Print       { spawn-sh "noctalia msg screenshot-region"; }
