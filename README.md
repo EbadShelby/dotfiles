@@ -79,6 +79,7 @@
 ### CLI Utilities
 
 * **drift**        - Terminal ASCII screensaver (also triggered on desktop idle via `swayidle`)
+* **pixtuoid**     - Terminal pixel-art office for AI coding agents
 * **swayidle**     - Idle management daemon for Wayland
 * **swaylock**     - Screen locker for Wayland
 * **fresh**        - An IDE/text editor in your terminal
