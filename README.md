@@ -78,16 +78,21 @@
 
 ### CLI Utilities
 
+* **drift**        - Terminal ASCII screensaver (also triggered on desktop idle via `swayidle`)
+* **swayidle**     - Idle management daemon for Wayland
+* **swaylock**     - Screen locker for Wayland
 * **fresh**        - An IDE/text editor in your terminal
+* **yazi**         - Blazing fast terminal file manager
 * **snapper**      - Btrfs snapshot and rollback manager
 * **fast-cli**     - network speed test on your terminal
 * **glazepkg**     - view installed tools from different sources in one view
+* **harlequin**    - Full-featured SQL IDE in the terminal
+* **yoinks**       - CLI video downloader
 * **ghgrab**       - terminal tool that lets you browse and download files from GitHub
 * **usbtree**      - TUI for inspecting the USB device tree
-* **harlequin**    - Full-featured SQL IDE in the terminal
-* **opencode**     - AI coding assistant for the terminal
-* **mycli**        - Smart MySQL client with autocomplete
 * **lazygit**      - Terminal UI for Git
+* **lazydocker**   - Terminal UI for Docker
+* **aria2c**       - Multi-source command-line download utility
 * **unar**         - better way to extract files on your terminal
 * **tldr**         - Simplified command examples
 * **bat**          - Better cat with syntax highlighting
@@ -106,7 +111,6 @@
 ## System
 
 * btrfs-assistant
-* Pika Backup
 * Extension Manager
 * Gnome Tweaks
 * Flatseal
@@ -115,6 +119,7 @@
 * GDM settings
 * Gparted
 * Mission Center
+* Disk Usage Analyzer
 
 ## Work
 
@@ -128,14 +133,13 @@
 ## Media
 
 * GPU Screen Recorder
-* Audacity
+* ArtCraft Launcher
 * Filmcraft
 * Pdfcraft
 * Photocraft
-* Figcraft
+* SoundCraft
 * ShutterEncoder
 * VideoTrimmer
-* VideoDownloader
 * Upscaler
 * Gradia
 * SimpleScan - docu scanner
@@ -145,15 +149,8 @@
 
 ## Web & Communication
 
-* Helium
-* Telegram
+* Brave Origin
 * LocalSend
 * Bitwarden (browser extension)
-
-## Miscellaneous
-
-* Steam
-* Waydroid
-* Faugus Launcher
 
 ---
