@@ -1,0 +1,1 @@
+timeout 120 'pgrep -x drift >/dev/null || /usr/bin/kitty --class drift-screensaver --start-as=fullscreen -e sh -c "sleep 0.3; exec /home/ebadshelby/go/bin/drift"' resume 'pkill -x drift'

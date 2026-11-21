@@ -6,6 +6,7 @@ prefer-no-csd
 spawn-at-startup "noctalia"
 spawn-at-startup "wl-clip-persist" "--clipboard" "regular"
 spawn-at-startup "/usr/libexec/lxqt-policykit-agent"
+spawn-at-startup "swayidle" "-w"
 
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
